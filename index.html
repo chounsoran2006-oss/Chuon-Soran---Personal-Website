@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Soran Chuon - Personal Website</title>
+    <meta
+      name="description"
+      content="Portfolio website for CHUON SORAN, a first-year IT developer passionate about web development and technology."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <nav class="nav container">
+        <a href="#home" class="logo" aria-label="Home">CHUON <span>SORAN</span></a>
+
+        <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <div class="nav-menu">
+          <ul class="nav-list">
+            <li><a href="#home" class="nav-link active">Home</a></li>
+            <li><a href="#about" class="nav-link">About Me</a></li>
+            <li><a href="#skills" class="nav-link">Skills</a></li>
+            <li><a href="#projects" class="nav-link">Projects</a></li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section id="home" class="hero">
+        <div class="container hero-content">
+          <div class="hero-text reveal">
+            <p class="eyebrow">Hello, I'm</p>
+            <h1>CHUON SORAN</h1>
+            <h2 class="typing-text" aria-live="polite">Student | First Year IT Developer</h2>
+            <p class="intro">
+              Hello! I'm CHUON SORAN, a first-year IT developer passionate about
+              technology, programming, and web development. I am continuously learning
+              new skills and building projects to become a professional developer.
+            </p>
+
+            <div class="hero-actions">
+              <a href="#about" class="btn btn-primary">About Me</a>
+              <a href="#projects" class="btn btn-secondary">My Projects</a>
+            </div>
+
+            <div class="quick-stats">
+              <div>
+                <strong>1+</strong>
+                <span>Years Learning</span>
+              </div>
+              <div>
+                <strong>5+</strong>
+                <span>Projects Built</span>
+              </div>
+              <div>
+                <strong>100%</strong>
+                <span>Motivated</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-visual reveal">
+            <div class="code-window" aria-label="Developer workspace illustration">
+              <div class="window-header">
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+                <span class="tab">developer.js</span>
+              </div>
+
+              <div class="window-body">
+                <div class="code-line"><span class="keyword">const</span> <span class="name">name</span> = <span class="string">"CHUON SORAN"</span>;</div>
+                <div class="code-line"><span class="keyword">const</span> <span class="name">role</span> = <span class="string">"First Year IT Developer"</span>;</div>
+                <div class="code-line"><span class="keyword">const</span> <span class="name">skills</span> = [<span class="string">"HTML"</span>, <span class="string">"CSS"</span>, <span class="string">"JavaScript"</span>];</div>
+                <div class="code-line"><span class="keyword">function</span> <span class="name">buildPortfolio</span>() {</div>
+                <div class="code-line indent"><span class="keyword">return</span> <span class="string">"Learning & creating"</span>;</div>
+                <div class="code-line">}</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="section">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="section-tag">About Me</p>
+            <h2>My story and motivation</h2>
+          </div>
+
+          <div class="about-grid">
+            <div class="img"><img src="ran.png" alt="" width="1500"></div>
+           
+
+            <div class="about-cards reveal">
+              <div class="info-card">
+                <span class="label">Name</span>
+                <strong>CHUON SORAN</strong>
+              </div>
+              <div class="info-card">
+                <span class="label">Job</span>
+                <strong>Student</strong>
+              </div>
+              <div class="info-card">
+                <span class="label">Position</span>
+                <strong>First Year IT Developer</strong>
+              </div>
+              <div class="info-card">
+                <span class="label">Field</span>
+                <strong>Information Technology</strong>
+              </div>
+              <div class="info-card highlight">
+                <span class="label">Interest</span>
+                <strong>Web Development</strong>
+              </div>
+            </div>
+             <div class="about-copy reveal">
+              <p>
+                Hi, I'm CHUON SORAN. I am a first-year IT student and aspiring web
+                developer. I enjoy learning programming, creating websites, solving
+                problems, and exploring new technologies.
+              </p>
+              <p>
+                My goal is to keep improving my technical skills, build real-world
+                projects, and grow into a confident developer who can contribute to
+                modern digital experiences.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="skills" class="section section-alt">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="section-tag">Skills</p>
+            <h2>Technologies I am learning</h2>
+          </div>
+
+          <div class="skills-grid">
+            <div class="skill-card reveal">
+              <div class="skill-top">
+                <span>HTML</span>
+                <span>90%</span>
+              </div>
+              <div class="skill-bar"><span style="width: 90%"></span></div>
+            </div>
+
+            <div class="skill-card reveal">
+              <div class="skill-top">
+                <span>CSS</span>
+                <span>88%</span>
+              </div>
+              <div class="skill-bar"><span style="width: 88%"></span></div>
+            </div>
+
+            <div class="skill-card reveal">
+              <div class="skill-top">
+                <span>JavaScript</span>
+                <span>80%</span>
+              </div>
+              <div class="skill-bar"><span style="width: 80%"></span></div>
+            </div>
+
+            <div class="skill-card reveal">
+              <div class="skill-top">
+                <span>Python</span>
+                <span>75%</span>
+              </div>
+              <div class="skill-bar"><span style="width: 75%"></span></div>
+            </div>
+
+            <div class="skill-card reveal">
+              <div class="skill-top">
+                <span>Git / GitHub</span>
+                <span>82%</span>
+              </div>
+              <div class="skill-bar"><span style="width: 82%"></span></div>
+            </div>
+
+            <div class="skill-card reveal">
+              <div class="skill-top">
+                <span>Responsive Web Design</span>
+                <span>85%</span>
+              </div>
+              <div class="skill-bar"><span style="width: 85%"></span></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" class="section">
+        <div class="container">
+          <div class="section-heading reveal">
+            <p class="section-tag">Projects</p>
+            <h2>Featured work and ideas</h2>
+          </div>
+
+          <div class="projects-grid">
+            <article class="project-card reveal">
+              <div class="project-image project-one">
+                <span>Portfolio</span>
+              </div>
+              <div class="project-body">
+                <h3>Personal Portfolio</h3>
+                <p>
+                  A clean personal portfolio website built to showcase my skills,
+                  projects, and contact information.
+                </p>
+                <div class="project-tags">
+                  <span>HTML</span>
+                  <span>CSS</span>
+                  <span>JavaScript</span>
+                </div>
+                <a href="#" class="project-link">View Project</a>
+              </div>
+            </article>
+
+            <article class="project-card reveal">
+              <div class="project-image project-two">
+                <span>Landing Page</span>
+              </div>
+              <div class="project-body">
+                <h3>Tech Landing Page</h3>
+                <p>
+                  A modern digital product landing page with call-to-action sections,
+                  service cards, and responsive layouts.
+                </p>
+                <div class="project-tags">
+                  <span>HTML</span>
+                  <span>CSS</span>
+                  <span>UI/UX</span>
+                </div>
+                <a href="#" class="project-link">View Project</a>
+              </div>
+            </article>
+
+            <article class="project-card reveal">
+              <div class="project-image project-three">
+                <span>Dashboard</span>
+              </div>
+              <div class="project-body">
+                <h3>Student Dashboard</h3>
+                <p>
+                  A simple project tracking dashboard designed for students to manage
+                  tasks, notes, and goals efficiently.
+                </p>
+                <div class="project-tags">
+                  <span>JavaScript</span>
+                  <span>CSS Grid</span>
+                  <span>Responsive</span>
+                </div>
+                <a href="#" class="project-link">View Project</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="section contact-section">
+        <div class="container">
+          <div class="contact-grid">
+            <div class="contact-panel reveal">
+              <p class="section-tag">Contact</p>
+              <h2>Let’s work together</h2>
+              <p>
+                I am open to learning opportunities, collaboration, and junior web
+                development projects.
+              </p>
+
+              <div class="social-links">
+                <a href="#" aria-label="GitHub">GitHub</a>
+                <a href="#" aria-label="Facebook">Facebook</a>
+                <a href="#" aria-label="Telegram">Telegram</a>
+              </div>
+            </div>
+
+            <form id="contactForm" class="contact-form reveal" novalidate>
+              <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Your name" />
+                <small class="error-message"></small>
+              </div>
+
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Your email" />
+                <small class="error-message"></small>
+              </div>
+
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" placeholder="Write your message..."></textarea>
+                <small class="error-message"></small>
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-submit">Send Message</button>
+              <p id="formMessage" class="form-message" aria-live="polite"></p>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-content">
+        <p>© 2026 CHUON SORAN. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <a href="#home" class="back-to-top" aria-label="Back to top">↑</a>
+
+    <script src="script.js"></script>
+  </body>
+</html>
