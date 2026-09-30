@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RT Learning - Practice Tests</title>
+  <script src="../../../../js/PracticeNav.js" defer></script>
+  <script src="../../../../js/Theme.js" defer></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          },
+          colors: {
+            brandDark: '#0b0f19',
+            cardBg: '#052320',
+            cardBorder: '#34d399',
+            btnGreen: '#0d7a5c',
+            btnGreenHover: '#0a634a',
+            badgeGreen: '#34d399',
+            navActive: '#6366f1',
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-[#0b0f19] text-white font-sans min-h-screen flex flex-col antialiased selection:bg-indigo-500 selection:text-white">
+
+  <!-- Navigation Bar -->
+    <header class="bg-gray-900 w-full mx-auto px-4 sm:px-6 lg:px-8 py-5">
+        <div class="flex items-center justify-between gap-4 border-b border-gray-800/60 pb-5 md:border-b-0 md:pb-0">
+            <!-- Brand Logo -->
+            <div class="flex items-center gap-2.5 cursor-pointer group">
+                <div class="w-9 h-9 rounded-full bg-slate-900 border border-slate-700/60 flex items-center justify-center font-bold text-xs shadow-inner">
+                    <span class="text-sky-400">R</span><span class="text-red-500">T</span>
+                </div>
+                <span class="font-bold text-lg tracking-tight text-white group-hover:text-gray-200 transition-colors">RTLearning</span>
+            </div>
+
+            <!-- Mobile Navigation Toggle Button -->
+            <div class="md:hidden">
+                <button id="mobile-menu-btn" class="p-2 text-gray-400 hover:text-white focus:outline-none">
+                    <i class="fa-solid fa-bars text-xl"></i>
+                </button>
+            </div>
+
+            <!-- Desktop Nav Links -->
+            <nav class="hidden md:flex items-center gap-1 lg:gap-2">
+                <a href="../../../index.html" class="px-4 py-2 text-sm font-medium text-gray-300 hover:text-white transition-colors">Dashboard</a>
+                <a href="../../My%20course/My%20course.html" class="px-4 py-2 text-sm font-medium text-gray-300 hover:text-white transition-colors">My courses</a>
+                <a href="../practice-test.html" class="px-5 py-2 text-sm font-medium text-white bg-accentViolet hover:bg-accentVioletHover rounded-full shadow-lg shadow-indigo-500/20 transition-all">Practice Tests</a>
+                <a href="../../Profile.html" class="px-4 py-2 text-sm font-medium text-gray-300 hover:text-white transition-colors">Profile</a>
+                <a href="../../Contact.html" class="px-4 py-2 text-sm font-medium text-gray-300 hover:text-white transition-colors">Contact Us</a>
+            </nav>
+        </div>
+
+        <!-- Mobile Nav Menu (Collapsible) -->
+        <div id="mobile-menu" class="hidden md:hidden mt-3 pt-3 border-t border-gray-800 flex-col gap-2">
+                <a href="../../../index.html" class="px-4 py-2 text-sm font-medium text-gray-300 hover:text-white">Dashboard</a>
+                <a href="../../My%20course/My%20course.html" class="px-4 py-2 text-sm font-medium text-gray-300 hover:text-white">My courses</a>
+                <a href="../practice-test.html" class="px-4 py-2 text-sm font-medium text-white bg-accentViolet rounded-lg text-center">Practice Tests</a>
+                <a href="../../Profile.html" class="px-4 py-2 text-sm font-medium text-gray-300 hover:text-white">Profile</a>
+                <a href="../../Contact.html" class="px-4 py-2 text-sm font-medium text-gray-300 hover:text-white">Contact Us</a>
+        </div>
+    </header>
+
+  <!-- Main Content Container -->
+  <main class="grow max-w-5xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-16 space-y-10 sm:space-y-12">
+    <a href="../first-quiz.html" aria-label="Back to Business Communication" class="inline-flex items-center gap-2 rounded-xl bg-[#23a075] px-5 py-2.5 text-sm font-bold text-white shadow-md transition hover:bg-[#1b8460] active:scale-95">
+      <span aria-hidden="true">&larr;</span> Back
+    </a>
+
+    <!-- Card 1: Practice by play with game -->
+    <div class="follow-test-card bg-[#052320] border-2 border-[#34d399]/80 rounded-8 p-6 sm:p-10 shadow-2xl relative transition-transform duration-300 hover:border-[#34d399] hover:shadow-emerald-900/20">
+      
+      <!-- Top Header & Green Dot Indicator -->
+      <div class="flex items-start justify-between gap-4 mb-8">
+        <h2 class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-white tracking-wide uppercase leading-tight">
+          PRACTICE BY PLAY WITH GAME...
+        </h2>
+        <div class="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-[#34d399] shrink-0 shadow-lg shadow-emerald-400/40"></div>
+      </div>
+
+      <!-- Card Content Body -->
+      <div class="flex flex-col md:flex-row items-center justify-between gap-8 pt-2">
+        
+        <!-- Game Thumbnail Preview (Custom SVG banner replica) -->
+        <div class="w-full md:w-[320px] h-40 sm:h-45 rounded-3xl overflow-hidden shadow-2xl border border-white/10 shrink-0 relative bg-slate-900">
+          <svg class="w-full h-full object-cover" viewBox="0 0 320 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Colorful patchwork background shapes -->
+            <rect width="320" height="180" fill="#00A896" />
+            <path d="M-20 -20 Q 80 20, 100 80 T -20 180 Z" fill="#D90429" />
+            <path d="M80 -20 Q 180 40, 220 -20 Z" fill="#FFB703" />
+            <path d="M180 -20 Q 240 80, 340 20 L 340 -20 Z" fill="#023E8A" />
+            <path d="M120 180 Q 160 100, 240 180 Z" fill="#FFB703" />
+            <path d="M220 180 Q 280 110, 340 160 L 340 180 Z" fill="#7B2CBF" />
+            <path d="M-20 120 Q 60 100, 100 180 Z" fill="#0077B6" />
+            <path d="M240 40 Q 320 80, 340 140 L 340 40 Z" fill="#E01A4F" />
+
+            <!-- "Games to learn English" graphic emblem -->
+            <g transform="translate(10, 20)">
+              <!-- Big 'G' -->
+              <text x="15" y="105" font-family="Arial Black, sans-serif" font-weight="900" font-size="110" fill="#0B1354">G</text>
+              <!-- Outer white border effect for G -->
+              <text x="15" y="105" font-family="Arial Black, sans-serif" font-weight="900" font-size="110" fill="none" stroke="#FFFFFF" stroke-width="12" stroke-linecap="round" stroke-linejoin="round">G</text>
+              <text x="15" y="105" font-family="Arial Black, sans-serif" font-weight="900" font-size="110" fill="#0B1354">G</text>
+              
+              <!-- "ames" Banner Pill -->
+              <rect x="85" y="38" width="185" height="52" rx="26" fill="#FFFFFF" />
+              <text x="98" y="80" font-family="Arial Black, sans-serif" font-weight="900" font-size="44" fill="#0B1354">ames</text>
+              
+              <!-- Subtitle pill "to learn English" -->
+              <rect x="80" y="94" width="215" height="30" rx="15" fill="#0B1354" />
+              <text x="94" y="115" font-family="Arial, sans-serif" font-weight="700" font-size="19" fill="#FFFFFF">to learn English</text>
+            </g>
+          </svg>
+        </div>
+
+        <!-- CTA Button -->
+        <div class="w-full md:w-auto flex justify-center md:justify-end">
+          <button class="follow-test-cta w-full sm:w-auto min-w-50 bg-[#0d7a5c] hover:bg-[#0a634a] text-white font-extrabold text-2xl sm:text-3xl px-10 py-4 sm:py-5 rounded-2xl sm:rounded-3xl shadow-xl transition-all duration-200 active:scale-95 text-center">
+           <a href="Follow%20test/game-test.html">Play now</a>
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Card 2: Practice by form -->
+    <div class="follow-test-card bg-[#052320] border-2 border-[#34d399]/80 rounded-8 p-6 sm:p-10 shadow-2xl relative transition-transform duration-300 hover:border-[#34d399] hover:shadow-emerald-900/20">
+      
+      <!-- Top Header & Green Dot Indicator -->
+      <div class="flex items-start justify-between gap-4 mb-8">
+        <h2 class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-white tracking-wide uppercase leading-tight">
+          PRACTICE BY FORM...
+        </h2>
+        <div class="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-[#34d399] shrink-0 shadow-lg shadow-emerald-400/40"></div>
+      </div>
+
+      <!-- Card Content Body -->
+      <div class="flex flex-col md:flex-row items-center justify-between gap-8 pt-2">
+        
+        <!-- Form/Text Preview Card -->
+        <div class="w-full md:w-[320px] h-40 sm:h-45 bg-white rounded-3xl overflow-hidden shadow-2xl flex items-center justify-center p-4 shrink-0 border border-white/20">
+          <div class="flex items-center justify-center space-x-1 sm:space-x-2 select-none">
+            <!-- Colorful bubble letters -->
+            <span class="text-5xl sm:text-6xl font-black text-red-500 transform -rotate-3 drop-shadow-md">E</span>
+            <span class="text-5xl sm:text-6xl font-black text-amber-500 transform rotate-2 drop-shadow-md">n</span>
+            <span class="text-5xl sm:text-6xl font-black text-emerald-500 transform -rotate-2 drop-shadow-md">g</span>
+            <span class="text-5xl sm:text-6xl font-black text-pink-500 transform rotate-3 drop-shadow-md">l</span>
+            <span class="text-5xl sm:text-6xl font-black text-purple-500 transform -rotate-1 drop-shadow-md">i</span>
+            <span class="text-5xl sm:text-6xl font-black text-yellow-500 transform rotate-4 drop-shadow-md">s</span>
+            <span class="text-5xl sm:text-6xl font-black text-pink-500 transform -rotate-3 drop-shadow-md">h</span>
+          </div>
+        </div>
+
+        <div class="w-full md:w-auto flex justify-center md:justify-end">
+          <button class="follow-test-cta w-full sm:w-auto min-w-50 bg-[#0d7a5c] hover:bg-[#0a634a] text-white font-extrabold text-2xl sm:text-3xl px-10 py-4 sm:py-5 rounded-2xl sm:rounded-3xl shadow-xl transition-all duration-200 active:scale-95 text-center">
+            <a href="Follow%20test/form-test.html">Play now</a>
+          </button>
+        </div>
+
+      </div>
+    </div>
+
+  </main>
+
+  <script>
+    const menuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    if (menuBtn && mobileMenu) {
+      menuBtn.addEventListener('click', () => {
+        mobileMenu.classList.toggle('hidden');
+      });
+    }
+  </script>
+</body>
+</html>

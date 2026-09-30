@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RT Learning - Practice By Form</title>
+    <script src="../../../../../js/PracticeNav.js" defer></script>
+    <script src="../../../../../js/Theme.js" defer></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        brandDark: '#090d16',
+                        cardBg: '#13282c',
+                        cardBorder: '#286a63',
+                        pillBg: '#0e1422',
+                        btnBack: '#3ab285',
+                        navActive: '#626eff',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #090d16;
+            color: #ffffff;
+            user-select: none;
+        }
+        /* Custom radio button appearance matching image */
+        .custom-radio {
+            appearance: none;
+            width: 28px;
+            height: 28px;
+            background-color: #d1d5db;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+        .custom-radio:checked {
+            background-color: #3ab285;
+            box-shadow: inset 0 0 0 4px #0e1422;
+        }
+    </style>
+</head>
+<body class="min-h-screen bg-brandDark text-white flex flex-col justify-between antialiased selection:bg-teal-500 selection:text-white">
+
+    <!-- Navigation Bar -->
+    <header class="w-full bg-[#0b0f19] border-b border-gray-800/50 px-4 lg:px-12 py-3.5 flex items-center justify-between sticky top-0 z-50">
+        <!-- Logo -->
+        <div class="flex items-center space-x-3 cursor-pointer" onclick="resetQuiz()">
+            <div class="w-8 h-8 rounded-full bg-linear-to-tr from-blue-600 via-indigo-500 to-pink-500 flex items-center justify-center p-0.5 shadow-md">
+                <div class="w-full h-full bg-[#0b0f19] rounded-full flex items-center justify-center">
+                    <span class="text-xs font-black text-transparent bg-clip-text bg-linear-to-r from-cyan-400 to-indigo-400">RT</span>
+                </div>
+            </div>
+            <span class="text-white font-bold text-lg tracking-tight">RT Learning</span>
+        </div>
+
+        <!-- Navigation Links -->
+        <nav class="hidden md:flex items-center space-x-6 text-sm font-medium">
+            <a href="../../../../../index.html" class="text-gray-300 hover:text-white transition-colors">Dashboard</a>
+            <a href="../../../../My%20course/My%20course.html" class="text-gray-300 hover:text-white transition-colors">My courses</a>
+            <a href="../../../practice-test.html" class="bg-[#505cfd] text-white px-5 py-1.5 rounded-full font-semibold shadow-lg shadow-indigo-500/20 hover:bg-indigo-600 transition-all">Practice Tests</a>
+            <a href="../../../../Profile.html" class="text-gray-300 hover:text-white transition-colors">Profile</a>
+            <a href="../../../../Contact.html" class="text-gray-300 hover:text-white transition-colors">Contact Us</a>
+        </nav>
+
+        <!-- Score & Mobile Toggle -->
+        <div class="flex items-center space-x-3">
+            <div class="bg-cardBg border border-cardBorder/60 px-3 py-1 rounded-lg text-xs font-semibold text-teal-300 flex items-center space-x-2">
+                <span>Score:</span>
+                <span id="scoreDisplay" class="text-white font-bold text-sm">0</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="max-w-4xl mx-auto w-full px-4 py-6 flex-1 flex flex-col justify-start items-stretch space-y-5">
+        
+        <a href="../start-module.html" aria-label="Back to practice options" class="inline-flex items-center gap-2 rounded-xl bg-[#23a075] px-5 py-2.5 text-sm font-bold text-white shadow-md transition hover:bg-[#1b8460] active:scale-95">
+            <span aria-hidden="true">&larr;</span> Back
+        </a>
+
+        <!-- Header Title Banner -->
+        <div class="w-full border-2 border-cardBorder rounded-2xl sm:rounded-3xl py-4 sm:py-6 px-4 text-center bg-cardBg/30 backdrop-blur-sm shadow-xl">
+            <h1 class="text-2xl sm:text-4xl font-extrabold tracking-wider text-white uppercase drop-shadow-sm">
+                PRACTICE BY FORM...
+            </h1>
+        </div>
+
+        <!-- Main Question Container Card -->
+        <div id="quizContainer" class="w-full border-2 border-cardBorder rounded-2xl sm:rounded-3xl bg-cardBg p-5 sm:p-8 flex flex-col space-y-6 shadow-2xl relative overflow-hidden transition-all duration-300">
+            
+            <!-- Question Title -->
+            <div class="text-center">
+                <h2 class="text-2xl sm:text-3xl font-bold text-white tracking-wide inline-block relative pb-1">
+                    Complete the senteneses
+                    <div class="w-3/4 bg-gray-500/50 mx-auto mt-2"></div>
+                </h2>
+            </div>
+
+            <!-- Question Sentence Box -->
+            <div class="w-full bg-pillBg border border-gray-800/80 rounded-2xl sm:rounded-3xl py-5 px-4 sm:px-8 text-center shadow-inner">
+                <p id="sentenceText" class="text-xl sm:text-3xl font-extrabold text-white leading-relaxed tracking-wide">
+                    <!-- Dynamic Question Text -->
+                    1. The boy did not do ________ homework.
+                </p>
+            </div>
+
+            <!-- Choose Instructions -->
+            <div class="space-y-2">
+                <p class="text-lg sm:text-xl font-semibold text-gray-200 tracking-wide">
+                    Choose the correct answer.........
+                </p>
+                <div class="w-full  bg-gray-600/40"></div>
+            </div>
+
+            <!-- Options List Container -->
+            <div class="w-full border-2 border-cardBorder/80 rounded-2xl bg-[#102428] p-4 sm:p-5">
+                <div id="optionsGroup" class="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 items-center">
+                    <!-- Dynamic Option Items -->
+                </div>
+            </div>
+
+            <!-- Feedback Message Banner -->
+            <div id="feedbackBanner" class="hidden text-center py-2 px-4 rounded-xl font-bold text-lg transition-all duration-300"></div>
+
+            <!-- Bottom Controls / Progress Bar -->
+            <div class="pt-2 flex items-center justify-between border-t border-cardBorder/40 text-xs sm:text-sm text-gray-300">
+                <div class="flex items-center space-x-2">
+                    <span>Question</span>
+                    <span id="currentQuestionNum" class="font-bold text-teal-300">1</span>
+                    <span>of</span>
+                    <span id="totalQuestionsNum" class="font-bold">5</span>
+                </div>
+                
+                <button id="nextBtn" onclick="nextQuestion()" class="hidden bg-emerald-500 hover:bg-emerald-600 text-white font-bold px-6 py-2 rounded-xl transition-all shadow-md active:scale-95">
+                    Next Question &rarr;
+                </button>
+            </div>
+
+        </div>
+
+        <!-- Completion Screen Container (Hidden by default) -->
+        <div id="completionScreen" class="hidden w-full border-2 border-cardBorder rounded-2xl sm:rounded-3xl bg-cardBg p-8 text-center space-y-6 shadow-2xl">
+            <div class="text-5xl">🎉</div>
+            <h2 class="text-3xl sm:text-4xl font-extrabold text-white">Quiz Completed!</h2>
+            <p class="text-gray-300 text-lg">You scored <span id="finalScore" class="text-emerald-400 font-bold text-2xl">0</span> out of <span id="maxScore" class="font-bold text-2xl">5</span>!</p>
+            <div class="pt-4 flex justify-center space-x-4">
+                <button onclick="resetQuiz()" class="bg-btnBack hover:bg-emerald-600 text-white font-bold px-8 py-3 rounded-2xl text-lg shadow-lg transition-all active:scale-95">
+                    Try Again
+                </button>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="w-full py-4 text-center text-xs text-gray-500 border-t border-gray-900/80">
+        &copy; 2026 RT Learning. All Rights Reserved.
+    </footer>
+
+    <script>
+        // Quiz Questions Data Structure
+        const questions = [
+            {
+                id: 1,
+                sentence: "1. The boy did not do ________ homework.",
+                options: [
+                    { label: "A. Their", value: "Their", correct: false },
+                    { label: "B. They're", value: "They're", correct: false },
+                    { label: "C. His", value: "His", correct: true }
+                ]
+            },
+            {
+                id: 2,
+                sentence: "2. ________ going to the library together this afternoon.",
+                options: [
+                    { label: "A. Their", value: "Their", correct: false },
+                    { label: "B. They're", value: "They're", correct: true },
+                    { label: "C. There", value: "There", correct: false }
+                ]
+            },
+            {
+                id: 3,
+                sentence: "3. Please place the books over ________ on the table.",
+                options: [
+                    { label: "A. Their", value: "Their", correct: false },
+                    { label: "B. They're", value: "They're", correct: false },
+                    { label: "C. There", value: "There", correct: true }
+                ]
+            },
+            {
+                id: 4,
+                sentence: "4. The students forgot ________ backpacks in the classroom.",
+                options: [
+                    { label: "A. Their", value: "Their", correct: true },
+                    { label: "B. They're", value: "They're", correct: false },
+                    { label: "C. There", value: "There", correct: false }
+                ]
+            },
+            {
+                id: 5,
+                sentence: "5. I believe ________ is a mistake in this formula.",
+                options: [
+                    { label: "A. Their", value: "Their", correct: false },
+                    { label: "B. They're", value: "They're", correct: false },
+                    { label: "C. There", value: "There", correct: true }
+                ]
+            }
+        ];
+
+        let currentIndex = 0;
+        let score = 0;
+        let answered = false;
+
+        // Initialize UI Elements
+        const sentenceText = document.getElementById('sentenceText');
+        const optionsGroup = document.getElementById('optionsGroup');
+        const scoreDisplay = document.getElementById('scoreDisplay');
+        const currentQuestionNum = document.getElementById('currentQuestionNum');
+        const totalQuestionsNum = document.getElementById('totalQuestionsNum');
+        const nextBtn = document.getElementById('nextBtn');
+        const feedbackBanner = document.getElementById('feedbackBanner');
+        const quizContainer = document.getElementById('quizContainer');
+        const completionScreen = document.getElementById('completionScreen');
+        const finalScore = document.getElementById('finalScore');
+        const maxScore = document.getElementById('maxScore');
+
+        totalQuestionsNum.textContent = questions.length;
+
+        // Render Question Function
+        function renderQuestion() {
+            answered = false;
+            nextBtn.classList.add('hidden');
+            feedbackBanner.classList.add('hidden');
+            feedbackBanner.className = "hidden text-center py-2 px-4 rounded-xl font-bold text-lg transition-all duration-300";
+
+            const q = questions[currentIndex];
+            sentenceText.textContent = q.sentence;
+            currentQuestionNum.textContent = currentIndex + 1;
+
+            optionsGroup.innerHTML = '';
+
+            q.options.forEach((opt, idx) => {
+                const optWrapper = document.createElement('label');
+                optWrapper.className = 'flex items-center space-x-3 cursor-pointer p-2 sm:p-3 rounded-xl transition-all duration-200 hover:bg-white/5 border border-transparent';
+                optWrapper.id = `option-label-${idx}`;
+
+                optWrapper.innerHTML = `
+                    <input type="radio" name="quizOption" value="${opt.value}" class="custom-radio" onchange="handleSelect(${idx})">
+                    <span class="text-xl sm:text-2xl font-bold text-white tracking-wide">${opt.label}</span>
+                `;
+
+                optionsGroup.appendChild(optWrapper);
+            });
+        }
+
+        // Handle Option Selection
+        function handleSelect(selectedIndex) {
+            if (answered) return;
+            answered = true;
+
+            const q = questions[currentIndex];
+            const selectedOpt = q.options[selectedIndex];
+            const radios = document.querySelectorAll('input[name="quizOption"]');
+            
+            // Disable inputs after choice
+            radios.forEach(r => r.disabled = true);
+
+            const selectedLabel = document.getElementById(`option-label-${selectedIndex}`);
+
+            if (selectedOpt.correct) {
+                score++;
+                scoreDisplay.textContent = score;
+                selectedLabel.classList.add('bg-emerald-900/60', 'border-emerald-500');
+                
+                feedbackBanner.textContent = "✨ Correct Answer! Excellent job.";
+                feedbackBanner.classList.remove('hidden');
+                feedbackBanner.classList.add('bg-emerald-500/20', 'text-emerald-300', 'border', 'border-emerald-500/40');
+            } else {
+                selectedLabel.classList.add('bg-rose-900/60', 'border-rose-500');
+                
+                // Highlight correct option
+                const correctIdx = q.options.findIndex(o => o.correct);
+                const correctLabel = document.getElementById(`option-label-${correctIdx}`);
+                correctLabel.classList.add('bg-emerald-900/40', 'border-emerald-500/60');
+
+                feedbackBanner.textContent = `❌ Incorrect. The correct answer was "${q.options[correctIdx].label}".`;
+                feedbackBanner.classList.remove('hidden');
+                feedbackBanner.classList.add('bg-rose-500/20', 'text-rose-300', 'border', 'border-rose-500/40');
+            }
+
+            // Show Next Button or Finish
+            if (currentIndex < questions.length - 1) {
+                nextBtn.classList.remove('hidden');
+            } else {
+                setTimeout(showCompletion, 1200);
+            }
+        }
+
+        // Next Question Handler
+        function nextQuestion() {
+            if (currentIndex < questions.length - 1) {
+                currentIndex++;
+                renderQuestion();
+            }
+        }
+
+        // Back / Previous Question Handler
+        function prevQuestion() {
+            if (currentIndex > 0) {
+                currentIndex--;
+                renderQuestion();
+            }
+        }
+
+        // Show Final Completion Screen
+        function showCompletion() {
+            quizContainer.classList.add('hidden');
+            completionScreen.classList.remove('hidden');
+            finalScore.textContent = score;
+            maxScore.textContent = questions.length;
+
+            // Trigger Victory Confetti
+            if (score > (questions.length / 2)) {
+                confetti({
+                    particleCount: 100,
+                    spread: 70,
+                    origin: { y: 0.6 }
+                });
+            }
+        }
+
+        // Reset Quiz State
+        function resetQuiz() {
+            currentIndex = 0;
+            score = 0;
+            scoreDisplay.textContent = "0";
+            completionScreen.classList.add('hidden');
+            quizContainer.classList.remove('hidden');
+            renderQuestion();
+        }
+
+        // Start Quiz on load
+        window.onload = function() {
+            renderQuestion();
+        }
+    </script>
+</body>
+</html>

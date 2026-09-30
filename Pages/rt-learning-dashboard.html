@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>RT Learning — Dashboard</title>
+  <script>(function () { try { if ((localStorage.getItem("rtlTheme") || "dark") === "light") { document.documentElement.classList.add("light") } } catch (e) { } })();</script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="../css/theme.css">
+</head>
+
+<body
+  class="min-h-screen bg-[rgb(12,14,23)] text-slate-200 font-sans pb-12 antialiased selection:bg-indigo-500 selection:text-white">
+
+  <!-- Navbar -->
+  <header class="w-full bg-[#171b26] border-b border-[#242838] sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+
+      <div class="flex items-center justify-between">
+
+        <div class="flex items-center gap-3">
+          <img
+            src="https://img.magnific.com/premium-vector/rtl-logo-rtl-letter-rtl-letter-logo-design-initials-rtl-logo-linked-with-circle-uppercase-monogram-logo-rtl-typography-technology-business-real-estate-brand_229120-67750.jpg?semt=ais_hybrid&w=740&q=80"
+            alt="RT Learning Logo"
+            class="w-10 h-10 sm:w-11 sm:h-11 rounded-full object-cover ring-2 ring-indigo-500/20">
+
+          <span class="text-lg sm:text-xl font-bold text-white tracking-tight">
+            RT Learning
+          </span>
+        </div>
+
+        <nav class="hidden md:flex items-center gap-2 lg:gap-4">
+          <a href="../index.html"
+            class="bg-[#817dff] text-black px-4 py-2 rounded-lg font-semibold hover:bg-[#6c67f0] transition text-sm hover:text-white">
+            Dashboard
+          </a>
+          <a href="./My course/My course.html"
+            class="text-gray-400 hover:text-white px-3 py-2 rounded-lg hover:bg-[#242838] transition text-sm">
+            My Course
+          </a>
+          <a href="./Practice%20Test/practice-test.html"
+            class="text-gray-400 hover:text-white px-3 py-2 rounded-lg hover:bg-[#242838] transition text-sm">
+            Practice Tests
+          </a>
+          <a href="./Profile.html"
+            class="text-gray-400 hover:text-white px-3 py-2 rounded-lg hover:bg-[#242838] transition text-sm">
+            Profile
+          </a>
+          <a href="./Contact.html"
+            class="text-gray-400 hover:text-white px-3 py-2 rounded-lg hover:bg-[#242838] transition text-sm">
+            Contact Us
+          </a>
+          <a href="./Logout.html"
+            class="text-gray-400 hover:text-white px-3 py-2 rounded-lg hover:bg-[#242838] transition text-sm flex items-center gap-1.5">
+            <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M15.75 9V5.25A2.25 2.25 0 0 0 13.5 3h-6a2.25 2.25 0 0 0-2.25 2.25v13.5A2.25 2.25 0 0 0 7.5 21h6a2.25 2.25 0 0 0 2.25-2.25V15m3 0 3-3m0 0-3-3m3 3H9" />
+            </svg>
+            Logout
+          </a>
+        </nav>
+
+        <button class="md:hidden text-gray-300 hover:text-white p-2 rounded-lg focus:outline-none focus:bg-[#242838]"
+          onclick="document.getElementById('mobile-menu').classList.toggle('hidden')" aria-label="Open menu">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+
+      </div>
+
+      <nav id="mobile-menu" class="hidden md:hidden mt-4 pt-4 border-t border-[#242838]">
+        <div class="flex flex-col gap-1">
+          <a href="../index.html"
+            class="bg-[#817dff] text-black px-4 py-2.5 rounded-lg font-semibold text-center hover:bg-[#6c67f0] transition">
+            Dashboard
+          </a>
+          <a href="./My course/My course.html"
+            class="text-gray-300 hover:text-white px-4 py-2.5 rounded-lg hover:bg-[#242838] transition">
+            My Course
+          </a>
+          <a href="./Practice%20Test/practice-test.html"
+            class="text-gray-300 hover:text-white px-4 py-2.5 rounded-lg hover:bg-[#242838] transition">
+            Practice Tests
+          </a>
+          <a href="./Profile.html"
+            class="text-gray-300 hover:text-white px-4 py-2.5 rounded-lg hover:bg-[#242838] transition">
+            Profile
+          </a>
+          <a href="./Contact.html"
+            class="text-gray-300 hover:text-white px-4 py-2.5 rounded-lg hover:bg-[#242838] transition">
+            Contact Us
+          </a>
+          <a href="./Logout.html"
+            class="text-gray-300 hover:text-white px-4 py-2.5 rounded-lg hover:bg-[#242838] transition flex items-center gap-2">
+            <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M15.75 9V5.25A2.25 2.25 0 0 0 13.5 3h-6a2.25 2.25 0 0 0-2.25 2.25v13.5A2.25 2.25 0 0 0 7.5 21h6a2.25 2.25 0 0 0 2.25-2.25V15m3 0 3-3m0 0-3-3m3 3H9" />
+            </svg>
+            Logout
+          </a>
+        </div>
+      </nav>
+
+    </div>
+  </header>
+
+  <div class="max-w-5xl mx-auto p-6">
+
+    <!-- Search bar -->
+    <div class="flex gap-4 mb-8">
+      <div class="flex-1 flex items-center gap-3 bg-white/5 rounded-xl px-4 py-3">
+        <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <circle cx="11" cy="11" r="7" />
+          <path d="m20 20-3.5-3.5" />
+        </svg>
+        <span class="text-sm text-gray-400">Search lessons, grammar rules, idioms...</span>
+      </div>
+      <a href="../index.html"
+        class="flex items-center gap-2 bg-white/5 px-5 py-3 rounded-full text-sm font-medium hover:bg-white/10 transition">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path d="M19 12H5m0 0 7 7m-7-7 7-7" />
+        </svg>
+        Back
+      </a>
+    </div>
+
+    <!-- Unit 1 -->
+    <div class="bg-white/3 rounded-2xl p-6 mb-6">
+      <p class="text-xs font-bold tracking-wide">
+        <span class="text-indigo-400">ACTIVE COURSE</span>
+        <span class="text-gray-500 ml-3">B2 WORKPLACE FOCUS</span>
+      </p>
+      <h2 class="text-2xl font-semibold my-3"><a href="./My course/Business English .course/business-communication.html" class="hover:text-indigo-400 transition-colors">Unit 1: Business Communication</a></h2>
+      <div class="bg-white/5 rounded-xl px-5 py-4 flex justify-between items-center mb-5">
+        <div>
+          <p class="text-xs text-gray-400 mb-1">Up Next</p>
+          <p class="font-semibold flex items-center gap-2">
+            <svg class="w-5 h-5 text-indigo-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <circle cx="12" cy="12" r="10" />
+              <path d="m10 8 6 4-6 4Z" />
+            </svg>
+            Introducing Yourself Professionally
+          </p>
+        </div>
+        <span class="text-xs bg-white/10 px-3 py-1 rounded-full text-gray-300">5 min</span>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+        <div class="bg-white/5 rounded-2xl p-5">
+          <div class="flex justify-between items-center mb-3">
+            <div class="w-9 h-9 rounded-lg bg-white/5 flex items-center justify-center">
+              <svg class="w-5 h-5 text-blue-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path
+                  d="M3 15v-2a9 9 0 0 1 18 0v2M3 15a2 2 0 0 0 2 2h1v-6H5a2 2 0 0 0-2 2Zm18 0a2 2 0 0 1-2 2h-1v-6h1a2 2 0 0 1 2 2Z" />
+              </svg>
+            </div>
+            <span class="text-xs font-medium text-emerald-400">+15 XP</span>
+          </div>
+          <p class="font-semibold">SpeedListening</p>
+          <p class="text-sm text-gray-400">30 min rapid audio</p>
+        </div>
+        <div class="bg-white/5 rounded-2xl p-5">
+          <div class="flex justify-between items-center mb-3">
+            <div class="w-9 h-9 rounded-lg bg-white/5 flex items-center justify-center">
+              <svg class="w-5 h-5 text-orange-400" fill="none" stroke="currentColor" stroke-width="2"
+                viewBox="0 0 24 24">
+                <path d="M4 6h16M4 12h10M4 18h7" />
+                <circle cx="18" cy="12" r="2" />
+              </svg>
+            </div>
+            <span class="text-xs font-medium text-emerald-400">+20 XP</span>
+          </div>
+          <p class="font-semibold">Grammar Sprint</p>
+          <p class="text-sm text-gray-400">10 tense queries</p>
+        </div>
+        <div class="bg-white/5 rounded-2xl p-5">
+          <div class="flex justify-between items-center mb-3">
+            <div class="w-9 h-9 rounded-lg bg-white/5 flex items-center justify-center">
+              <svg class="w-5 h-5 text-emerald-400" fill="none" stroke="currentColor" stroke-width="2"
+                viewBox="0 0 24 24">
+                <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3Z" />
+                <path d="M19 10v2a7 7 0 0 1-14 0v-2M12 19v4" />
+              </svg>
+            </div>
+            <span class="text-xs font-medium text-emerald-400">+25 XP</span>
+          </div>
+          <p class="font-semibold">AI Speech Coach</p>
+          <p class="text-sm text-gray-400">Phoneme feedback</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Unit 2 -->
+    <div class="bg-white/3 rounded-2xl p-6 mb-6">
+      <p class="text-xs font-bold tracking-wide">
+        <span class="text-indigo-400">ACTIVE COURSE</span>
+        <span class="text-gray-500 ml-3">B2 WORKPLACE FOCUS</span>
+      </p>
+      <h2 class="text-2xl font-semibold my-3"><a href="./My course/Business English .course/business-presentation.html" class="hover:text-indigo-400 transition-colors">Unit 2: Business Presentation</a></h2>
+      <div class="bg-white/5 rounded-xl px-5 py-4 flex justify-between items-center mb-5">
+        <div>
+          <p class="text-xs text-gray-400 mb-1">Up Next</p>
+          <p class="font-semibold flex items-center gap-2">
+            <svg class="w-5 h-5 text-indigo-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <circle cx="12" cy="12" r="10" />
+              <path d="m10 8 6 4-6 4Z" />
+            </svg>
+            Giving a Clear Presentation
+          </p>
+        </div>
+        <span class="text-xs bg-white/10 px-3 py-1 rounded-full text-gray-300">5 min</span>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+        <div class="bg-white/5 rounded-2xl p-5">
+          <div class="flex justify-between items-center mb-3">
+            <div class="w-9 h-9 rounded-lg bg-white/5 flex items-center justify-center">
+              <svg class="w-5 h-5 text-blue-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path
+                  d="M3 15v-2a9 9 0 0 1 18 0v2M3 15a2 2 0 0 0 2 2h1v-6H5a2 2 0 0 0-2 2Zm18 0a2 2 0 0 1-2 2h-1v-6h1a2 2 0 0 1 2 2Z" />
+              </svg>
+            </div>
+            <span class="text-xs font-medium text-emerald-400">+15 XP</span>
+          </div>
+          <p class="font-semibold">SpeedListening</p>
+          <p class="text-sm text-gray-400">1 h 30 min rapid audio</p>
+        </div>
+        <div class="bg-white/5 rounded-2xl p-5">
+          <div class="flex justify-between items-center mb-3">
+            <div class="w-9 h-9 rounded-lg bg-white/5 flex items-center justify-center">
+              <svg class="w-5 h-5 text-orange-400" fill="none" stroke="currentColor" stroke-width="2"
+                viewBox="0 0 24 24">
+                <path d="M4 6h16M4 12h10M4 18h7" />
+                <circle cx="18" cy="12" r="2" />
+              </svg>
+            </div>
+            <span class="text-xs font-medium text-emerald-400">+20 XP</span>
+          </div>
+          <p class="font-semibold">Grammar Sprint</p>
+          <p class="text-sm text-gray-400">10 tense queries</p>
+        </div>
+        <div class="bg-white/5 rounded-2xl p-5">
+          <div class="flex justify-between items-center mb-3">
+            <div class="w-9 h-9 rounded-lg bg-white/5 flex items-center justify-center">
+              <svg class="w-5 h-5 text-emerald-400" fill="none" stroke="currentColor" stroke-width="2"
+                viewBox="0 0 24 24">
+                <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3Z" />
+                <path d="M19 10v2a7 7 0 0 1-14 0v-2M12 19v4" />
+              </svg>
+            </div>
+            <span class="text-xs font-medium text-emerald-400">+25 XP</span>
+          </div>
+          <p class="font-semibold">AI Speech Coach</p>
+          <p class="text-sm text-gray-400">Phoneme feedback</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Unit 3 -->
+    <div class="bg-white/3 rounded-2xl p-6 mb-6">
+      <p class="text-xs font-bold tracking-wide">
+        <span class="text-indigo-400">ACTIVE COURSE</span>
+        <span class="text-gray-500 ml-3">B2 WORKPLACE FOCUS</span>
+      </p>
+      <h2 class="text-2xl font-semibold my-3"><a href="./My course/Everyday Fluency.course/shopping-english.html" class="hover:text-indigo-400 transition-colors">Unit 3: Words and Sentences – Shopping English</a></h2>
+      <div class="bg-white/5 rounded-xl px-5 py-4 flex justify-between items-center mb-5">
+        <div>
+          <p class="text-xs text-gray-400 mb-1">Up Next</p>
+          <p class="font-semibold flex items-center gap-2">
+            <svg class="w-5 h-5 text-indigo-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <circle cx="12" cy="12" r="10" />
+              <path d="m10 8 6 4-6 4Z" />
+            </svg>
+            Shopping Conversations
+          </p>
+        </div>
+        <span class="text-xs bg-white/10 px-3 py-1 rounded-full text-gray-300">5 min</span>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+        <div class="bg-white/5 rounded-2xl p-5">
+          <div class="flex justify-between items-center mb-3">
+            <div class="w-9 h-9 rounded-lg bg-white/5 flex items-center justify-center">
+              <svg class="w-5 h-5 text-blue-400" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path
+                  d="M3 15v-2a9 9 0 0 1 18 0v2M3 15a2 2 0 0 0 2 2h1v-6H5a2 2 0 0 0-2 2Zm18 0a2 2 0 0 1-2 2h-1v-6h1a2 2 0 0 1 2 2Z" />
+              </svg>
+            </div>
+            <span class="text-xs font-medium text-emerald-400">+15 XP</span>
+          </div>
+          <p class="font-semibold">SpeedListening</p>
+          <p class="text-sm text-gray-400">1 h 30 min rapid audio</p>
+        </div>
+        <div class="bg-white/5 rounded-2xl p-5">
+          <div class="flex justify-between items-center mb-3">
+            <div class="w-9 h-9 rounded-lg bg-white/5 flex items-center justify-center">
+              <svg class="w-5 h-5 text-orange-400" fill="none" stroke="currentColor" stroke-width="2"
+                viewBox="0 0 24 24">
+                <path d="M4 6h16M4 12h10M4 18h7" />
+                <circle cx="18" cy="12" r="2" />
+              </svg>
+            </div>
+            <span class="text-xs font-medium text-emerald-400">+20 XP</span>
+          </div>
+          <p class="font-semibold">Grammar Sprint</p>
+          <p class="text-sm text-gray-400">10 tense queries</p>
+        </div>
+        <div class="bg-white/5 rounded-2xl p-5">
+          <div class="flex justify-between items-center mb-3">
+            <div class="w-9 h-9 rounded-lg bg-white/5 flex items-center justify-center">
+              <svg class="w-5 h-5 text-emerald-400" fill="none" stroke="currentColor" stroke-width="2"
+                viewBox="0 0 24 24">
+                <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3Z" />
+                <path d="M19 10v2a7 7 0 0 1-14 0v-2M12 19v4" />
+              </svg>
+            </div>
+            <span class="text-xs font-medium text-emerald-400">+25 XP</span>
+          </div>
+          <p class="font-semibold">AI Speech Coach</p>
+          <p class="text-sm text-gray-400">Phoneme feedback</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="../js/Theme.js"></script>
+</body>
+
+</html>

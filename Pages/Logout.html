@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RT Learning - Logged Out</title>
+    <script>(function () { try { if ((localStorage.getItem("rtlTheme") || "dark") === "light") { document.documentElement.classList.add("light") } } catch (e) { } })();</script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="../css/output.css">
+</head>
+
+<body
+    class="min-h-screen flex items-center justify-center p-4 sm:p-6 md:p-8 text-slate-100 font-sans antialiased [background:radial-gradient(circle_at_15%_20%,#26305a_0%,transparent_45%),radial-gradient(circle_at_85%_80%,#263a5a_0%,transparent_45%),#0d1424]">
+
+    <div
+        class="w-full max-w-md rounded-3xl border border-[#2a3454] p-7 sm:p-9 bg-linear-to-b from-[#141a2e] to-[#0f1424] shadow-[0_40px_80px_rgba(0,0,0,0.45)] text-center">
+
+        <!-- Icon -->
+        <div
+            class="mx-auto w-16 h-16 rounded-2xl bg-[#111528] border border-[#2a3454] flex items-center justify-center mb-5">
+            <svg class="w-8 h-8 text-[#817dff]" fill="none" stroke="currentColor" stroke-width="1.8"
+                viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M15.75 9V5.25A2.25 2.25 0 0 0 13.5 3h-6a2.25 2.25 0 0 0-2.25 2.25v13.5A2.25 2.25 0 0 0 7.5 21h6a2.25 2.25 0 0 0 2.25-2.25V15m3 0 3-3m0 0-3-3m3 3H9" />
+            </svg>
+        </div>
+
+        <h1 class="text-xl sm:text-2xl font-bold text-white">You've been logged out</h1>
+        <p class="text-sm text-[#9aa3bf] mt-2">
+            Your session has been safely ended.<br>
+            Great work — see you at your next lesson, Sora! 👋
+        </p>
+
+        <!-- Streak reminder -->
+        <div
+            class="mt-6 rounded-2xl bg-[#1c2540] border border-[#2a3454] px-4 py-3.5 text-xs sm:text-[13px] text-[#9aa3bf] flex items-center justify-center gap-2">
+            <span class="text-base">🔥</span>
+            <span>Keep your <span class="font-bold text-amber-400">14-day streak</span> alive — come back today!</span>
+        </div>
+
+        <!-- CTA -->
+        <a href="Login.html"
+            class="block w-full mt-6 py-3.5 rounded-2xl text-white text-sm md:text-[15px] font-semibold hover:brightness-110 transition bg-linear-to-b from-[#7b7ff5] to-[#6c6ef0] hover:-translate-y-0.5">
+            Sign in again
+        </a>
+
+        <p class="text-[11px] text-[#9aa3bf] mt-4">
+            Redirecting to login in <span id="countdown" class="font-bold text-slate-200">5</span>s…
+        </p>
+    </div>
+
+    <script>
+        // Clear any locally stored session data
+        try {
+            localStorage.clear();
+            sessionStorage.clear();
+            document.cookie.split(';').forEach(function (c) {
+                document.cookie = c.trim().split('=')[0] +
+                    '=;expires=Thu, 01 Jan 1970 00:00:00 UTC;path=/';
+            });
+        } catch (e) { /* ignore storage errors */ }
+
+        // Auto-redirect to the login page
+        (function () {
+            var seconds = 5;
+            var el = document.getElementById('countdown');
+            var timer = setInterval(function () {
+                seconds--;
+                if (seconds <= 0) {
+                    clearInterval(timer);
+                    window.location.href = 'Login.html';
+                } else if (el) {
+                    el.textContent = seconds;
+                }
+            }, 1000);
+        })();
+    </script>
+
+    <script src="../js/Theme.js"></script>
+</body>
+
+</html>

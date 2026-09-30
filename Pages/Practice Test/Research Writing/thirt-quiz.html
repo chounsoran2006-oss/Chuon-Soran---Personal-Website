@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RT Learning - Research Writing & Citations</title>
+    <script src="../../../js/PracticeNav.js" defer></script>
+    <script src="../../../js/Theme.js" defer></script>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome Icons CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        brandBg: '#0b0e17',
+                        brandNavBg: '#0f121d',
+                        brandCardBg: '#131927',
+                        moduleCardBg: '#072023',
+                        moduleCardHover: '#0a2a2e',
+                        accentEmerald: '#10b981',
+                        accentEmeraldHover: '#059669',
+                        accentIndigo: '#6366f1',
+                        accentIndigoHover: '#4f46e5',
+                        tealBadgeBg: '#052928',
+                        tealBadgeText: '#2dd4bf',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0b0e17;
+            color: #f3f4f6;
+        }
+
+        /* Custom scrollbar styling for sleek dark look */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #0b0e17;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #1e2638;
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #2b364e;
+        }
+    </style>
+</head>
+
+<body class="bg-brandBg text-gray-200 min-h-screen pb-20 antialiased selection:bg-accentEmerald selection:text-white">
+
+    <!-- Top Navigation Bar -->
+        <header class="w-full bg-[#171b26] border-b border-[#242838] sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+
+            <div class="flex items-center justify-between">
+
+                <div class="flex items-center gap-3">
+                    <img src="https://img.magnific.com/premium-vector/rtl-logo-rtl-letter-rtl-letter-logo-design-initials-rtl-logo-linked-with-circle-uppercase-monogram-logo-rtl-typography-technology-business-real-estate-brand_229120-67750.jpg?semt=ais_hybrid&w=740&q=80"
+                        alt="RT Learning Logo"
+                        class="w-10 h-10 sm:w-11 sm:h-11 rounded-full object-cover ring-2 ring-indigo-500/20">
+
+                    <span class="text-lg sm:text-xl font-bold text-white tracking-tight">
+                        RT Learning
+                    </span>
+                </div>
+
+                <nav class="hidden md:flex items-center gap-2 lg:gap-4">
+                    <a href="/index.html"
+                        class="text-gray-400 hover:text-white px-3 py-2 rounded-lg hover:bg-[#242838] transition text-sm">
+                        Dashboard
+                    </a>
+                    <a href="/Pages/My course/My course.html"
+                        class="text-gray-400 hover:text-white px-3 py-2 rounded-lg hover:bg-[#242838] transition text-sm">
+                        My Course
+                    </a>
+                    <a href="/Pages/Practice Test/practice-test.html"
+                        class="bg-[#817dff] text-black px-4 py-2 rounded-lg font-semibold hover:bg-[#6c67f0] transition hover:text-white">
+                        Practice Tests
+                    </a>
+                    <a href="/Pages/Profile.html"
+                        class="text-gray-400 hover:text-white px-3 py-2 rounded-lg hover:bg-[#242838] transition text-sm">
+                        Profile
+                    </a>
+                    <a href="/Pages/Contact.html"
+                        class="text-gray-400 hover:text-white px-3 py-2 rounded-lg hover:bg-[#242838] transition text-sm">
+                        Contact Us
+                    </a>
+                    <a href="/Pages/Logout.html"
+                        class="text-gray-400 hover:text-white px-3 py-2 rounded-lg hover:bg-[#242838] transition text-sm flex items-center gap-1.5">
+                        <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M15.75 9V5.25A2.25 2.25 0 0 0 13.5 3h-6a2.25 2.25 0 0 0-2.25 2.25v13.5A2.25 2.25 0 0 0 7.5 21h6a2.25 2.25 0 0 0 2.25-2.25V15m3 0 3-3m0 0-3-3m3 3H9" />
+                        </svg>
+                        Logout
+                    </a>
+                </nav>
+
+                <button
+                    class="md:hidden text-gray-300 hover:text-white p-2 rounded-lg focus:outline-none focus:bg-[#242838]"
+                    onclick="document.getElementById('mobile-menu').classList.toggle('hidden')" aria-label="Open menu">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+
+            </div>
+
+            <nav id="mobile-menu" class="hidden md:hidden mt-4 pt-4 border-t border-[#242838]">
+                <div class="flex flex-col gap-1">
+                    <a href="../index.html"
+                        class="text-gray-300 hover:text-white px-4 py-2.5 rounded-lg hover:bg-[#242838] transition">
+                        Dashboard
+                    </a>
+                    <a href="./My course/My course.html"
+                        class="text-gray-300 hover:text-white px-4 py-2.5 rounded-lg hover:bg-[#242838] transition">
+                        My Course
+                    </a>
+                    <a href="./Practice%20Test/practice-test.html"
+                        class="text-gray-300 hover:text-white px-4 py-2.5 rounded-lg hover:bg-[#242838] transition">
+                        Practice Tests
+                    </a>
+                    <a href="./Profile.html"
+                        class="bg-[#817dff] text-black px-4 py-2.5 rounded-lg font-semibold text-center hover:bg-[#6c67f0] transition">
+                        Profile
+                    </a>
+                    <a href="./Contact.html"
+                        class="text-gray-300 hover:text-white px-4 py-2.5 rounded-lg hover:bg-[#242838] transition">
+                        Contact Us
+                    </a>
+                    <a href="./Logout.html"
+                        class="text-gray-300 hover:text-white px-4 py-2.5 rounded-lg hover:bg-[#242838] transition flex items-center gap-2">
+                        <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M15.75 9V5.25A2.25 2.25 0 0 0 13.5 3h-6a2.25 2.25 0 0 0-2.25 2.25v13.5A2.25 2.25 0 0 0 7.5 21h6a2.25 2.25 0 0 0 2.25-2.25V15m3 0 3-3m0 0-3-3m3 3H9" />
+                        </svg>
+                        Logout
+                    </a>
+                </div>
+            </nav>
+
+        </div>
+    </header>
+
+
+        <section class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 my-4">
+        <div class="flex flex-col md:flex-row items-center justify-between gap-4">
+            <div class="relative w-full md:max-w-xl">
+                <div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-400">
+                    <i class="fa-solid fa-magnifying-glass text-sm"></i>
+                </div>
+                <input type="text" id="searchInput" placeholder="Search lessons, grammar rules, idioms..."
+                    class="w-full pl-10 pr-4 py-2.5 bg-[#121625] border border-[#1e2436] rounded-xl text-sm text-slate-200 placeholder-slate-500 focus:outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500/20 focus:shadow-[0_0_20px_rgba(99,102,241,0.15)] transition-all">
+                <div id="searchResults"
+                    class="hidden absolute left-0 right-0 top-full mt-2 z-40 rounded-xl border border-[#242838] bg-[#121625] shadow-2xl overflow-hidden divide-y divide-[#1e2436]">
+                </div>
+            </div>
+
+            <div class="flex items-center justify-between md:justify-end w-full md:w-auto gap-4">
+                <div id="streakPill"
+                    class="flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#1a1f30] border border-amber-500/20 text-amber-400 text-xs font-semibold hover:bg-amber-500/10 hover:border-amber-500/40 transition cursor-default">
+                    <i class="fa-solid fa-clock-rotate-left text-amber-400"></i>
+                    <span id="streakDays">14 days</span>
+                </div>
+
+                <div class="relative">
+                    <button id="bellBtn"
+                        class="relative p-2 rounded-full text-slate-400 hover:text-white hover:bg-[#121625] hover:ring-2 hover:ring-[#242838] transition-all">
+                        <i class="fa-regular fa-bell text-lg"></i>
+                        <span id="notifDot"
+                            class="absolute top-1.5 right-1.5 w-2 h-2 bg-pink-500 rounded-full ring-2 ring-[#0c0e17] animate-pulse"></span>
+                    </button>
+                    <div id="notifPanel"
+                        class="hidden absolute right-0 top-full mt-2 z-40 w-72 rounded-xl border border-[#242838] bg-[#121625] shadow-2xl overflow-hidden">
+                        <div class="flex items-center justify-between px-4 py-3 border-b border-[#242838]">
+                            <span class="text-xs font-bold tracking-wide text-slate-300 uppercase">Notifications</span>
+                            <button id="notifClear" class="text-[11px] text-indigo-400 hover:text-indigo-300">Mark all
+                                read</button>
+                        </div>
+                        <div id="notifList" class="max-h-64 overflow-y-auto divide-y divide-[#1e2436]"></div>
+                    </div>
+                </div>
+
+                <a href="../Profile.html" title="Go to your profile"
+                    class="flex items-center gap-3 pl-2 border-l border-[#1e2436] md:border-l-0 group cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&auto=format&fit=crop&q=80"
+                        alt="Soran Avatar"
+                        class="js-user-avatar w-9 h-9 rounded-full object-cover ring-2 ring-indigo-500/40 group-hover:ring-[#817dff] transition">
+                    <div class="flex flex-col">
+                        <span class="js-user-name text-sm font-semibold text-white leading-tight">Soran</span>
+                        <span class="js-user-level text-xs text-slate-400 leading-tight">B2 - advance</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content Area -->
+    <main class="w-full max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
+        <a href="../practice-test.html" aria-label="Back to Practice Tests" class="inline-flex items-center gap-2 rounded-xl bg-[#23a075] px-5 py-2.5 text-sm font-bold text-white shadow-md transition hover:bg-[#1b8460] active:scale-95">
+            <span aria-hidden="true">&larr;</span> Back
+        </a>
+
+        <!-- Hero Section Banner (Centered) -->
+        <section class="flex flex-col items-center text-center space-y-5 pt-4">
+
+            <!-- Category Tag Pill -->
+            <div
+                class="inline-flex items-center px-4 py-1.5 rounded-md bg-tealBadgeBg border border-teal-900/60 text-tealBadgeText text-[11px] font-bold tracking-wider uppercase shadow-inner">
+                RESEARCH METHODOLOGY • Papers & Citations
+            </div>
+
+            <!-- Hero Main Title -->
+            <h1 class="text-3xl sm:text-4xl md:text-5xl font-black text-white tracking-tight max-w-3xl leading-tight">
+                Research Writing & Citations
+            </h1>
+
+            <!-- Subtitle Description -->
+            <p class="text-slate-400 text-xs sm:text-sm md:text-base leading-relaxed max-w-2xl">
+                Master literature reviews, research methodology descriptions, APA/MLA citations, and avoiding
+                plagiarism.
+            </p>
+
+            <!-- Center Badge Box -->
+            <div class="pt-2">
+                <div
+                    class="bg-[#0b2427] border border-teal-900/50 hover:border-teal-700/60 transition-all rounded-xl px-5 py-2.5 flex items-center gap-3.5 shadow-xl group">
+                    <div class="text-2xl sm:text-3xl">📚</div>
+                    <div class="text-left">
+                        <div
+                            class="text-sm sm:text-base font-extrabold text-white leading-tight group-hover:text-teal-300 transition-colors">
+                            04 Specialized Modules
+                        </div>
+                        <div class="text-[11px] font-medium text-emerald-400/90 leading-tight">
+                            Master research paper drafting
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Modules List Stack (Items 1-4) -->
+        <section class="space-y-4 pt-2">
+
+            <!-- Module Item 1 -->
+            <div
+                class="bg-moduleCardBg border border-teal-950/80 hover:border-teal-800/60 bg-linear-to-r from-[#061e21] to-[#0a272a] rounded-2xl p-4 sm:p-5 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 transition-all duration-300 shadow-lg group">
+
+                <!-- Left Details Group -->
+                <div class="flex items-center gap-4 sm:gap-5 w-full sm:w-auto">
+                    <!-- Circle Number Icon -->
+                    <div
+                        class="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-emerald-500 text-brandBg flex items-center justify-center text-xl sm:text-2xl font-black shrink-0 shadow-lg shadow-emerald-500/20 group-hover:scale-105 transition-transform">
+                        1
+                    </div>
+
+                    <!-- Text Info -->
+                    <div class="space-y-1">
+                        <div class="text-[10px] sm:text-[11px] font-bold text-emerald-400 tracking-wider uppercase">
+                            LITERATURE REVIEW • 5 Scenarios
+                        </div>
+                        <h3
+                            class="text-base sm:text-lg font-extrabold text-white group-hover:text-emerald-300 transition-colors leading-snug">
+                            Synthesizing Prior Literature
+                        </h3>
+                        <p class="text-xs text-slate-400 max-w-xl leading-relaxed">
+                            Combining multiple academic sources logically and highlighting gaps in existing research.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Right CTA Button -->
+                <div
+                    class="w-full sm:w-auto flex justify-end shrink-0 pt-2 sm:pt-0 border-t sm:border-0 border-teal-950">
+                    <a href="#"
+                        class="w-full sm:w-auto px-5 py-2.5 bg-emerald-700 hover:bg-emerald-600 active:scale-[0.98] text-white font-bold text-xs sm:text-sm rounded-lg shadow-md transition-all flex items-center justify-center gap-2">
+                        <span>Start Module</span>
+                        <i class="fa-solid fa-arrow-right text-xs"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Module Item 2 -->
+            <div
+                class="bg-moduleCardBg border border-teal-950/80 hover:border-teal-800/60 bg-linear-to-r from-[#061e21] to-[#0a272a] rounded-2xl p-4 sm:p-5 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 transition-all duration-300 shadow-lg group">
+
+                <!-- Left Details Group -->
+                <div class="flex items-center gap-4 sm:gap-5 w-full sm:w-auto">
+                    <!-- Circle Number Icon -->
+                    <div
+                        class="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-emerald-500 text-brandBg flex items-center justify-center text-xl sm:text-2xl font-black shrink-0 shadow-lg shadow-emerald-500/20 group-hover:scale-105 transition-transform">
+                        2
+                    </div>
+
+                    <!-- Text Info -->
+                    <div class="space-y-1">
+                        <div class="text-[10px] sm:text-[11px] font-bold text-emerald-400 tracking-wider uppercase">
+                            LITERATURE REVIEW • 5 Scenarios
+                        </div>
+                        <h3
+                            class="text-base sm:text-lg font-extrabold text-white group-hover:text-emerald-300 transition-colors leading-snug">
+                            Synthesizing Prior Literature
+                        </h3>
+                        <p class="text-xs text-slate-400 max-w-xl leading-relaxed">
+                            Combining multiple academic sources logically and highlighting gaps in existing research.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Right CTA Button -->
+                <div
+                    class="w-full sm:w-auto flex justify-end shrink-0 pt-2 sm:pt-0 border-t sm:border-0 border-teal-950">
+                    <a href="#"
+                        class="w-full sm:w-auto px-5 py-2.5 bg-emerald-700 hover:bg-emerald-600 active:scale-[0.98] text-white font-bold text-xs sm:text-sm rounded-lg shadow-md transition-all flex items-center justify-center gap-2">
+                        <span>Start Module</span>
+                        <i class="fa-solid fa-arrow-right text-xs"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Module Item 3 -->
+            <div
+                class="bg-moduleCardBg border border-teal-950/80 hover:border-teal-800/60 bg-linear-to-r from-[#061e21] to-[#0a272a] rounded-2xl p-4 sm:p-5 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 transition-all duration-300 shadow-lg group">
+
+                <!-- Left Details Group -->
+                <div class="flex items-center gap-4 sm:gap-5 w-full sm:w-auto">
+                    <!-- Circle Number Icon -->
+                    <div
+                        class="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-emerald-500 text-brandBg flex items-center justify-center text-xl sm:text-2xl font-black shrink-0 shadow-lg shadow-emerald-500/20 group-hover:scale-105 transition-transform">
+                        3
+                    </div>
+
+                    <!-- Text Info -->
+                    <div class="space-y-1">
+                        <div class="text-[10px] sm:text-[11px] font-bold text-emerald-400 tracking-wider uppercase">
+                            LITERATURE REVIEW • 5 Scenarios
+                        </div>
+                        <h3
+                            class="text-base sm:text-lg font-extrabold text-white group-hover:text-emerald-300 transition-colors leading-snug">
+                            Synthesizing Prior Literature
+                        </h3>
+                        <p class="text-xs text-slate-400 max-w-xl leading-relaxed">
+                            Combining multiple academic sources logically and highlighting gaps in existing research.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Right CTA Button -->
+                <div
+                    class="w-full sm:w-auto flex justify-end shrink-0 pt-2 sm:pt-0 border-t sm:border-0 border-teal-950">
+                    <a href="#"
+                        class="w-full sm:w-auto px-5 py-2.5 bg-emerald-700 hover:bg-emerald-600 active:scale-[0.98] text-white font-bold text-xs sm:text-sm rounded-lg shadow-md transition-all flex items-center justify-center gap-2">
+                        <span>Start Module</span>
+                        <i class="fa-solid fa-arrow-right text-xs"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Module Item 4 -->
+            <div
+                class="bg-moduleCardBg border border-teal-950/80 hover:border-teal-800/60 bg-linear-to-r from-[#061e21] to-[#0a272a] rounded-2xl p-4 sm:p-5 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 transition-all duration-300 shadow-lg group">
+
+                <!-- Left Details Group -->
+                <div class="flex items-center gap-4 sm:gap-5 w-full sm:w-auto">
+                    <!-- Circle Number Icon -->
+                    <div
+                        class="w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-emerald-500 text-brandBg flex items-center justify-center text-xl sm:text-2xl font-black shrink-0 shadow-lg shadow-emerald-500/20 group-hover:scale-105 transition-transform">
+                        4
+                    </div>
+
+                    <!-- Text Info -->
+                    <div class="space-y-1">
+                        <div class="text-[10px] sm:text-[11px] font-bold text-emerald-400 tracking-wider uppercase">
+                            LITERATURE REVIEW • 5 Scenarios
+                        </div>
+                        <h3
+                            class="text-base sm:text-lg font-extrabold text-white group-hover:text-emerald-300 transition-colors leading-snug">
+                            Synthesizing Prior Literature
+                        </h3>
+                        <p class="text-xs text-slate-400 max-w-xl leading-relaxed">
+                            Combining multiple academic sources logically and highlighting gaps in existing research.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Right CTA Button -->
+                <div
+                    class="w-full sm:w-auto flex justify-end shrink-0 pt-2 sm:pt-0 border-t sm:border-0 border-teal-950">
+                    <a href="#"
+                        class="w-full sm:w-auto px-5 py-2.5 bg-emerald-700 hover:bg-emerald-600 active:scale-[0.98] text-white font-bold text-xs sm:text-sm rounded-lg shadow-md transition-all flex items-center justify-center gap-2">
+                        <span>Start Module</span>
+                        <i class="fa-solid fa-arrow-right text-xs"></i>
+                    </a>
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+
+    <script>
+        // Toggle Mobile Navigation Menu
+        document.addEventListener('DOMContentLoaded', () => {
+            const mobileBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            if (mobileBtn && mobileMenu) {
+                mobileBtn.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('hidden');
+                    mobileMenu.classList.toggle('flex');
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>

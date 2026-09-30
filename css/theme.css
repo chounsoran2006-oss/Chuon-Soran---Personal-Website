@@ -1,0 +1,373 @@
+/* ============================================================
+   RT Learning — Light theme overrides
+   Applied when <html> has the "light" class (toggled by Theme.js).
+   Unlayered CSS, so it wins over Tailwind's layered utilities
+   (and over the Play CDN's generated styles — higher specificity).
+   ============================================================ */
+
+html.light body {
+    background: radial-gradient(circle at 15% 20%, #dbe4ff 0%, transparent 45%),
+        radial-gradient(circle at 85% 80%, #d7f2e6 0%, transparent 45%), #f3f5fa;
+    color: #1e293b;
+}
+
+/* ---------- Smooth theme crossfade ----------
+   "theme-anim" is added to <html> only while switching (see Theme.js),
+   so everyday hovers keep their fast Tailwind transitions. */
+html.theme-anim,
+html.theme-anim body,
+html.theme-anim body *:not(svg):not(path):not(canvas):not(img):not(video) {
+    transition: background-color 0.35s ease, background 0.35s ease,
+        border-color 0.35s ease, color 0.35s ease, fill 0.35s ease,
+        box-shadow 0.35s ease, outline-color 0.35s ease,
+        text-decoration-color 0.35s ease !important;
+}
+@media (prefers-reduced-motion: reduce) {
+    html.theme-anim,
+    html.theme-anim body,
+    html.theme-anim body *:not(svg):not(path):not(canvas):not(img):not(video) {
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* ---------- Surfaces ---------- */
+html.light .bg-\[\#0c0e17\] { background-color: #f3f5fa; }
+html.light .bg-\[rgb\(12\,14\,23\)\] { background-color: #f3f5fa; }
+html.light .bg-\[\#121625\] { background-color: #ffffff; }
+html.light .bg-\[\#171b26\] { background-color: #ffffff; }
+html.light .bg-\[\#171b27\] { background-color: #ffffff; }
+html.light .bg-\[\#1e2330\] { background-color: #ffffff; }
+html.light .bg-\[\#1a1b24\] { background-color: #eef1f8; }
+html.light .bg-\[\#1a1f30\] { background-color: #eef1f8; }
+html.light .bg-\[\#1a2030\] { background-color: #e6eaf3; }
+html.light .bg-\[\#1c2540\] { background-color: #ffffff; }
+html.light .bg-\[\#0b0e18\] { background-color: #ffffff; }
+html.light .bg-\[\#111528\] { background-color: #eef1f8; }
+html.light .bg-\[\#141a2e\] { background-color: #ffffff; }
+html.light .bg-\[\#0f1424\] { background-color: #ffffff; }
+html.light .bg-\[\#1d2333\] { background-color: #f1f4fa; }
+html.light .bg-\[\#1b2a35\] { background-color: #ecf7f3; }
+html.light .bg-\[\#1e233d\] { background-color: #e6eaf3; }
+html.light .bg-\[\#1e2436\] { background-color: #e6eaf3; }
+html.light .bg-\[\#252c3d\] { background-color: #e6eaf3; }
+html.light .bg-\[\#12151e\] { background-color: #e6eaf3; }
+html.light .bg-\[\#1a2540\] { background-color: #e8edfb; }
+html.light .bg-\[\#1a2a2c\] { background-color: #ffffff; }
+html.light .bg-\[\#0d221c\] { background-color: #e9f9f1; }
+html.light .bg-\[\#22101a\] { background-color: #fdeef2; }
+/* previously missing: */
+html.light .bg-\[\#1f2c33\] { background-color: #e2e8f0; }
+html.light .bg-\[\#212b4d\] { background-color: #e0e7f5; }
+html.light .bg-\[\#222941\] { background-color: #e6eaf3; }
+html.light .bg-\[\#252c40\] { background-color: #dde3ef; }
+html.light .bg-\[\#10b981\] { background-color: #10b981; } /* keep accent buttons green */
+
+/* ---------- Hover states ---------- */
+html.light .hover\:bg-\[\#242838\]:hover { background-color: rgba(15, 23, 42, 0.06); }
+html.light .hover\:bg-\[\#212b4d\]:hover { background-color: #e0e7f5; }
+html.light .hover\:bg-\[\#222941\]:hover { background-color: #e6eaf3; }
+html.light .hover\:bg-\[\#252c40\]:hover { background-color: #dde3ef; }
+html.light .hover\:bg-\[\#1f2c33\]:hover { background-color: #e2e8f0; }
+html.light .hover\:bg-\[\#1a2030\]:hover { background-color: #dbe1ee; }
+html.light .hover\:border-\[\#3d4a75\]:hover { border-color: #a5b4fc; }
+html.light .hover\:bg-\[\#121625\]:hover { background-color: #eef1f8; }
+html.light .hover\:bg-\[\#171b26\]:hover { background-color: #f1f4fa; }
+html.light .hover\:bg-\[\#1e2330\]:hover { background-color: #f1f4fa; }
+
+/* ---------- Borders ---------- */
+html.light .border-\[\#242838\] { border-color: #e2e8f0; }
+html.light .border-\[\#1e2436\] { border-color: #e2e8f0; }
+html.light .border-\[\#2a3454\] { border-color: #d7deec; }
+html.light .border-\[\#2d354a\] { border-color: #d7deec; }
+html.light .border-\[\#1e488f\] { border-color: #bcd3f7; }
+html.light .border-\[\#121625\] { border-color: #e2e8f0; }
+html.light .divide-\[\#1e2436\] > :not([hidden]) ~ :not([hidden]) { border-color: #e2e8f0; }
+html.light .divide-\[\#242838\] > :not([hidden]) ~ :not([hidden]) { border-color: #e2e8f0; }
+
+/* ---------- Rings ---------- */
+html.light .ring-\[\#0c0e17\] { --tw-ring-color: #ffffff; }
+html.light .ring-\[\#121625\] { --tw-ring-color: #ffffff; }
+html.light .ring-\[\#242838\] { --tw-ring-color: #e2e8f0; }
+
+/* ---------- Text ---------- */
+html.light .text-white { color: #0f172a; }
+html.light .text-slate-100 { color: #1e293b; }
+html.light .text-slate-200 { color: #334155; }
+html.light .text-slate-300 { color: #475569; }
+html.light .text-slate-400 { color: #64748b; }
+html.light .text-slate-500 { color: #7c8aa0; }
+html.light .text-slate-600 { color: #94a3b8; }
+html.light .text-gray-300 { color: #64748b; }
+html.light .text-gray-400 { color: #64748b; }
+html.light .text-\[\#9aa3bf\] { color: #64748b; }
+html.light .login-testimonial .text-slate-200 { color: #e2e8f0; }
+html.light .login-testimonial .text-\[\#9aa3bf\] { color: #cbd5e1; }
+html.light .contact-form-card { background-color: #ffffff; }
+html.light .dashboard-hero { background-image: linear-gradient(135deg, #eef1fb 0%, #ffffff 52%, #e9f7f0 100%); }
+html.light .dashboard-hero .text-white { color: #0f172a; }
+html.light .dashboard-hero .text-slate-400 { color: #475569; }
+html.light .dashboard-hero .text-indigo-300 { color: #4338ca; }
+html.light .dashboard-hero .text-emerald-300,
+html.light .dashboard-hero .text-emerald-500\/80 { color: #047857; }
+html.light .active-course-banner { background-image: linear-gradient(90deg, #eef1fb 0%, #ffffff 52%, #e9f7f0 100%); }
+html.light .active-course-banner .text-indigo-300 { color: #4338ca; }
+html.light .active-course-banner .text-slate-400 { color: #475569; }
+html.light .active-course-banner .active-course-cta {
+    background-image: linear-gradient(90deg, #514bd2, #403bb8);
+    color: #ffffff;
+}
+html.light .hover\:text-white:hover { color: #0f172a; }
+html.light .hover\:text-slate-200:hover { color: #334155; }
+html.light .hover\:text-slate-300:hover { color: #475569; }
+html.light .hover\:text-indigo-300:hover { color: #4f46e5; }
+html.light .hover\:text-indigo-400:hover { color: #4338ca; }
+html.light .hover\:text-emerald-300:hover { color: #047857; }
+html.light .hover\:text-amber-300:hover { color: #b45309; }
+
+/* ---------- White overlays ---------- */
+html.light .bg-white\/5 { background-color: rgba(15, 23, 42, 0.04); }
+html.light .bg-white\/10 { background-color: rgba(15, 23, 42, 0.1); }
+html.light .bg-white\/20 { background-color: rgba(15, 23, 42, 0.16); }
+html.light .hover\:bg-white\/10:hover { background-color: rgba(15, 23, 42, 0.08); }
+html.light .bg-black\/40 { background-color: rgba(15, 23, 42, 0.06); }
+html.light .bg-black\/70 { background-color: rgba(15, 23, 42, 0.45); }
+
+/* ---------- Decorative gradients (dashboards/login) ---------- */
+html.light .from-\[\#1c2340\] { --tw-gradient-from: #eef1fb; }
+html.light .via-\[\#1e2330\] { --tw-gradient-via: #ffffff; }
+html.light .to-\[\#152019\] { --tw-gradient-to: #e9f7f0; }
+html.light .from-\[\#1c1f33\] { --tw-gradient-from: #eef1fb; }
+html.light .from-\[\#141a2e\] { --tw-gradient-from: #ffffff; }
+html.light .to-\[\#0f1424\] { --tw-gradient-to: #f1f4fa; }
+html.light .from-\[\#1a2540\] { --tw-gradient-from: #e8edfb; }
+html.light .via-\[\#182038\] { --tw-gradient-via: #eef1fb; }
+html.light .to-\[\#141a30\] { --tw-gradient-to: #e4ecfb; }
+html.light .from-\[\#2a3160\] { --tw-gradient-from: #e6ebff; }
+html.light .via-\[\#1c2540\] { --tw-gradient-via: #eef1fb; }
+html.light .to-\[\#101a33\] { --tw-gradient-to: #e4ecfb; }
+/* previously missing: */
+html.light .via-\[\#2a3454\] { --tw-gradient-via: #d7deec; }
+html.light .to-\[\#2a3454\] { --tw-gradient-to: #d7deec; }
+html.light .to-\[\#1e2330\] { --tw-gradient-to: #ffffff; }
+html.light .from-\[\#7b7ff5\] { --tw-gradient-from: #7b7ff5; } /* keep accent gradients vivid */
+html.light .via-\[\#817dff\] { --tw-gradient-via: #817dff; }
+html.light .to-\[\#6c67f0\] { --tw-gradient-to: #6c67f0; }
+html.light .to-\[\#6c6ef0\] { --tw-gradient-to: #6c6ef0; }
+
+/* ---------- Login body background (arbitrary gradient on <body>) ---------- */
+html.light body[class*="radial-gradient"][class*="#0d1424"] {
+    background: radial-gradient(circle at 15% 20%, #dbe4ff 0%, transparent 45%),
+        radial-gradient(circle at 85% 80%, #d7f2e6 0%, transparent 45%), #f3f5fa;
+}
+
+/* ---------- Soft shadows so cards separate nicely ---------- */
+html.light .rounded-2xl,
+html.light .rounded-3xl,
+html.light .rounded-xl {
+    box-shadow: 0 1px 3px rgba(15, 23, 42, 0.07);
+}
+
+/* ---------- Dark scrollbars -> light ---------- */
+html.light ::-webkit-scrollbar-thumb { background: #cbd5e1; }
+
+/* ---------- Misc legibility on light surfaces ---------- */
+html.light .placeholder-slate-500::placeholder { color: #94a3b8; }
+html.light .shadow-\[0_40px_80px_rgba\(0\,0\,0\,0\.45\)\],
+html.light .shadow-\[0_40px_80px_rgba\(0\,0\,0\,0\.5\)\] { box-shadow: 0 24px 60px rgba(15, 23, 42, 0.12); }
+
+/* ---------- My Course catalog ---------- */
+.course-catalog-page .course-track-filters {
+    scrollbar-width: none;
+}
+.course-catalog-page .course-track-filters::-webkit-scrollbar {
+    display: none;
+}
+html.light .course-catalog-page .course-track-filters > * {
+    background-color: #ffffff;
+    border-color: #dbe2ef;
+    color: #475569;
+    box-shadow: 0 1px 3px rgba(15, 23, 42, 0.06);
+}
+html.light .course-catalog-page .course-track-filters > a:hover {
+    background-color: #e8ecff;
+    color: #4338ca;
+}
+html.light .course-catalog-page .course-featured-card {
+    background: linear-gradient(110deg, #ffffff 0%, #f8faff 62%, #eff8f3 100%);
+    border-color: #dbe2ef;
+    box-shadow: 0 8px 24px rgba(30, 41, 59, 0.08);
+}
+html.light .course-catalog-page .course-progress-track {
+    background-color: #e2e8f0;
+}
+html.light .course-catalog-page .course-catalog-grid > div {
+    background-color: #ffffff;
+    border-color: #e2e8f0;
+    box-shadow: 0 2px 8px rgba(30, 41, 59, 0.06);
+}
+html.light .course-catalog-page .course-catalog-grid > div:hover {
+    border-color: #a5b4fc;
+    box-shadow: 0 8px 20px rgba(30, 41, 59, 0.1);
+}
+
+/* ---------- Course pages ---------- */
+html.light .course-page [class*="bg-[#0B0F19]"],
+html.light .course-page [class*="bg-[#0D1117]"],
+html.light .course-page [class*="bg-[#0d1018]"],
+html.light .course-page [class*="bg-[#111827]"],
+html.light .course-page [class*="bg-[#131927]"],
+html.light .course-page [class*="bg-[#161B22]"],
+html.light .course-page [class*="bg-gray-800"],
+html.light .course-page [class*="bg-gray-900"],
+html.light .course-page [class*="bg-neutralBg"],
+html.light .course-page [class*="bg-surfaceBg"],
+html.light .course-page [class*="bg-slate-900/"],
+html.light .course-page [class*="bg-emerald-950/"] {
+    background-color: #ffffff;
+}
+html.light .course-page [class*="bg-emerald-900/"] {
+    background-color: #ecfdf5;
+}
+html.light .course-page [class*="border-gray-800"],
+html.light .course-page [class*="border-gray-700"],
+html.light .course-page [class*="border-[#151d2e]"],
+html.light .course-page [class*="border-emerald-900"],
+html.light .course-page [class*="border-emerald-800"],
+html.light .course-page [class*="border-emerald-700"] {
+    border-color: #dbe2ef;
+}
+html.light .course-page [class*="text-gray-100"],
+html.light .course-page [class*="text-emerald-50"],
+html.light .course-page [class*="text-emerald-200"] {
+    color: #475569;
+}
+html.light .course-page [class*="text-emerald-300"],
+html.light .course-page [class*="text-emerald-400"] {
+    color: #047857;
+}
+html.light .course-page [class*="text-indigo-300"],
+html.light .course-page [class*="text-indigo-400"],
+html.light .course-page [class*="text-indigo-500"] {
+    color: #4338ca;
+}
+
+/* ---------- Follow-test module cards ---------- */
+html.light .follow-test-card {
+    background-color: #ffffff;
+    border-color: #a7f3d0;
+    box-shadow: 0 14px 32px rgba(15, 23, 42, 0.1);
+}
+html.light .follow-test-card:hover {
+    border-color: #34d399;
+    box-shadow: 0 18px 42px rgba(15, 23, 42, 0.14);
+}
+html.light .follow-test-card h2 {
+    color: #0f172a !important;
+}
+html.light .follow-test-card .follow-test-cta {
+    background-color: #047857 !important;
+    color: #ffffff !important;
+}
+html.light .follow-test-card .follow-test-cta:hover {
+    background-color: #065f46 !important;
+}
+
+/* ---------- Practice pages ---------- */
+html.light .practice-page :is(
+    [class~="bg-cardBg"],
+    [class~="bg-cardBg/30"],
+    [class~="bg-pillBg"],
+    [class~="bg-tealBadgeBg"],
+    [class~="bg-slate-900"],
+    [class~="bg-slate-900/30"],
+    [class~="bg-slate-800"],
+    [class~="bg-innerCardBg/80"],
+    [class~="bg-[#052320]"],
+    [class~="bg-[#092523]"],
+    [class~="bg-[#0a0d16]/90"],
+    [class~="bg-[#0b0f17]"],
+    [class~="bg-[#0b0f19]"],
+    [class~="bg-[#0b2427]"],
+    [class~="bg-[#102428]"],
+    [class~="bg-[#121625]"],
+    [class~="bg-[#131722]"],
+    [class~="bg-[#171b26]"],
+    [class~="bg-[#1a1f30]"]
+) {
+    background-color: #ffffff !important;
+    color: #0f172a;
+    border-color: #dbe2ef;
+}
+html.light .practice-page [class~="bg-cardBg/30"] {
+    background-color: rgba(255, 255, 255, 0.8) !important;
+}
+html.light .practice-page [class~="bg-innerCardBg/80"] {
+    background-color: #f1f4fa !important;
+    color: #334155 !important;
+    border-color: #dbe2ef !important;
+}
+html.light .practice-page .text-white {
+    color: #0f172a !important;
+}
+html.light .practice-page :is(
+    [class~="bg-accentButton"],
+    [class~="bg-accentBlue"],
+    [class~="bg-accentIndigo"],
+    [class~="bg-accentOrange"],
+    [class~="bg-accentViolet"],
+    [class~="bg-btnBack"],
+    [class~="bg-emerald-500"],
+    [class~="bg-emerald-700"],
+    [class~="bg-red-900/60"],
+    [class~="bg-[#0d7a5c]"],
+    [class~="bg-[#23a075]"],
+    [class~="bg-[#505cfd]"],
+    [class~="bg-[#5c63ed]"]
+) {
+    color: #ffffff !important;
+}
+html.light .practice-page :is(
+    [class~="border-gray-800/50"],
+    [class~="border-gray-800/60"],
+    [class~="border-gray-800/80"],
+    [class~="border-slate-700"],
+    [class~="border-slate-700/80"],
+    [class~="border-slate-800"],
+    [class~="border-slate-800/60"],
+    [class~="border-slate-800/80"]
+) {
+    border-color: #dbe2ef !important;
+}
+html.light .practice-page [class~="bg-moduleCardBg"] {
+    background-color: #ffffff !important;
+    background-image: linear-gradient(110deg, #ffffff 0%, #f8faff 65%, #eef8f3 100%) !important;
+    border-color: #dbe2ef !important;
+    box-shadow: 0 6px 18px rgba(30, 41, 59, 0.08);
+}
+html.light .practice-page [class~="bg-moduleCardBg"] h3 {
+    color: #0f172a !important;
+}
+html.light .practice-page [class~="bg-moduleCardBg"],
+html.light .practice-page [class~="bg-moduleCardBg"] h3 {
+    transition: none !important;
+}
+html.light .practice-page [class~="bg-moduleCardBg"]:hover h3 {
+    color: #047857 !important;
+}
+html.light .practice-page [class~="hover:border-teal-800/60"]:hover {
+    border-color: #a7f3d0 !important;
+}
+html.light .practice-page .text-emerald-300,
+html.light .practice-page .text-emerald-400 {
+    color: #047857 !important;
+}
+html.light .practice-page .follow-test-card h2 {
+    color: #0f172a !important;
+}
+html.light .practice-page .follow-test-card .follow-test-cta {
+    background-color: #047857 !important;
+    color: #ffffff !important;
+}
+html.light .practice-page .follow-test-card .follow-test-cta:hover {
+    background-color: #065f46 !important;
+}

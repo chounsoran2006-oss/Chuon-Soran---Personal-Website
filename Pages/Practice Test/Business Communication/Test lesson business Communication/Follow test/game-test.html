@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RT Learning - Words of Wonders</title>
+  <script src="../../../../../js/PracticeNav.js" defer></script>
+  <script src="../../../../../js/Theme.js" defer></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          },
+          colors: {
+            brandDark: '#0b0f17',
+            cardBg: '#092523',
+            cardBorder: '#149c82',
+            btnGreen: '#23a075',
+            badgeBlue: '#5c63ed',
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="bg-[#0b0f17] text-white font-sans min-h-screen flex flex-col antialiased select-none">
+
+  <header class="w-full bg-[#0b0f17] border-b border-slate-800/80 sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      
+      <div class="flex items-center space-x-3 cursor-pointer">
+        <div class="w-9 h-9 rounded-full bg-slate-900 border border-slate-700 flex items-center justify-center overflow-hidden shadow-inner">
+          <span class="text-[11px] font-black tracking-tighter bg-linear-to-r from-red-500 via-yellow-400 to-blue-500 bg-clip-text text-transparent">
+            RTL
+          </span>
+        </div>
+        <span class="text-lg font-bold tracking-tight text-white">RT Learning</span>
+      </div>
+      <nav class="hidden md:flex items-center space-x-7 text-xs font-semibold tracking-wide">
+        <a href="../../../../../index.html" class="text-slate-300 hover:text-white transition-colors">Dashboard</a>
+        <a href="../../../../My%20course/My%20course.html" class="text-slate-300 hover:text-white transition-colors">My courses</a>
+        <a href="../../../practice-test.html" class="bg-[#5c63ed] text-white px-4 py-2 rounded-xl shadow-lg shadow-indigo-500/20 hover:bg-indigo-600 transition-all duration-200">
+          Practice Tests
+        </a>
+        <a href="../../../../Profile.html" class="text-slate-300 hover:text-white transition-colors">Profile</a>
+        <a href="../../../../Contact.html" class="text-slate-300 hover:text-white transition-colors">Contact Us</a>
+      </nav>
+    </div>
+  </header>
+  <main class="grow max-w-5xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-6 space-y-6">
+
+    <a href="../start-module.html" aria-label="Back to practice options" class="inline-flex items-center gap-2 rounded-xl bg-[#23a075] px-5 py-2.5 text-sm font-bold text-white shadow-md transition hover:bg-[#1b8460] active:scale-95">
+      <span aria-hidden="true">&larr;</span> Back
+    </a>
+
+    <!-- Title Box -->
+    <div class="bg-[#092523] border-2 border-[#149c82] rounded-3xl py-5 px-6 text-center shadow-xl">
+      <h1 class="text-2xl sm:text-3xl md:text-4xl font-black text-white tracking-wider uppercase">
+        PRACTICE BY PLAY WITH GAME...
+      </h1>
+    </div>
+
+    <!-- Main Game Board Container -->
+    <div class="bg-[#092523] border-2 border-[#149c82] rounded-3xl p-6 sm:p-8 shadow-2xl relative">
+      
+      <!-- Subtitle -->
+      <div class="text-center mb-6 sm:mb-8">
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-white tracking-wide inline-block relative pb-2 border-b-2 border-slate-400/50">
+          Words of Wonders
+        </h2>
+      </div>
+
+      <!-- Game Canvas & Interactive Grid Area -->
+      <div class="flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-12 min-h-80 py-4">
+        
+        <!-- Left Side: Crossword Board Grid -->
+        <div class="relative flex min-w-0 max-w-full items-center justify-center p-3 sm:p-4 bg-slate-900/30 rounded-2xl border border-white/5 shadow-inner">
+          <div id="crossword-grid" class="grid grid-cols-7 gap-1 sm:gap-2">
+            <!-- Grid cells generated via JS to match exact layout -->
+          </div>
+        </div>
+
+        <!-- Center: Arrow -->
+        <div class="hidden lg:flex items-center justify-center text-[#d08818]">
+          <svg class="w-16 h-12 transform rotate-180" viewBox="0 0 60 30" fill="none" stroke="currentColor" stroke-width="6" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="5" y1="15" x2="55" y2="15" />
+            <polyline points="20 5 5 15 20 25" />
+          </svg>
+        </div>
+
+        <!-- Right Side: Circular Letter Wheel Game -->
+        <div class="relative flex flex-col items-center justify-center">
+          
+          <!-- Current Spelled Word Display -->
+          <div id="current-word" class="h-10 text-2xl font-black text-amber-400 tracking-widest uppercase flex items-center justify-center mb-3 min-w-30 bg-black/40 px-4 rounded-lg border border-amber-500/30">
+            <!-- Dynamically populated -->
+          </div>
+
+          <div id="letter-wheel" class="relative w-[min(72vw,18rem)] max-w-full aspect-square rounded-full bg-[#d2d5da] border-4 border-[#ca871b] shadow-2xl flex items-center justify-center overflow-hidden">
+            
+            <!-- Interactive Line Canvas -->
+            <canvas id="wheel-canvas" width="288" height="288" class="absolute inset-0 z-10 w-full h-full touch-none pointer-events-auto cursor-pointer rounded-full"></canvas>
+
+            <!-- Letter Nodes on Wheel -->
+            <!-- Letters: C, L, O, C, K, A (Forms COAL, CLOCK, CLOAK, LACK, COLA, OAK, COCK) -->
+            <div id="letters-container" class="absolute inset-0 z-20 pointer-events-none">
+              <!-- Letters inserted dynamically around the circle -->
+            </div>
+          </div>
+
+          <!-- Helper Buttons -->
+          <div class="flex items-center space-x-3 mt-4">
+            <button id="btn-shuffle" class="px-4 py-1.5 bg-slate-800 hover:bg-slate-700 text-xs font-bold rounded-lg border border-slate-600 text-slate-200 transition-all">
+              🔀 Shuffle
+            </button>
+            <button id="btn-clear" class="px-4 py-1.5 bg-red-900/60 hover:bg-red-800 text-xs font-bold rounded-lg border border-red-500/40 text-red-200 transition-all">
+              ✕ Clear
+            </button>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- Divider line -->
+      <div class="mt-8 border-t border-slate-500/30 w-full max-w-3xl mx-auto"></div>
+
+      <!-- Success Modal Toast -->
+      <div id="game-status" class="text-center mt-3 text-emerald-400 font-bold text-sm h-6"></div>
+    </div>
+
+    <!-- Bottom Games Selection Container -->
+    <div class="bg-[#092523] border-2 border-[#149c82] rounded-3xl p-4 sm:p-6 shadow-2xl">
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+        
+        <!-- Game Thumbnail 1: FUN GAMES ARENA -->
+        <button class="game-thumb-btn active ring-4 ring-emerald-400 bg-linear-to-b from-sky-400 to-blue-600 rounded-2xl p-3 flex flex-col items-center justify-center text-center shadow-lg transform transition-transform hover:scale-105 h-28 sm:h-32 relative overflow-hidden group">
+          <div class="bg-amber-400 text-red-900 font-black text-xs sm:text-sm px-2 py-0.5 rounded shadow mb-1">FUN GAMES</div>
+          <div class="text-white font-extrabold text-base sm:text-lg tracking-wider drop-shadow-md">ARENA</div>
+          <span class="absolute bottom-1 text-[10px] text-sky-100 font-semibold opacity-90">Words & Puzzles</span>
+        </button>
+
+        <!-- Game Thumbnail 2: KIDS ZONE -->
+        <button class="game-thumb-btn bg-linear-to-br from-purple-500 via-pink-500 to-yellow-400 rounded-2xl p-3 flex flex-col items-center justify-center text-center shadow-lg transform transition-transform hover:scale-105 h-28 sm:h-32 relative overflow-hidden group">
+          <div class="flex space-x-1 mb-1">
+            <span class="w-3 h-3 rounded-full bg-red-400 inline-block"></span>
+            <span class="w-3 h-3 rounded-full bg-yellow-300 inline-block"></span>
+            <span class="w-3 h-3 rounded-full bg-green-400 inline-block"></span>
+          </div>
+          <div class="bg-indigo-900 text-yellow-300 font-black text-sm sm:text-base px-3 py-1 rounded-full border border-yellow-300 shadow">
+            KIDS ZONE
+          </div>
+        </button>
+
+        <!-- Game Thumbnail 3: GRAMMAR GAMES -->
+        <button class="game-thumb-btn bg-slate-100 rounded-2xl p-3 flex flex-col items-center justify-center text-center shadow-lg transform transition-transform hover:scale-105 h-28 sm:h-32 border border-slate-300">
+          <div class="text-xs font-bold text-sky-600 mb-1 flex items-center gap-1">
+            <span class="w-2 h-2 rounded-sm bg-sky-500"></span> Gamesrest
+          </div>
+          <div class="bg-sky-700 text-white font-black text-xs sm:text-sm px-2 py-1 rounded w-full mb-1">
+            GRAMMAR GAMES
+          </div>
+          <div class="w-6 h-6 rounded-full bg-red-600 flex items-center justify-center text-white text-xs">
+            ▶
+          </div>
+        </button>
+
+        <!-- Game Thumbnail 4: Fun with Grammar -->
+        <button class="game-thumb-btn bg-white text-indigo-900 rounded-2xl p-3 flex flex-col items-center justify-center text-center shadow-lg transform transition-transform hover:scale-105 h-28 sm:h-32 border border-slate-200 relative">
+          <div class="text-blue-500 absolute top-2 left-2 text-xs">🦋</div>
+          <div class="text-blue-500 absolute top-2 right-2 text-xs">🦋</div>
+          <div class="font-serif italic font-extrabold text-xl text-indigo-800">Fun</div>
+          <div class="text-[10px] font-bold tracking-widest text-slate-500 uppercase">with</div>
+          <div class="font-extrabold text-xs sm:text-sm text-indigo-900 border-t border-indigo-200 pt-0.5">Grammar</div>
+        </button>
+
+      </div>
+    </div>
+
+  </main>
+
+  <script>
+    // Words of Wonders Crossword & Wheel Logic
+    const letters = ['O', 'C', 'K', 'A', 'L', 'C']; // 6 Wheel letters
+    
+    // Crossword Grid Layout (7x7) based on image
+    // Target Words to solve:
+    // 1. CLOAK (horizontal/vertical)
+    // 2. COAL
+    // 3. LOCK
+    // 4. LACK
+    // 5. COCK
+    const gridLayout = [
+      // row 0
+      [null, null, null, { char: 'C', id: 'w1_0' }, null, null, null],
+      // row 1
+      [null, { char: 'C', id: 'w2_0' }, { char: 'O', id: 'w2_1' }, { char: 'L', id: 'w1_1' }, { char: 'O', id: 'w3_1' }, { char: 'C', id: 'w3_2' }, { char: 'K', id: 'w3_3' }],
+      // row 2
+      [null, { char: 'O', id: 'w2_1' }, null, { char: 'O', id: 'w1_2' }, null, null, null],
+      // row 3
+      [null, { char: 'A', id: 'w2_2' }, null, { char: 'A', id: 'w1_3' }, null, { char: 'C', id: 'w4_0' }, null],
+      // row 4
+      [{ char: 'L', id: 'w5_0' }, { char: 'L', id: 'w2_3' }, { char: 'A', id: 'w5_2' }, { char: 'K', id: 'w1_4' }, { char: 'C', id: 'w5_3' }, { char: 'O', id: 'w4_1' }, null],
+      // row 5
+      [null, null, null, { char: 'C', id: 'w6_0' }, null, { char: 'C', id: 'w4_2' }, null],
+      // row 6
+      [null, null, null, { char: 'K', id: 'w6_1' }, null, { char: 'K', id: 'w4_3' }, null]
+    ];
+
+    const targetWords = {
+      'CLOAK': [ 'w1_0', 'w1_1', 'w1_2', 'w1_3', 'w1_4' ],
+      'COAL':  [ 'w2_0', 'w2_1', 'w2_2', 'w2_3' ],
+      'LOCK':  [ 'w3_0', 'w3_1', 'w3_2', 'w3_3' ],
+      'COCK':  [ 'w4_0', 'w4_1', 'w4_2', 'w4_3' ],
+      'LACK':  [ 'w5_0', 'w5_1', 'w5_2', 'w5_3' ],
+      'CK':    [ 'w6_0', 'w6_1' ]
+    };
+
+    const solvedWords = new Set();
+
+    // DOM Elements
+    const gridContainer = document.getElementById('crossword-grid');
+    const lettersContainer = document.getElementById('letters-container');
+    const currentWordEl = document.getElementById('current-word');
+    const canvas = document.getElementById('wheel-canvas');
+    const ctx = canvas.getContext('2d');
+    const statusEl = document.getElementById('game-status');
+
+    let nodePositions = [];
+    let selectedIndices = [];
+    let isDragging = false;
+    let mousePos = { x: 0, y: 0 };
+
+    function createGrid() {
+      gridContainer.innerHTML = '';
+      for (let r = 0; r < 7; r++) {
+        for (let c = 0; c < 7; c++) {
+          const item = gridLayout[r][c];
+          const cell = document.createElement('div');
+          
+          if (item) {
+            cell.className = 'w-6 h-6 sm:w-9 sm:h-9 bg-white text-slate-900 rounded-md sm:rounded-lg font-extrabold flex items-center justify-center text-sm sm:text-xl shadow-md border border-slate-300 transition-all duration-300';
+            cell.dataset.char = item.char;
+            cell.dataset.id = `${r}_${c}`;
+            // Reveal text if already solved
+            cell.innerText = cell.classList.contains('solved') ? item.char : '';
+          } else {
+            cell.className = 'w-6 h-6 sm:w-9 sm:h-9 opacity-0 pointer-events-none';
+          }
+          gridContainer.appendChild(cell);
+        }
+      }
+    }
+
+    function renderLetterWheel() {
+      lettersContainer.innerHTML = '';
+      nodePositions = [];
+      const count = letters.length;
+      const radius = 95; // Radius inside 288px canvas
+      const centerX = canvas.width / 2;
+      const centerY = canvas.height / 2;
+      letters.forEach((char, index) => {
+        const angle = (index * (2 * Math.PI / count)) - (Math.PI / 2);
+        const x = centerX + radius * Math.cos(angle);
+        const y = centerY + radius * Math.sin(angle);
+
+        nodePositions.push({ x, y, char, index });
+
+        const letterDiv = document.createElement('div');
+        letterDiv.className = 'absolute w-12 h-12 -ml-6 -mt-6 rounded-full flex items-center justify-center font-black text-2xl text-slate-900 transition-transform';
+        letterDiv.style.left = `${(x / canvas.width) * 100}%`;
+        letterDiv.style.top = `${(y / canvas.height) * 100}%`;
+        letterDiv.innerText = char;
+        lettersContainer.appendChild(letterDiv);
+      });
+    }
+
+    function drawLines() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+      if (selectedIndices.length > 0) {
+        ctx.beginPath();
+        ctx.strokeStyle = '#23a075';
+        ctx.lineWidth = 10;
+        ctx.lineCap = 'round';
+        ctx.lineJoin = 'round';
+
+        selectedIndices.forEach((idx, i) => {
+          const pos = nodePositions[idx];
+          if (i === 0) {
+            ctx.moveTo(pos.x, pos.y);
+          } else {
+            ctx.lineTo(pos.x, pos.y);
+          }
+        });
+
+        if (isDragging) {
+          ctx.lineTo(mousePos.x, mousePos.y);
+        }
+
+        ctx.stroke();
+      }
+
+      // Draw node circle highlights
+      nodePositions.forEach((pos, idx) => {
+        if (selectedIndices.includes(idx)) {
+          ctx.beginPath();
+          ctx.arc(pos.x, pos.y, 22, 0, 2 * Math.PI);
+          ctx.fillStyle = '#23a075';
+          ctx.fill();
+
+          ctx.beginPath();
+          ctx.arc(pos.x, pos.y, 22, 0, 2 * Math.PI);
+          ctx.strokeStyle = '#ffffff';
+          ctx.lineWidth = 3;
+          ctx.stroke();
+        }
+      });
+    }
+
+    // Helper to get Canvas Relative Coordinates
+    function getCanvasPos(e) {
+      const rect = canvas.getBoundingClientRect();
+      const clientX = e.touches ? e.touches[0].clientX : e.clientX;
+      const clientY = e.touches ? e.touches[0].clientY : e.clientY;
+      return {
+        x: (clientX - rect.left) * (canvas.width / rect.width),
+        y: (clientY - rect.top) * (canvas.height / rect.height)
+      };
+    }
+
+    function checkNodeHit(pos) {
+      return nodePositions.findIndex(node => {
+        const dx = node.x - pos.x;
+        const dy = node.y - pos.y;
+        return Math.sqrt(dx * dx + dy * dy) < 28;
+      });
+    }
+
+    function updateWordDisplay() {
+      const word = selectedIndices.map(i => letters[i]).join('');
+      currentWordEl.innerText = word;
+    }
+
+    function handleStart(e) {
+      e.preventDefault();
+      const pos = getCanvasPos(e);
+      const hitIndex = checkNodeHit(pos);
+      if (hitIndex !== -1) {
+        isDragging = true;
+        selectedIndices = [hitIndex];
+        mousePos = pos;
+        updateWordDisplay();
+        drawLines();
+      }
+    }
+
+    function handleMove(e) {
+      if (!isDragging) return;
+      e.preventDefault();
+      const pos = getCanvasPos(e);
+      mousePos = pos;
+
+      const hitIndex = checkNodeHit(pos);
+      if (hitIndex !== -1 && !selectedIndices.includes(hitIndex)) {
+        selectedIndices.push(hitIndex);
+        updateWordDisplay();
+      }
+      drawLines();
+    }
+
+    function handleEnd(e) {
+      if (!isDragging) return;
+      isDragging = false;
+      const formedWord = selectedIndices.map(i => letters[i]).join('');
+      
+      validateWord(formedWord);
+
+      selectedIndices = [];
+      currentWordEl.innerText = '';
+      drawLines();
+    }
+
+    function validateWord(word) {
+      if (solvedWords.has(word)) {
+        statusEl.innerText = `Already found "${word}"!`;
+        statusEl.className = 'text-center mt-3 text-amber-400 font-bold text-sm h-6';
+        return;
+      }
+
+      // Check if matches grid words
+      let matched = false;
+      for (let r = 0; r < 7; r++) {
+        for (let c = 0; c < 7; c++) {
+          const item = gridLayout[r][c];
+          if (item) {
+            // Check horizontally or vertically for match
+            const cellEl = gridContainer.children[r * 7 + c];
+            if (cellEl && cellEl.dataset.char === word[0]) {
+              // Try reveal word
+              if (checkAndRevealWord(word, r, c)) {
+                matched = true;
+              }
+            }
+          }
+        }
+      }
+
+      if (matched) {
+        solvedWords.add(word);
+        statusEl.innerText = `Great! Found word: ${word} 🎉`;
+        statusEl.className = 'text-center mt-3 text-emerald-400 font-bold text-sm h-6';
+      } else if (word.length > 1) {
+        statusEl.innerText = `"${word}" is not on the board.`;
+        statusEl.className = 'text-center mt-3 text-red-400 font-bold text-sm h-6';
+      }
+    }
+
+    function checkAndRevealWord(word, startR, startC) {
+      // Horizontal check
+      let hMatch = true;
+      if (startC + word.length <= 7) {
+        for (let i = 0; i < word.length; i++) {
+          const item = gridLayout[startR][startC + i];
+          if (!item || item.char !== word[i]) {
+            hMatch = false;
+            break;
+          }
+        }
+        if (hMatch) {
+          for (let i = 0; i < word.length; i++) {
+            const cell = gridContainer.children[startR * 7 + (startC + i)];
+            cell.innerText = word[i];
+            cell.classList.add('bg-emerald-400', 'text-slate-900', 'scale-105');
+          }
+          return true;
+        }
+      }
+
+      // Vertical check
+      let vMatch = true;
+      if (startR + word.length <= 7) {
+        for (let i = 0; i < word.length; i++) {
+          const item = gridLayout[startR + i][startC];
+          if (!item || item.char !== word[i]) {
+            vMatch = false;
+            break;
+          }
+        }
+        if (vMatch) {
+          for (let i = 0; i < word.length; i++) {
+            const cell = gridContainer.children[(startR + i) * 7 + startC];
+            cell.innerText = word[i];
+            cell.classList.add('bg-emerald-400', 'text-slate-900', 'scale-105');
+          }
+          return true;
+        }
+      }
+
+      return false;
+    }
+
+    // Attach Event Listeners
+    canvas.addEventListener('mousedown', handleStart);
+    canvas.addEventListener('mousemove', handleMove);
+    window.addEventListener('mouseup', handleEnd);
+
+    canvas.addEventListener('touchstart', handleStart, { passive: false });
+    canvas.addEventListener('touchmove', handleMove, { passive: false });
+    window.addEventListener('touchend', handleEnd);
+    // Controls
+    document.getElementById('btn-shuffle').addEventListener('click', () => {
+      letters.sort(() => Math.random() - 0.5);
+      renderLetterWheel();
+      drawLines();
+    });
+
+    document.getElementById('btn-clear').addEventListener('click', () => {
+      selectedIndices = [];
+      currentWordEl.innerText = '';
+      drawLines();
+    });
+
+    // Initialize Game Board on Load
+    window.onload = function() {
+      createGrid();
+      renderLetterWheel();
+      drawLines();
+    };
+  </script>
+</body>
+</html>

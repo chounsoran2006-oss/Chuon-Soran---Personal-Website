@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RT Learning Dashboard</title>
+    <script src="../../js/PracticeNav.js" defer></script>
+    <script src="../../js/Theme.js" defer></script>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        brandBg: '#0b0e14',
+                        cardBg: '#131722',
+                        innerCardBg: '#1a1f2e',
+                        accentBlue: '#6366f1',
+                        accentButton: '#7075f5',
+                        navHover: '#222838',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0b0e14;
+            color: #f3f4f6;
+        }
+    </style>
+</head>
+<body class="bg-brandBg text-gray-200 min-h-screen pb-12 antialiased selection:bg-accentBlue selection:text-white">
+        <header class="w-full bg-[#171b26] border-b border-[#242838] sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+
+            <div class="flex items-center justify-between">
+
+                <div class="flex items-center gap-3">
+                    <img src="https://img.magnific.com/premium-vector/rtl-logo-rtl-letter-rtl-letter-logo-design-initials-rtl-logo-linked-with-circle-uppercase-monogram-logo-rtl-typography-technology-business-real-estate-brand_229120-67750.jpg?semt=ais_hybrid&w=740&q=80"
+                        alt="RT Learning Logo"
+                        class="w-10 h-10 sm:w-11 sm:h-11 rounded-full object-cover ring-2 ring-indigo-500/20">
+
+                    <span class="text-lg sm:text-xl font-bold text-white tracking-tight">
+                        RT Learning
+                    </span>
+                </div>
+
+                <nav class="hidden md:flex items-center gap-2 lg:gap-4">
+                    <a href="/index.html"
+                        class="text-gray-400 hover:text-white px-3 py-2 rounded-lg hover:bg-[#242838] transition text-sm">
+                        Dashboard
+                    </a>
+                    <a href="/Pages/My course/My course.html"
+                        class="text-gray-400 hover:text-white px-3 py-2 rounded-lg hover:bg-[#242838] transition text-sm">
+                        My Course
+                    </a>
+                    <a href="/Pages/Practice Test/practice-test.html"
+                        class="bg-[#817dff] text-black px-4 py-2 rounded-lg font-semibold hover:bg-[#6c67f0] transition hover:text-white">
+                        Practice Tests
+                    </a>
+                    <a href="/Pages/Profile.html"
+                        class="text-gray-400 hover:text-white px-3 py-2 rounded-lg hover:bg-[#242838] transition text-sm">
+                        Profile
+                    </a>
+                    <a href="/Pages/Contact.html"
+                        class="text-gray-400 hover:text-white px-3 py-2 rounded-lg hover:bg-[#242838] transition text-sm">
+                        Contact Us
+                    </a>
+                    <a href="/Pages/Logout.html"
+                        class="text-gray-400 hover:text-white px-3 py-2 rounded-lg hover:bg-[#242838] transition text-sm flex items-center gap-1.5">
+                        <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M15.75 9V5.25A2.25 2.25 0 0 0 13.5 3h-6a2.25 2.25 0 0 0-2.25 2.25v13.5A2.25 2.25 0 0 0 7.5 21h6a2.25 2.25 0 0 0 2.25-2.25V15m3 0 3-3m0 0-3-3m3 3H9" />
+                        </svg>
+                        Logout
+                    </a>
+                </nav>
+
+                <button
+                    class="md:hidden text-gray-300 hover:text-white p-2 rounded-lg focus:outline-none focus:bg-[#242838]"
+                    onclick="document.getElementById('mobile-menu').classList.toggle('hidden')" aria-label="Open menu">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+
+            </div>
+
+            <nav id="mobile-menu" class="hidden md:hidden mt-4 pt-4 border-t border-[#242838]">
+                <div class="flex flex-col gap-1">
+                    <a href="../index.html"
+                        class="text-gray-300 hover:text-white px-4 py-2.5 rounded-lg hover:bg-[#242838] transition">
+                        Dashboard
+                    </a>
+                    <a href="./My course/My course.html"
+                        class="text-gray-300 hover:text-white px-4 py-2.5 rounded-lg hover:bg-[#242838] transition">
+                        My Course
+                    </a>
+                    <a href="./Practice%20Test/practice-test.html"
+                        class="text-gray-300 hover:text-white px-4 py-2.5 rounded-lg hover:bg-[#242838] transition">
+                        Practice Tests
+                    </a>
+                    <a href="./Profile.html"
+                        class="bg-[#817dff] text-black px-4 py-2.5 rounded-lg font-semibold text-center hover:bg-[#6c67f0] transition">
+                        Profile
+                    </a>
+                    <a href="./Contact.html"
+                        class="text-gray-300 hover:text-white px-4 py-2.5 rounded-lg hover:bg-[#242838] transition">
+                        Contact Us
+                    </a>
+                    <a href="./Logout.html"
+                        class="text-gray-300 hover:text-white px-4 py-2.5 rounded-lg hover:bg-[#242838] transition flex items-center gap-2">
+                        <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M15.75 9V5.25A2.25 2.25 0 0 0 13.5 3h-6a2.25 2.25 0 0 0-2.25 2.25v13.5A2.25 2.25 0 0 0 7.5 21h6a2.25 2.25 0 0 0 2.25-2.25V15m3 0 3-3m0 0-3-3m3 3H9" />
+                        </svg>
+                        Logout
+                    </a>
+                </div>
+            </nav>
+
+        </div>
+    </header>
+
+    <!-- Second Controls Bar (Search & User Info) -->
+    <section class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 my-4">
+        <div class="flex flex-col md:flex-row items-center justify-between gap-4">
+            <div class="relative w-full md:max-w-xl">
+                <div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-400">
+                    <i class="fa-solid fa-magnifying-glass text-sm"></i>
+                </div>
+                <input type="text" id="searchInput" placeholder="Search lessons, grammar rules, idioms..."
+                    class="w-full pl-10 pr-4 py-2.5 bg-[#121625] border border-[#1e2436] rounded-xl text-sm text-slate-200 placeholder-slate-500 focus:outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500/20 focus:shadow-[0_0_20px_rgba(99,102,241,0.15)] transition-all">
+                <div id="searchResults"
+                    class="hidden absolute left-0 right-0 top-full mt-2 z-40 rounded-xl border border-[#242838] bg-[#121625] shadow-2xl overflow-hidden divide-y divide-[#1e2436]">
+                </div>
+            </div>
+
+            <div class="flex items-center justify-between md:justify-end w-full md:w-auto gap-4">
+                <div id="streakPill"
+                    class="flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#1a1f30] border border-amber-500/20 text-amber-400 text-xs font-semibold hover:bg-amber-500/10 hover:border-amber-500/40 transition cursor-default">
+                    <i class="fa-solid fa-clock-rotate-left text-amber-400"></i>
+                    <span id="streakDays">14 days</span>
+                </div>
+
+                <div class="relative">
+                    <button id="bellBtn"
+                        class="relative p-2 rounded-full text-slate-400 hover:text-white hover:bg-[#121625] hover:ring-2 hover:ring-[#242838] transition-all">
+                        <i class="fa-regular fa-bell text-lg"></i>
+                        <span id="notifDot"
+                            class="absolute top-1.5 right-1.5 w-2 h-2 bg-pink-500 rounded-full ring-2 ring-[#0c0e17] animate-pulse"></span>
+                    </button>
+                    <div id="notifPanel"
+                        class="hidden absolute right-0 top-full mt-2 z-40 w-72 rounded-xl border border-[#242838] bg-[#121625] shadow-2xl overflow-hidden">
+                        <div class="flex items-center justify-between px-4 py-3 border-b border-[#242838]">
+                            <span class="text-xs font-bold tracking-wide text-slate-300 uppercase">Notifications</span>
+                            <button id="notifClear" class="text-[11px] text-indigo-400 hover:text-indigo-300">Mark all
+                                read</button>
+                        </div>
+                        <div id="notifList" class="max-h-64 overflow-y-auto divide-y divide-[#1e2436]"></div>
+                    </div>
+                </div>
+
+                <a href="../Profile.html" title="Go to your profile"
+                    class="flex items-center gap-3 pl-2 border-l border-[#1e2436] md:border-l-0 group cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&auto=format&fit=crop&q=80"
+                        alt="Soran Avatar"
+                        class="js-user-avatar w-9 h-9 rounded-full object-cover ring-2 ring-indigo-500/40 group-hover:ring-[#817dff] transition">
+                    <div class="flex flex-col">
+                        <span class="js-user-name text-sm font-semibold text-white leading-tight">Soran</span>
+                        <span class="js-user-level text-xs text-slate-400 leading-tight">B2 - advance</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content Area -->
+    <main class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
+
+        <!-- Banner Section -->
+        <section class="bg-cardBg border border-gray-800/60 rounded-3xl p-6 sm:p-8 shadow-xl">
+            <!-- Active Course Badges -->
+            <div class="flex flex-wrap items-center gap-3 mb-3">
+                <span class="text-[11px] font-bold tracking-wider text-sky-400 uppercase">ACTIVE COURSE</span>
+                <span class="text-[11px] font-bold tracking-wider text-gray-400 uppercase">B2 WORKPLACE FOCUS</span>
+            </div>
+
+            <!-- Title -->
+            <h1 class="text-2xl sm:text-3xl font-bold text-white mb-6">
+                All lesson that you learn already
+            </h1>
+
+            <!-- Sub Card Inside Banner -->
+            <div class="bg-innerCardBg/80 border border-gray-800/80 rounded-2xl p-4 sm:p-5 text-gray-200 text-sm sm:text-base font-medium flex items-center">
+                <span>Check your <strong class="text-white font-semibold">Speed Listening</strong> <strong class="text-white font-semibold">Grammar Sprint</strong> & <strong class="text-white font-semibold">AI Speech Coach</strong> In Lesson</span>
+            </div>
+        </section>
+
+        <!-- Course Cards List -->
+        <div class="space-y-6">
+
+            <!-- Card 1: Business Communication -->
+            <div class="bg-cardBg border border-gray-800/60 rounded-3xl p-5 sm:p-6 lg:p-8 flex flex-col md:flex-row items-center justify-between gap-6 hover:border-gray-700/80 transition-all duration-300 shadow-xl">
+                <!-- SVG Illustration Mockup -->
+                <div class="w-full md:w-80 h-48 rounded-2xl bg-white p-4 flex items-center justify-center shrink-0 overflow-hidden shadow-md">
+                    <!-- SVG Vector representation of people chatting -->
+                    <svg class="w-full h-full max-h-40" viewBox="0 0 300 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="60" cy="110" r="22" fill="#F59E0B" />
+                        <circle cx="115" cy="120" r="24" fill="#EF4444" />
+                        <circle cx="180" cy="125" r="26" fill="#10B981" />
+                        <circle cx="240" cy="115" r="22" fill="#3B82F6" />
+                        
+                        <!-- Speech bubbles -->
+                        <path d="M40 50 Q 40 30 65 30 Q 90 30 90 50 Q 90 70 70 70 L 60 80 L 62 70 Q 40 70 40 50 Z" fill="#E0F2FE" stroke="#0284C7" stroke-width="2"/>
+                        <path d="M100 40 Q 100 20 125 20 Q 150 20 150 40 Q 150 60 130 60 L 120 70 L 122 60 Q 100 60 100 40 Z" fill="#E0F2FE" stroke="#0284C7" stroke-width="2"/>
+                        <path d="M210 45 Q 210 25 235 25 Q 260 25 260 45 Q 260 65 240 65 L 230 75 L 232 65 Q 210 65 210 45 Z" fill="#E0F2FE" stroke="#0284C7" stroke-width="2"/>
+                        
+                        <!-- Wavy lines inside bubbles -->
+                        <path d="M52 45 Q 65 40 78 45" stroke="#0284C7" stroke-width="2" stroke-linecap="round"/>
+                        <path d="M52 53 Q 65 48 78 53" stroke="#0284C7" stroke-width="2" stroke-linecap="round"/>
+                        <path d="M112 35 Q 125 30 138 35" stroke="#0284C7" stroke-width="2" stroke-linecap="round"/>
+                        <path d="M112 43 Q 125 38 138 43" stroke="#0284C7" stroke-width="2" stroke-linecap="round"/>
+                        <path d="M222 40 Q 235 35 248 40" stroke="#0284C7" stroke-width="2" stroke-linecap="round"/>
+                        <path d="M222 48 Q 235 43 248 48" stroke="#0284C7" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                </div>
+
+                <!-- Text Content -->
+                <div class="flex-1 space-y-2 text-center md:text-left">
+                    <h2 class="text-xl sm:text-2xl font-bold text-white tracking-tight">Business Communication</h2>
+                    <p class="text-gray-400 text-sm leading-relaxed max-w-xl">
+                        Learn how to communicate clearly and professionally with coworkers and clients.
+                    </p>
+                </div>
+
+                <!-- Action Button -->
+                <div class="shrink-0 w-full md:w-auto">
+                    <button class="w-full md:w-auto px-7 py-3 bg-accentButton hover:bg-indigo-500 text-white font-medium text-sm rounded-xl sm:rounded-2xl shadow-lg shadow-indigo-500/20 flex items-center justify-center gap-3 transition-all transform active:scale-95">
+                        <a href="Business%20Communication/first-quiz.html">Test Quiz</a>
+                        <i class="fa-solid fa-arrow-right text-xs"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Card 2: Food & Restaurant English -->
+            <div class="bg-cardBg border border-gray-800/60 rounded-3xl p-5 sm:p-6 lg:p-8 flex flex-col md:flex-row items-center justify-between gap-6 hover:border-gray-700/80 transition-all duration-300 shadow-xl">
+                <!-- SVG Menu Card Mockup -->
+                <div class="w-full md:w-80 h-48 rounded-2xl bg-white p-4 flex flex-col justify-between shrink-0 overflow-hidden shadow-md text-gray-800 border-2 border-orange-500 relative">
+                    <div class="text-center">
+                        <h3 class="font-serif italic text-xl font-bold text-gray-900 border-b border-orange-200 pb-1">Menu</h3>
+                    </div>
+                    <div class="grid grid-cols-2 gap-2 text-[9px] font-sans">
+                        <div>
+                            <p class="font-bold text-orange-600 uppercase text-[8px]">STARTERS</p>
+                            <p class="text-gray-600">Spring Rolls</p>
+                            <p class="text-gray-600">French Onion Soup</p>
+                            <p class="text-gray-600">Tomato Bruschetta</p>
+                            <p class="text-gray-600">Caesar Salad</p>
+                        </div>
+                        <div>
+                            <p class="font-bold text-orange-600 uppercase text-[8px]">MAIN COURSE</p>
+                            <p class="text-gray-600">Grilled Salmon</p>
+                            <p class="text-gray-600">Roast Beef</p>
+                            <p class="text-gray-600">Chicken Pie</p>
+                            <p class="text-gray-600">Eggplant Lasagne</p>
+                        </div>
+                    </div>
+                    <div class="flex justify-between items-end text-[8px] text-gray-500 border-t border-gray-100 pt-1">
+                        <span>Side Dishes</span>
+                        <span class="font-bold text-orange-600">Dessert</span>
+                    </div>
+                </div>
+
+                <!-- Text Content -->
+                <div class="flex-1 space-y-2 text-center md:text-left">
+                    <h2 class="text-xl sm:text-2xl font-bold text-white tracking-tight">Food & Restaurant English</h2>
+                    <p class="text-gray-400 text-sm leading-relaxed max-w-xl">
+                        Learn how to order food, talk about meals and communicate at restaurants.
+                    </p>
+                </div>
+
+                <!-- Action Button -->
+                <div class="shrink-0 w-full md:w-auto">
+                    <button class="w-full md:w-auto px-7 py-3 bg-accentButton hover:bg-indigo-500 text-white font-medium text-sm rounded-xl sm:rounded-2xl shadow-lg shadow-indigo-500/20 flex items-center justify-center gap-3 transition-all transform active:scale-95">
+                        <a href="Food-Restaurant-English/second-quiz.html">Test Quiz</a>
+                        <i class="fa-solid fa-arrow-right text-xs"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Card 3: Research Writing -->
+            <div class="bg-cardBg border border-gray-800/60 rounded-3xl p-5 sm:p-6 lg:p-8 flex flex-col md:flex-row items-center justify-between gap-6 hover:border-gray-700/80 transition-all duration-300 shadow-xl">
+                <!-- SVG Chart Mockup -->
+                <div class="w-full md:w-80 h-48 rounded-2xl bg-emerald-500 p-2.5 flex flex-col justify-between shrink-0 overflow-hidden shadow-md text-white">
+                    <div class="text-center font-bold text-xs uppercase tracking-wider mb-1">
+                        KNOW YOUR <span class="underline">SENTENCE TYPES</span>
+                    </div>
+                    <div class="bg-white rounded-xl p-2 text-gray-800 text-[8px] space-y-1.5 flex-1 flex flex-col justify-center">
+                        <div class="bg-sky-100 p-1 rounded border-l-2 border-sky-500">
+                            <span class="font-bold text-sky-800">SIMPLE SENTENCE:</span> Contains one independent clause.
+                        </div>
+                        <div class="bg-emerald-100 p-1 rounded border-l-2 border-emerald-500">
+                            <span class="font-bold text-emerald-800">COMPOUND SENTENCE:</span> Joined by a coordinating conjunction.
+                        </div>
+                        <div class="bg-amber-100 p-1 rounded border-l-2 border-amber-500">
+                            <span class="font-bold text-amber-800">COMPLEX SENTENCE:</span> Independent and dependent clause.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Text Content -->
+                <div class="flex-1 space-y-2 text-center md:text-left">
+                    <h2 class="text-xl sm:text-2xl font-bold text-white tracking-tight">Research Writing</h2>
+                    <p class="text-gray-400 text-sm leading-relaxed max-w-xl">
+                        Learn how to organize research ideas, write clearly and support your arguments.
+                    </p>
+                </div>
+
+                <!-- Action Button -->
+                <div class="shrink-0 w-full md:w-auto">
+                    <button class="w-full md:w-auto px-7 py-3 bg-accentButton hover:bg-indigo-500 text-white font-medium text-sm rounded-xl sm:rounded-2xl shadow-lg shadow-indigo-500/20 flex items-center justify-center gap-3 transition-all transform active:scale-95">
+                        <a href="Research%20Writing/thirt-quiz.html">Test Quiz</a>
+                        <i class="fa-solid fa-arrow-right text-xs"></i>
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <script src="../../js/ProfileSync.js"></script>
+    <script src="../../js/Dashboard.js"></script>
+    <script>
+        // Interactive script for mobile navigation menu toggle
+        document.addEventListener('DOMContentLoaded', () => {
+            const mobileBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            if (mobileBtn && mobileMenu) {
+                mobileBtn.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('hidden');
+                    mobileMenu.classList.toggle('flex');
+                });
+            }
+        });
+    </script>
+</body>
+</html>

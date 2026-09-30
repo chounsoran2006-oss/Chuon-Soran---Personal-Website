@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RT Learning - Business Communication Excellence</title>
+    <script src="../../../js/PracticeNav.js" defer></script>
+    <script src="../../../js/Theme.js" defer></script>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        brandBg: '#090C12',
+                        cardBg: '#131826',
+                        cardBgHover: '#181f32',
+                        innerCardBg: '#0f1320',
+                        badgeGreen: '#10B981',
+                        accentViolet: '#6366F1',
+                        accentVioletHover: '#4F46E5',
+                        textMuted: '#94A3B8',
+                        textLight: '#E2E8F0',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #090C12;
+            color: #f3f4f6;
+        }
+        /* Custom subtle scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #090C12;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #1f293d;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #334155;
+        }
+    </style>
+</head>
+<body class="bg-brandBg text-gray-200 min-h-screen pb-16 antialiased selection:bg-accentViolet selection:text-white">
+
+    <!-- Navigation Bar -->
+        <header class="w-full bg-[#171b26] border-b border-[#242838] sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+
+            <div class="flex items-center justify-between">
+
+                <div class="flex items-center gap-3">
+                    <img src="https://img.magnific.com/premium-vector/rtl-logo-rtl-letter-rtl-letter-logo-design-initials-rtl-logo-linked-with-circle-uppercase-monogram-logo-rtl-typography-technology-business-real-estate-brand_229120-67750.jpg?semt=ais_hybrid&w=740&q=80"
+                        alt="RT Learning Logo"
+                        class="w-10 h-10 sm:w-11 sm:h-11 rounded-full object-cover ring-2 ring-indigo-500/20">
+
+                    <span class="text-lg sm:text-xl font-bold text-white tracking-tight">
+                        RT Learning
+                    </span>
+                </div>
+
+                <nav class="hidden md:flex items-center gap-2 lg:gap-4">
+                    <a href="/index.html"
+                        class="text-gray-400 hover:text-white px-3 py-2 rounded-lg hover:bg-[#242838] transition text-sm">
+                        Dashboard
+                    </a>
+                    <a href="/Pages/My course/My course.html"
+                        class="text-gray-400 hover:text-white px-3 py-2 rounded-lg hover:bg-[#242838] transition text-sm">
+                        My Course
+                    </a>
+                    <a href="/Pages/Practice Test/practice-test.html"
+                        class="bg-[#817dff] text-black px-4 py-2 rounded-lg font-semibold hover:bg-[#6c67f0] transition hover:text-white">
+                        Practice Tests
+                    </a>
+                    <a href="/Pages/Profile.html"
+                        class="text-gray-400 hover:text-white px-3 py-2 rounded-lg hover:bg-[#242838] transition text-sm">
+                        Profile
+                    </a>
+                    <a href="/Pages/Contact.html"
+                        class="text-gray-400 hover:text-white px-3 py-2 rounded-lg hover:bg-[#242838] transition text-sm">
+                        Contact Us
+                    </a>
+                    <a href="/Pages/Logout.html"
+                        class="text-gray-400 hover:text-white px-3 py-2 rounded-lg hover:bg-[#242838] transition text-sm flex items-center gap-1.5">
+                        <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M15.75 9V5.25A2.25 2.25 0 0 0 13.5 3h-6a2.25 2.25 0 0 0-2.25 2.25v13.5A2.25 2.25 0 0 0 7.5 21h6a2.25 2.25 0 0 0 2.25-2.25V15m3 0 3-3m0 0-3-3m3 3H9" />
+                        </svg>
+                        Logout
+                    </a>
+                </nav>
+
+                <button
+                    class="md:hidden text-gray-300 hover:text-white p-2 rounded-lg focus:outline-none focus:bg-[#242838]"
+                    onclick="document.getElementById('mobile-menu').classList.toggle('hidden')" aria-label="Open menu">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+
+            </div>
+
+            <nav id="mobile-menu" class="hidden md:hidden mt-4 pt-4 border-t border-[#242838]">
+                <div class="flex flex-col gap-1">
+                    <a href="../index.html"
+                        class="text-gray-300 hover:text-white px-4 py-2.5 rounded-lg hover:bg-[#242838] transition">
+                        Dashboard
+                    </a>
+                    <a href="./My course/My course.html"
+                        class="text-gray-300 hover:text-white px-4 py-2.5 rounded-lg hover:bg-[#242838] transition">
+                        My Course
+                    </a>
+                    <a href="./Practice%20Test/practice-test.html"
+                        class="text-gray-300 hover:text-white px-4 py-2.5 rounded-lg hover:bg-[#242838] transition">
+                        Practice Tests
+                    </a>
+                    <a href="./Profile.html"
+                        class="bg-[#817dff] text-black px-4 py-2.5 rounded-lg font-semibold text-center hover:bg-[#6c67f0] transition">
+                        Profile
+                    </a>
+                    <a href="./Contact.html"
+                        class="text-gray-300 hover:text-white px-4 py-2.5 rounded-lg hover:bg-[#242838] transition">
+                        Contact Us
+                    </a>
+                    <a href="./Logout.html"
+                        class="text-gray-300 hover:text-white px-4 py-2.5 rounded-lg hover:bg-[#242838] transition flex items-center gap-2">
+                        <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M15.75 9V5.25A2.25 2.25 0 0 0 13.5 3h-6a2.25 2.25 0 0 0-2.25 2.25v13.5A2.25 2.25 0 0 0 7.5 21h6a2.25 2.25 0 0 0 2.25-2.25V15m3 0 3-3m0 0-3-3m3 3H9" />
+                        </svg>
+                        Logout
+                    </a>
+                </div>
+            </nav>
+
+        </div>
+    </header>
+
+    <!-- Sub-header / Search Bar Section -->
+    <section class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 my-4">
+        <div class="flex flex-col md:flex-row items-center justify-between gap-4">
+            <div class="relative w-full md:max-w-xl">
+                <div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-400">
+                    <i class="fa-solid fa-magnifying-glass text-sm"></i>
+                </div>
+                <input type="text" id="searchInput" placeholder="Search lessons, grammar rules, idioms..."
+                    class="w-full pl-10 pr-4 py-2.5 bg-[#121625] border border-[#1e2436] rounded-xl text-sm text-slate-200 placeholder-slate-500 focus:outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500/20 focus:shadow-[0_0_20px_rgba(99,102,241,0.15)] transition-all">
+                <div id="searchResults"
+                    class="hidden absolute left-0 right-0 top-full mt-2 z-40 rounded-xl border border-[#242838] bg-[#121625] shadow-2xl overflow-hidden divide-y divide-[#1e2436]">
+                </div>
+            </div>
+
+            <div class="flex items-center justify-between md:justify-end w-full md:w-auto gap-4">
+                <div id="streakPill"
+                    class="flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#1a1f30] border border-amber-500/20 text-amber-400 text-xs font-semibold hover:bg-amber-500/10 hover:border-amber-500/40 transition cursor-default">
+                    <i class="fa-solid fa-clock-rotate-left text-amber-400"></i>
+                    <span id="streakDays">14 days</span>
+                </div>
+
+                <div class="relative">
+                    <button id="bellBtn"
+                        class="relative p-2 rounded-full text-slate-400 hover:text-white hover:bg-[#121625] hover:ring-2 hover:ring-[#242838] transition-all">
+                        <i class="fa-regular fa-bell text-lg"></i>
+                        <span id="notifDot"
+                            class="absolute top-1.5 right-1.5 w-2 h-2 bg-pink-500 rounded-full ring-2 ring-[#0c0e17] animate-pulse"></span>
+                    </button>
+                    <div id="notifPanel"
+                        class="hidden absolute right-0 top-full mt-2 z-40 w-72 rounded-xl border border-[#242838] bg-[#121625] shadow-2xl overflow-hidden">
+                        <div class="flex items-center justify-between px-4 py-3 border-b border-[#242838]">
+                            <span class="text-xs font-bold tracking-wide text-slate-300 uppercase">Notifications</span>
+                            <button id="notifClear" class="text-[11px] text-indigo-400 hover:text-indigo-300">Mark all
+                                read</button>
+                        </div>
+                        <div id="notifList" class="max-h-64 overflow-y-auto divide-y divide-[#1e2436]"></div>
+                    </div>
+                </div>
+
+                <a href="../Profile.html" title="Go to your profile"
+                    class="flex items-center gap-3 pl-2 border-l border-[#1e2436] md:border-l-0 group cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&auto=format&fit=crop&q=80"
+                        alt="Soran Avatar"
+                        class="js-user-avatar w-9 h-9 rounded-full object-cover ring-2 ring-indigo-500/40 group-hover:ring-[#817dff] transition">
+                    <div class="flex flex-col">
+                        <span class="js-user-name text-sm font-semibold text-white leading-tight">Soran</span>
+                        <span class="js-user-level text-xs text-slate-400 leading-tight">B2 - advance</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content Area -->
+    <main class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+        <a href="../practice-test.html" aria-label="Back to Practice Tests" class="inline-flex items-center gap-2 rounded-xl bg-[#23a075] px-5 py-2.5 text-sm font-bold text-white shadow-md transition hover:bg-[#1b8460] active:scale-95">
+            <span aria-hidden="true">&larr;</span> Back
+        </a>
+
+        <!-- Hero Banner Section -->
+        <section class="bg-cardBg border border-gray-800/60 rounded-2xl p-6 sm:p-10 shadow-2xl relative overflow-hidden">
+            <div class="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8">
+                
+                <!-- Left Details -->
+                <div class="max-w-3xl space-y-3">
+                    <!-- Upper Tag -->
+                    <div class="text-[11px] font-bold tracking-wider text-gray-400 uppercase">
+                        EXECUTIVE SKILLS - Corporate Communication
+                    </div>
+
+                    <!-- Main Banner Title -->
+                    <h1 class="text-2xl sm:text-4xl font-extrabold text-white tracking-tight leading-tight">
+                        Business Communication<br class="hidden sm:inline" /> Excellence
+                    </h1>
+
+                    <!-- Banner Description -->
+                    <p class="text-gray-400 text-xs sm:text-sm leading-relaxed pt-1 max-w-2xl">
+                        Master key strategies for cross-departmental collaboration, formal feedback delivery, crisis updates, and corporate messaging.
+                    </p>
+                </div>
+
+                <!-- Right Side Stat Box -->
+                <div class="w-full lg:w-64 h-36 bg-[#0a0d16]/90 border border-gray-800/80 rounded-2xl p-6 flex flex-col items-center justify-center text-center shrink-0 shadow-inner">
+                    <div class="mb-3 text-amber-500/90 text-lg">
+                        <i class="fa-solid fa-briefcase"></i>
+                    </div>
+                    <span class="text-2xl font-black text-emerald-400 tracking-tight">
+                        06 Modules
+                    </span>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Section Header Bar -->
+        <section class="pt-2">
+            <div class="flex items-center justify-between border-b border-gray-800/60 pb-3">
+                <div class="flex items-center gap-2">
+                    <!-- Flag/Section Icon -->
+                    <i class="fa-solid fa-flag text-red-500 text-xs"></i>
+                    <h2 class="text-sm font-bold text-white tracking-wide">
+                        Business Communication Modules
+                    </h2>
+                </div>
+                <span class="text-xs text-gray-500">
+                    Select a topic to start
+                </span>
+            </div>
+        </section>
+
+        <!-- Modules Grid Section -->
+        <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+            <!-- Card 1 -->
+            <div class="bg-cardBg border border-gray-800/60 hover:border-gray-700/80 rounded-2xl p-6 flex flex-col justify-between hover:bg-cardBgHover transition-all duration-300 shadow-xl group">
+                <div>
+                    <!-- Card Top Header -->
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-[10px] font-extrabold px-2.5 py-1 rounded-md uppercase tracking-wider">
+                            MODULE 01
+                        </span>
+                        <span class="text-xs font-medium text-gray-400">
+                            Cross-team
+                        </span>
+                    </div>
+
+                    <!-- Card Content -->
+                    <h3 class="text-base font-bold text-white mb-2 group-hover:text-emerald-400 transition-colors">
+                        Inter-Departmental Alignment
+                    </h3>
+                    <p class="text-xs text-gray-400 leading-relaxed">
+                        Communicating objectives and requirements across cross-functional teams effectively.
+                    </p>
+                </div>
+
+                <!-- Card Footer Divider & Actions -->
+                <div class="mt-8 pt-4 border-t border-gray-800/80 flex items-center justify-between">
+                    <span class="text-xs font-medium text-gray-400">
+                        1 Scenarios
+                    </span>
+                    <a href="../Business Communication/Test lesson business Communication/start-module.html" class="text-xs font-bold text-emerald-400 hover:text-emerald-300 transition-colors flex items-center gap-1">
+                        Start Module
+                    </a>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="bg-cardBg border border-gray-800/60 hover:border-gray-700/80 rounded-2xl p-6 flex flex-col justify-between hover:bg-cardBgHover transition-all duration-300 shadow-xl group">
+                <div>
+                    <!-- Card Top Header -->
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-[10px] font-extrabold px-2.5 py-1 rounded-md uppercase tracking-wider">
+                            MODULE 02
+                        </span>
+                        <span class="text-xs font-medium text-gray-400">
+                            Cross-team
+                        </span>
+                    </div>
+
+                    <!-- Card Content -->
+                    <h3 class="text-base font-bold text-white mb-2 group-hover:text-emerald-400 transition-colors">
+                        Constructive Performance Feedback
+                    </h3>
+                    <p class="text-xs text-gray-400 leading-relaxed">
+                        Communicating objectives and requirements across cross-functional teams effectively.
+                    </p>
+                </div>
+
+                <!-- Card Footer Divider & Actions -->
+                <div class="mt-8 pt-4 border-t border-gray-800/80 flex items-center justify-between">
+                    <span class="text-xs font-medium text-gray-400">
+                        2 Scenarios
+                    </span>
+                    <a href="#" class="text-xs font-bold text-emerald-400 hover:text-emerald-300 transition-colors flex items-center gap-1">
+                        Start Module
+                    </a>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="bg-cardBg border border-gray-800/60 hover:border-gray-700/80 rounded-2xl p-6 flex flex-col justify-between hover:bg-cardBgHover transition-all duration-300 shadow-xl group">
+                <div>
+                    <!-- Card Top Header -->
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-[10px] font-extrabold px-2.5 py-1 rounded-md uppercase tracking-wider">
+                            MODULE 03
+                        </span>
+                        <span class="text-xs font-medium text-gray-400">
+                            Cross-team
+                        </span>
+                    </div>
+
+                    <!-- Card Content -->
+                    <h3 class="text-base font-bold text-white mb-2 group-hover:text-emerald-400 transition-colors">
+                        Crisis & Incident Communication
+                    </h3>
+                    <p class="text-xs text-gray-400 leading-relaxed">
+                        Communicating objectives and requirements across cross-functional teams effectively.
+                    </p>
+                </div>
+
+                <!-- Card Footer Divider & Actions -->
+                <div class="mt-8 pt-4 border-t border-gray-800/80 flex items-center justify-between">
+                    <span class="text-xs font-medium text-gray-400">
+                        3 Scenarios
+                    </span>
+                    <a href="#" class="text-xs font-bold text-emerald-400 hover:text-emerald-300 transition-colors flex items-center gap-1">
+                        Start Module
+                    </a>
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="bg-cardBg border border-gray-800/60 hover:border-gray-700/80 rounded-2xl p-6 flex flex-col justify-between hover:bg-cardBgHover transition-all duration-300 shadow-xl group">
+                <div>
+                    <!-- Card Top Header -->
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-[10px] font-extrabold px-2.5 py-1 rounded-md uppercase tracking-wider">
+                            MODULE 04
+                        </span>
+                        <span class="text-xs font-medium text-gray-400">
+                            Cross-team
+                        </span>
+                    </div>
+
+                    <!-- Card Content -->
+                    <h3 class="text-base font-bold text-white mb-2 group-hover:text-emerald-400 transition-colors">
+                        Inter-Departmental Alignment
+                    </h3>
+                    <p class="text-xs text-gray-400 leading-relaxed">
+                        Communicating objectives and requirements across cross-functional teams effectively.
+                    </p>
+                </div>
+
+                <!-- Card Footer Divider & Actions -->
+                <div class="mt-8 pt-4 border-t border-gray-800/80 flex items-center justify-between">
+                    <span class="text-xs font-medium text-gray-400">
+                        4 Scenarios
+                    </span>
+                    <a href="#" class="text-xs font-bold text-emerald-400 hover:text-emerald-300 transition-colors flex items-center gap-1">
+                        Start Module
+                    </a>
+                </div>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="bg-cardBg border border-gray-800/60 hover:border-gray-700/80 rounded-2xl p-6 flex flex-col justify-between hover:bg-cardBgHover transition-all duration-300 shadow-xl group">
+                <div>
+                    <!-- Card Top Header -->
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-[10px] font-extrabold px-2.5 py-1 rounded-md uppercase tracking-wider">
+                            MODULE 05
+                        </span>
+                        <span class="text-xs font-medium text-gray-400">
+                            Cross-team
+                        </span>
+                    </div>
+
+                    <!-- Card Content -->
+                    <h3 class="text-base font-bold text-white mb-2 group-hover:text-emerald-400 transition-colors">
+                        Constructive Performance Feedback
+                    </h3>
+                    <p class="text-xs text-gray-400 leading-relaxed">
+                        Communicating objectives and requirements across cross-functional teams effectively.
+                    </p>
+                </div>
+
+                <!-- Card Footer Divider & Actions -->
+                <div class="mt-8 pt-4 border-t border-gray-800/80 flex items-center justify-between">
+                    <span class="text-xs font-medium text-gray-400">
+                        5 Scenarios
+                    </span>
+                    <a href="#" class="text-xs font-bold text-emerald-400 hover:text-emerald-300 transition-colors flex items-center gap-1">
+                        Start Module
+                    </a>
+                </div>
+            </div>
+
+            <!-- Card 6 -->
+            <div class="bg-cardBg border border-gray-800/60 hover:border-gray-700/80 rounded-2xl p-6 flex flex-col justify-between hover:bg-cardBgHover transition-all duration-300 shadow-xl group">
+                <div>
+                    <!-- Card Top Header -->
+                    <div class="flex items-center justify-between mb-4">
+                        <span class="bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-[10px] font-extrabold px-2.5 py-1 rounded-md uppercase tracking-wider">
+                            MODULE 06
+                        </span>
+                        <span class="text-xs font-medium text-gray-400">
+                            Cross-team
+                        </span>
+                    </div>
+
+                    <h3 class="text-base font-bold text-white mb-2 group-hover:text-emerald-400 transition-colors">
+                        Crisis & Incident Communication
+                    </h3>
+                    <p class="text-xs text-gray-400 leading-relaxed">
+                        Communicating objectives and requirements across cross-functional teams effectively.
+                    </p>
+                </div>
+
+                <div class="mt-8 pt-4 border-t border-gray-800/80 flex items-center justify-between">
+                    <span class="text-xs font-medium text-gray-400">
+                        6 Scenarios
+                    </span>
+                    <a href="#" class="text-xs font-bold text-emerald-400 hover:text-emerald-300 transition-colors flex items-center gap-1">
+                        Start Module
+                    </a>
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const mobileBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            if (mobileBtn && mobileMenu) {
+                mobileBtn.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('hidden');
+                    mobileMenu.classList.toggle('flex');
+                });
+            }
+        });
+    </script>
+
+</body>
+</html>

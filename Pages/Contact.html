@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us Page</title>
+  <script>(function () { try { if ((localStorage.getItem("rtlTheme") || "dark") === "light") { document.documentElement.classList.add("light") } } catch (e) { } })();</script>
+  <link rel="stylesheet" href="../css/output.css">
+</head>
+
+<body>
+  <div
+    class="min-h-screen bg-[#0c0e17] text-slate-200 font-sans pb-12 antialiased selection:bg-indigo-500 selection:text-white">
+
+    <!-- Header -->
+    <header class="w-full bg-[#171b26] border-b border-[#242838] sticky top-0 z-50">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+
+        <div class="flex items-center justify-between">
+
+          <div class="flex items-center gap-3">
+            <img
+              src="https://img.magnific.com/premium-vector/rtl-logo-rtl-letter-rtl-letter-logo-design-initials-rtl-logo-linked-with-circle-uppercase-monogram-logo-rtl-typography-technology-business-real-estate-brand_229120-67750.jpg?semt=ais_hybrid&w=740&q=80"
+              alt="RT Learning Logo"
+              class="w-10 h-10 sm:w-11 sm:h-11 rounded-full object-cover ring-2 ring-indigo-500/20">
+
+            <span class="text-lg sm:text-xl font-bold text-white tracking-tight">
+              RT Learning
+            </span>
+          </div>
+
+          <nav class="hidden md:flex items-center gap-2 lg:gap-4">
+            <a href="../index.html"
+              class="text-gray-400 hover:text-white px-3 py-2 rounded-lg hover:bg-[#242838] transition text-sm">
+              Dashboard
+            </a>
+            <a href="./My course/My course.html"
+              class="text-gray-400 hover:text-white px-3 py-2 rounded-lg hover:bg-[#242838] transition text-sm">
+              My Course
+            </a>
+            <a href="./Practice%20Test/practice-test.html"
+              class="text-gray-400 hover:text-white px-3 py-2 rounded-lg hover:bg-[#242838] transition text-sm">
+              Practice Tests
+            </a>
+            <a href="./Profile.html"
+              class="text-gray-400 hover:text-white px-3 py-2 rounded-lg hover:bg-[#242838] transition text-sm">
+              Profile
+            </a>
+            <a href="./Contact.html"
+              class="bg-[#817dff] text-black px-4 py-2 rounded-lg font-semibold hover:bg-[#6c67f0] transition text-sm hover:text-white">
+              Contact Us
+            </a>
+            <a href="./Logout.html"
+              class="text-gray-400 hover:text-white px-3 py-2 rounded-lg hover:bg-[#242838] transition text-sm flex items-center gap-1.5">
+              <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M15.75 9V5.25A2.25 2.25 0 0 0 13.5 3h-6a2.25 2.25 0 0 0-2.25 2.25v13.5A2.25 2.25 0 0 0 7.5 21h6a2.25 2.25 0 0 0 2.25-2.25V15m3 0 3-3m0 0-3-3m3 3H9" />
+              </svg>
+              Logout
+            </a>
+          </nav>
+
+          <button class="md:hidden text-gray-300 hover:text-white p-2 rounded-lg focus:outline-none focus:bg-[#242838]"
+            onclick="document.getElementById('mobile-menu').classList.toggle('hidden')" aria-label="Open menu">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+          </button>
+
+        </div>
+
+        <nav id="mobile-menu" class="hidden md:hidden mt-4 pt-4 border-t border-[#242838]">
+          <div class="flex flex-col gap-1">
+            <a href="../index.html"
+              class="text-gray-300 hover:text-white px-4 py-2.5 rounded-lg hover:bg-[#242838] transition">
+              Dashboard
+            </a>
+            <a href="./My course/My course.html"
+              class="text-gray-300 hover:text-white px-4 py-2.5 rounded-lg hover:bg-[#242838] transition">
+              My Course
+            </a>
+            <a href="./Practice%20Test/practice-test.html"
+              class="text-gray-300 hover:text-white px-4 py-2.5 rounded-lg hover:bg-[#242838] transition">
+              Practice Tests
+            </a>
+            <a href="./Profile.html"
+              class="text-gray-300 hover:text-white px-4 py-2.5 rounded-lg hover:bg-[#242838] transition">
+              Profile
+            </a>
+            <a href="./Contact.html"
+              class=" bg-[#817dff] text-black px-4 py-2.5 rounded-lg font-semibold text-center hover:bg-[#6c67f0] transition">
+              Contact Us
+            </a>
+            <a href="./Logout.html"
+              class="text-gray-300 hover:text-white px-4 py-2.5 rounded-lg hover:bg-[#242838] transition flex items-center gap-2">
+              <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M15.75 9V5.25A2.25 2.25 0 0 0 13.5 3h-6a2.25 2.25 0 0 0-2.25 2.25v13.5A2.25 2.25 0 0 0 7.5 21h6a2.25 2.25 0 0 0 2.25-2.25V15m3 0 3-3m0 0-3-3m3 3H9" />
+              </svg>
+              Logout
+            </a>
+          </div>
+        </nav>
+
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="min-h-screen flex p-6 md:p-12">
+      <div class="w-full max-w-6xl grid grid-cols-1 md:grid-cols-2 gap-16 items-end justify-end ">
+        <!-- Left: info panel -->
+        <div class="text-white px-2">
+          <h1 class="text-4xl font-bold mb-6">We're here to help.</h1>
+          <p class="text-gray-400 leading-relaxed mb-10 max-w-sm">
+            Whether you are choosing your first course or looking for a career direction, our team is ready to point you
+            in the right direction.
+          </p>
+
+          <div class="space-y-7">
+            <div class="flex items-center gap-4">
+              <div class="w-9 h-9 rounded-full bg-blue-500 flex items-center justify-center text-lg shrink-0">✉️</div>
+              <div>
+                <p class="font-semibold">Email</p>
+                <p class="text-gray-400 text-sm">chounsoran2006@gmail.com</p>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-4">
+              <div class="w-9 h-9 rounded-full bg-gray-700 flex items-center justify-center text-lg shrink-0">📞</div>
+              <div>
+                <p class="font-semibold">Phone</p>
+                <p class="text-gray-400 text-sm">+885 887485930</p>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-4">
+              <div class="w-9 h-9 rounded-full bg-blue-500 flex items-center justify-center text-lg shrink-0">📍</div>
+              <div>
+                <p class="font-semibold">Location</p>
+                <p class="text-gray-400 text-sm">BP 511, Phum Tropeang Chhuk (Borey Sorla), Street 371, Phnom Penh</p>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-4">
+              <div class="w-9 h-9 rounded-full bg-gray-700 flex items-center justify-center text-lg shrink-0">🕐</div>
+              <div>
+                <p class="font-semibold">Working Hours</p>
+                <p class="text-gray-400 text-sm">Mon - Fri, 7:30 AM - 5:00 PM</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: form card -->
+        <div class="contact-form-card bg-slate-700/40 backdrop-blur rounded-2xl p-8 md:p-10 shadow-xl">
+          <h2 class="text-2xl font-bold text-white mb-1">Send us a message</h2>
+          <p class="text-gray-300 text-sm mb-6">We usually reply within one business day.</p>
+
+          <form class="space-y-5">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+              <div>
+                <label class="block text-white text-sm font-semibold mb-2">Full Name</label>
+                <input type="text" placeholder="Your name"
+                  class="w-full rounded-lg bg-gray-200 placeholder-gray-500 text-gray-700 px-4 py-3 outline-none focus:ring-2 focus:ring-indigo-400" />
+              </div>
+              <div>
+                <label class="block text-white text-sm font-semibold mb-2">Email Address</label>
+                <input type="email" placeholder="Your Email"
+                  class="w-full rounded-lg bg-gray-200 placeholder-gray-500 text-gray-700 px-4 py-3 outline-none focus:ring-2 focus:ring-indigo-400" />
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+              <div>
+                <label class="block text-white text-sm font-semibold mb-2">Phone Number</label>
+                <input type="tel" placeholder="+855 97 - 290 - 290"
+                  class="w-full rounded-lg bg-gray-200 placeholder-gray-500 text-gray-700 px-4 py-3 outline-none focus:ring-2 focus:ring-indigo-400" />
+              </div>
+              <div>
+                <label class="block text-white text-sm font-semibold mb-2">Subject</label>
+                <input type="text" placeholder="How can we help?"
+                  class="w-full rounded-lg bg-gray-200 placeholder-gray-500 text-gray-700 px-4 py-3 outline-none focus:ring-2 focus:ring-indigo-400" />
+              </div>
+            </div>
+
+            <div>
+              <label class="block text-white text-sm font-semibold mb-2">Message</label>
+              <textarea rows="5" placeholder="Tell us a little more...."
+                class="w-full rounded-lg bg-gray-200 placeholder-gray-500 text-gray-700 px-4 py-3 outline-none resize-none focus:ring-2 focus:ring-indigo-400"></textarea>
+            </div>
+
+            <button type="submit"
+              class="bg-indigo-400 hover:bg-indigo-500 transition-colors text-white font-semibold px-6 py-3 rounded-lg inline-flex items-center gap-2">
+              Send Message
+              <span>&rarr;</span>
+            </button>
+          </form>
+        </div>
+
+        <!-- Location map (spans full width) -->
+        <div class="md:col-span-2 mt-4">
+          <h2 class="text-2xl md:text-3xl font-bold text-white mb-1">Our Location</h2>
+          <p class="text-gray-400 text-sm mb-6">BP 511, Phum Tropeang Chhuk (Borey Sorla), Street 371, Phnom Penh</p>
+          <div class="rounded-2xl overflow-hidden border border-[#242838] shadow-xl">
+            <iframe title="RT Learning location on Google Maps"
+              src="https://www.google.com/maps?q=BP%20511%2C%20Phum%20Tropeang%20Chhuk%20(Borey%20Sorla)%2C%20Street%20371%2C%20Phnom%20Penh&output=embed"
+              class="w-full h-72 md:h-150 block" style="border:0" allowfullscreen loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+  <script src="../js/Theme.js"></script>
+</body>
+
+</html>

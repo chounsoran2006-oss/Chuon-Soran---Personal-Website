@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>RTLearning - My Courses</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet">
+    <script src="../../js/CourseNav.js" defer></script>
+    <script src="../../js/StreakSync.js" defer></script>
+</head>
+
+<body class="course-catalog-page bg-[#0d1018] text-white">
+
+    <header class="w-full bg-[#171b26] border-b border-[#242838]">
+        <div class="w-full px-4 sm:px-6 lg:px-8 py-4">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center gap-3">
+                    <img src="https://img.magnific.com/premium-vector/rtl-logo-rtl-letter-rtl-letter-logo-design-initials-rtl-logo-linked-with-circle-uppercase-monogram-logo-rtl-typography-technology-business-real-estate-brand_229120-67750.jpg?semt=ais_hybrid&w=740&q=80"
+                        alt="RT Learning Logo" class="w-10 h-10 sm:w-11 sm:h-11 rounded-full object-cover">
+                    <span class="text-lg sm:text-xl font-bold text-white">
+                        RT Learning
+                    </span>
+                </div>
+
+
+                <nav class="hidden md:flex items-center gap-4 lg:gap-6">
+
+                    <a href="../../index.html" class="text-gray-400 hover:text-white transition">
+                        Dashboard
+                    </a>
+
+                    <a href="My course.html" class="text-gray-400 hover:text-white transition">
+                        My Course
+                    </a>
+
+                    <a href="../Practice%20Test/practice-test.html" class="text-gray-400 hover:text-white transition">
+                        Practice Tests
+                    </a>
+
+                    <a href="../Profile.html" class="text-gray-400 hover:text-white transition">
+                        Profile
+                    </a>
+                    <a href="../Contact.html"
+                        class="bg-[#817dff] text-black px-4 py-2 rounded-lg font-medium hover:bg-[#5853d1] hover:text-white transition">
+                        Contact Us
+                    </a>
+                </nav>
+
+                <button class="md:hidden text-white text-2xl p-2 select-none focus:outline-none"
+                    onclick="document.getElementById('mobile-menu').classList.toggle('hidden')" aria-label="Open menu">
+                    ☰
+                </button>
+            </div>
+            <nav id="mobile-menu" class="hidden md:hidden mt-4 pt-4 border-t border-[#242838]">
+                <div class="flex flex-col gap-2">
+                    <a href="../../index.html"
+                        class="text-gray-400 hover:text-white px-3 py-3 rounded-lg hover:bg-[#242838] transition">
+                        Dashboard
+                    </a>
+                    <a href="My course.html"
+                        class="text-gray-400 hover:text-white px-3 py-3 rounded-lg hover:bg-[#242838] transition">
+                        My Course
+                    </a>
+                    <a href="../Practice%20Test/practice-test.html"
+                        class="text-gray-400 hover:text-white px-3 py-3 rounded-lg hover:bg-[#242838] transition">
+                        Practice Tests
+                    </a>
+                    <a href="../Profile.html"
+                        class="text-gray-400 hover:text-white px-3 py-3 rounded-lg hover:bg-[#242838] transition">
+                        Profile
+                    </a>
+                    <a href="../Contact.html"
+                        class="bg-[#817dff] text-black px-4 py-3 rounded-lg font-medium text-center hover:bg-[#5853d1] hover:text-white transition">
+                        Contact Us
+                    </a>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <main class="w-full px-2 md:px-12 lg:px-16 ">
+        <section class="w-full my-4">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-4">
+                <div class="relative w-full md:flex-1">
+                    <div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-400">
+                        <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            aria-hidden="true">
+                            <circle cx="11" cy="11" r="7"></circle>
+                            <path d="m20 20-4-4"></path>
+                        </svg>
+                    </div>
+                    <input type="search" id="searchInput" placeholder="Search lessons, grammar rules, idioms..."
+                        class="w-full pl-10 pr-4 py-2.5 bg-[#121625] border border-[#1e2436] rounded-xl text-sm text-slate-200 placeholder-slate-500 focus:outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500/20 focus:shadow-[0_0_20px_rgba(99,102,241,0.15)] transition-all">
+                </div>
+
+                <div class="flex items-center justify-between md:justify-end w-full md:w-auto gap-4">
+                    <div
+                        class="flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#1a1f30] border border-amber-500/20 text-amber-400 text-xs font-semibold">
+                        <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                            aria-hidden="true">
+                            <path d="M3.5 12a8.5 8.5 0 1 0 2.2-5.7L3.5 8.5" />
+                            <path d="M3.5 4.5v4h4M12 7v5l3 2" />
+                        </svg>
+                        <span class="js-streak-days">14 days</span>
+                    </div>
+
+                    <button type="button" aria-label="Notifications"
+                        class="relative p-2 rounded-full text-slate-400 hover:text-white hover:bg-[#121625] transition">
+                        <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+                            aria-hidden="true">
+                            <path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9M10 21h4" />
+                        </svg>
+                        <span class="absolute top-1.5 right-1.5 h-2 w-2 rounded-full bg-pink-500"></span>
+                    </button>
+
+                    <a href="../Profile.html" title="Go to your profile"
+                        class="flex items-center gap-3 pl-2 border-l border-[#1e2436] md:border-l-0 group">
+                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&auto=format&fit=crop&q=80"
+                            alt="Soran Avatar"
+                            class="js-user-avatar h-9 w-9 rounded-full object-cover ring-2 ring-indigo-500/40 group-hover:ring-[#817dff] transition">
+                        <div class="flex flex-col">
+                            <span class="js-user-name text-sm font-semibold text-white leading-tight">Soran</span>
+                            <span class="js-user-level text-xs text-slate-400 leading-tight">B2 - advance</span>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <h1 class="text-3xl md:text-[32px] font-bold mb-5">
+            Immersive Course Catalog
+        </h1>
+        <div class="course-track-filters flex gap-2 overflow-x-auto mb-4" aria-label="Course categories">
+            <span
+                class="bg-[#111827] text-gray-300 text-[10px] font-semibold px-5 py-2 rounded-full whitespace-nowrap border border-gray-700">
+                ▦ All Tracks 28
+            </span>
+            <a href="Business English .course/Business English .html" class="bg-[#191d29] text-gray-400
+              text-[10px]
+              px-5 py-2 rounded-full
+              whitespace-nowrap
+              hover:bg-[#817dff]
+              hover:text-[#111321]
+              transition">
+                💼 Business English
+            </a>
+            <a href="IELTS & TOEFL.course/IELTS & TOEFL.html" class="bg-[#191d29] text-gray-400
+              text-[10px]
+              px-5 py-2 rounded-full
+              whitespace-nowrap
+              hover:bg-[#817dff]
+              hover:text-[#111321]
+              transition">
+                🎓 IELTS & TOEFL
+            </a>
+            <a href="Everyday Fluency.course/Everyday Fluency.html" class="bg-[#191d29] text-gray-400
+              text-[10px]
+              px-5 py-2 rounded-full
+              whitespace-nowrap
+              hover:bg-[#817dff]
+              hover:text-[#111321]
+              transition">
+                💬 Everyday Fluency
+            </a>
+            <a href="academic-writing-courses/Academic Writing .html" class="bg-[#191d29] text-gray-400
+              text-[10px]
+              px-5 py-2 rounded-full
+              whitespace-nowrap
+              hover:bg-[#817dff]
+              hover:text-[#111321]
+              transition">
+                📖 Academic Writing
+            </a>
+        </div>
+        <section
+            class="course-featured-card w-full bg-[#24273f] border border-[#30334d] rounded-lg p-5 mb-8 grid grid-cols-1 md:grid-cols-[230px_1fr_260px] gap-6 items-center">
+            <img src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=800&q=80"
+                alt="Business English" class="w-full h-40 md:h-48 object-cover rounded-md">
+            <div>
+                <h2 class="text-xl font-bold leading-7 mb-2">
+                    Business English:<br>
+                    Pitch & Negotiate
+                </h2>
+                <p class="text-[10px] text-gray-400 leading-5 max-w-xl">
+                    Master high-stakes contract rhetoric,
+                    counter-objection structures, and
+                    board-level tonality with
+                </p>
+                <div class="flex items-center gap-3 mt-5">
+                    <div class="course-progress-track flex-1 
+                        max-w-75 
+                        h-1.5 bg-[#30354a]
+                         rounded-full overflow-hidden">
+                        <div class="w-[75%]
+                                   h-full                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
+                                   rounded-full">
+                        </div>
+                    </div>
+                    <span class="text-[9px]text-[#3ce2ad]">
+                        0/24
+                    </span>
+                </div>
+            </div>
+
+            <div class="text-center">
+                <a href="Business English .course/negotiation-english.html" class="block w-full
+                     bg-[#817dff]
+                     text-[#111321]
+                      font-bold text-[11px] 
+                        py-3 rounded-md text-center
+                       hover:bg-[#9692ff]">
+                    <i class="fa-regular fa-circle-play mr-1">
+                    </i>
+                    Start Course
+                </a>
+                <p class="text-[8px] text-gray-500 mt-2">
+                    Up next: Executive Objections (14 min)
+                </p>
+            </div>
+        </section>
+
+        <div class="mb-5">
+            <h2 class="text-xl font-bold mb-2">
+                Mastery Tracks & Specializations
+            </h2>
+            <p class="text-[10px] text-gray-500">
+                Structured pathways vetted by linguistics
+                researchers and certified test administrators.
+            </p>
+        </div>
+
+        <div class="course-catalog-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+
+            <div
+                class="bg-gray-800 border border-gray-700 rounded-md overflow-hidden flex flex-col hover:border-indigo-500 transition-all duration-300">
+                <img src="../../images/images 12.png" alt="IELTS Speaking" class="w-full h-37.5 object-cover block">
+                <div class="p-4 flex flex-col flex-1">
+                    <h3 class="text-sm font-bold mb-4">IELTS Speaking</h3>
+                    <p class="text-[10px] text-gray-400 leading-5 mb-5">
+                        Practice IELTS speaking questions and improve your confidence and fluency.
+                    </p>
+                    <a href="IELTS & TOEFL.course/ielts-speaking.html"
+                        class="mt-auto bg-indigo-600 text-white font-bold text-[10px] py-3 rounded-md text-center hover:bg-indigo-500 transition-colors">
+                        Start Course
+                    </a>
+                </div>
+            </div>
+
+            <div
+                class="bg-gray-800 border border-gray-700 rounded-md overflow-hidden flex flex-col hover:border-indigo-500 transition-all duration-300">
+                <img src="../../images/images 13.png" alt="IELTS Listening" class="w-full h-37.5 object-cover block">
+                <div class="p-4 flex flex-col flex-1">
+                    <h3 class="text-sm font-bold mb-4">IELTS Listening</h3>
+                    <p class="text-[10px] text-gray-400 leading-5 mb-5">
+                        Improve your listening skills with IELTS-style listening practice.
+                    </p>
+                    <a href="IELTS & TOEFL.course/ielts-listening.html"
+                        class="mt-auto bg-indigo-600 text-white font-bold text-[10px] py-3 rounded-md text-center hover:bg-indigo-500 transition-colors">
+                        Start Course
+                    </a>
+                </div>
+            </div>
+
+            <div
+                class="bg-[#111827] border border-[#151d2e] rounded-md overflow-hidden flex flex-col hover:border-[#817dff] transition-all duration-300">
+                <img src="../../images/images 18.png" alt="Daily Conversations"
+                    class="w-full h-37.5 object-cover block">
+                <div class="p-4 flex flex-col flex-1">
+                    <h3 class="text-sm font-bold mb-4">Daily Conversations</h3>
+                    <p class="text-[10px] text-gray-500 leading-5 mb-5">
+                        Practice common English conversations used in everyday life.
+                    </p>
+                    <a href="Everyday Fluency.course/daily-conversations.html"
+                        class="mt-auto bg-[#817dff] text-[#111321] font-bold text-[10px] py-3 rounded-md text-center hover:bg-[#6c68ff] transition-colors">
+                        Start Course
+                    </a>
+                </div>
+            </div>
+
+            <div
+                class="bg-[#111827] border border-[#151d2e] rounded-md overflow-hidden flex flex-col hover:border-[#817dff] transition-all duration-300">
+                <img src="../../images/images 19.png" alt="Shopping English" class="w-fuh-37.5px] object-cover block">
+                <div class="p-4 flex flex-col flex-1">
+                    <h3 class="text-sm font-bold mb-4">Shopping English</h3>
+                    <p class="text-[10px] text-gray-500 leading-5 mb-5">
+                        Learn useful English phrases for shopping, prices, products and payments.
+                    </p>
+                    <a href="Everyday Fluency.course/shopping-english.html"
+                        class="mt-auto bg-[#817dff] text-[#111321] font-bold text-[10px] py-3 rounded-md text-center hover:bg-[#6c68ff] transition-colors">
+                        Start Course
+                    </a>
+                </div>
+            </div>
+
+            <div
+                class="bg-[#111827] border border-[#151d2e] rounded-md overflow-hidden flex flex-col hover:border-[#817dff] transition-all duration-300">
+                <a href="Business English .course/business-communication.html" class="block overflow-hidden">
+                    <img src="../../images/images 4.png" alt="Business Communication"
+                        class="w-full h-37.5 object-cover block hover:scale-105 transition-transform duration-300">
+                </a>
+                <div class="p-4 flex flex-col flex-1">
+                    <h3 class="text-sm font-bold mb-4">Business Communication</h3>
+                    <p class="text-[10px] text-gray-500 leading-5 mb-5">
+                        Learn how to communicate clearly and professionally with coworkers and clients.
+                    </p>
+                    <a href="Business English .course/business-communication.html"
+                        class="mt-auto bg-[#817dff] text-[#111321] font-bold text-[10px] py-3 rounded-md text-center hover:bg-[#6c68ff] transition-colors">
+                        Start Course
+                    </a>
+                </div>
+            </div>
+
+            <div
+                class="bg-[#111827] border border-[#151d2e] rounded-md overflow-hidden flex flex-col hover:border-[#817dff] transition-all duration-300">
+                <a href="Business English .course/business-presentation.html" class="block overflow-hidden">
+                    <img src="../../images/images 5.png" alt="Business Presentation"
+                        class="w-full h-37.5 object-cover block hover:scale-105 transition-transform duration-300">
+                </a>
+                <div class="p-4 flex flex-col flex-1">
+                    <h3 class="text-sm font-bold mb-4">Business Presentation</h3>
+                    <p class="text-[10px] text-gray-500 leading-5 mb-5">
+                        Practice giving professional presentations and speaking confidently in front of others.
+                    </p>
+                    <a href="Business English .course/business-presentation.html"
+                        class="mt-auto bg-[#817dff] text-[#111321] font-bold text-[10px] py-3 rounded-md text-center hover:bg-[#6c68ff] transition-colors">
+                        Start Course
+                    </a>
+                </div>
+            </div>
+
+            <div
+                class="bg-[#111827] border border-[#151d2e] rounded-md overflow-hidden flex flex-col hover:border-[#817dff] transition-all duration-300">
+                <a href="academic-writing-courses/academic-essay-writing.html" class="block overflow-hidden">
+                    <img src="../../images/images 3.png" alt="Academic Essay Writing"
+                        class="w-full h-37.5 object-cover block hover:scale-105 transition-transform duration-300">
+                </a>
+                <div class="p-4 flex flex-col flex-1">
+                    <h3 class="text-sm font-bold mb-4">Academic Essay Writing</h3>
+                    <p class="text-[10px] text-gray-500 leading-5 mb-5">
+                        Learn how to write clear and organized academic essays with strong ideas.
+                    </p>
+                    <a href="academic-writing-courses/academic-essay-writing.html"
+                        class="mt-auto bg-[#817dff] text-[#111321] font-bold text-[10px] py-3 rounded-md text-center hover:bg-[#6c68ff] transition-colors">
+                        Start Course
+                    </a>
+                </div>
+            </div>
+
+            <div
+                class="bg-[#111827] border border-[#151d2e] rounded-md overflow-hidden flex flex-col hover:border-[#817dff] transition-all duration-300">
+                <a href="academic-writing-courses/research-writing.html" class="block overflow-hidden">
+                    <img src="../../images/images.png" alt="Research Writing"
+                        class="w-full h-37.5 object-cover block hover:scale-105 transition-transform duration-300">
+                </a>
+                <div class="p-4 flex flex-col flex-1">
+                    <h3 class="text-sm font-bold mb-4">Research Writing</h3>
+                    <p class="text-[10px] text-gray-500 leading-5 mb-5">
+                        Learn how to organize research ideas, write clearly and support your arguments.
+                    </p>
+                    <a href="academic-writing-courses/research-writing.html"
+                        class="mt-auto bg-[#817dff] text-[#111321] font-bold text-[10px] py-3 rounded-md text-center hover:bg-[#6c68ff] transition-colors">
+                        Start Course
+                    </a>
+                </div>
+            </div>
+
+            <div
+                class="bg-gray-800 border border-gray-700 rounded-md overflow-hidden flex flex-col hover:border-indigo-500 transition-all duration-300">
+                <img src="../../images/images 14.png" alt="IELTS Reading" class="w-full h-37.5 object-cover block">
+                <div class="p-4 flex flex-col flex-1">
+                    <h3 class="text-sm font-bold mb-4">IELTS Reading</h3>
+                    <p class="text-[10px] text-gray-400 leading-5 mb-5">
+                        Learn reading strategies and practice different types of IELTS questions.
+                    </p>
+                    <a href="IELTS & TOEFL.course/ielts-reading.html"
+                        class="mt-auto bg-indigo-600 text-white font-bold text-[10px] py-3 rounded-md text-center hover:bg-indigo-500 transition-colors">
+                        Start Course
+                    </a>
+                </div>
+            </div>
+
+
+            <div
+                class="bg-gray-800 border border-gray-700 rounded-md overflow-hidden flex flex-col hover:border-indigo-500 transition-all duration-300">
+                <img src="../../images/images 15.png" alt="IELTS Writing" class="w-full h-37.5 object-cover block">
+                <div class="p-4 flex flex-col flex-1">
+                    <h3 class="text-sm font-bold mb-4">IELTS Writing</h3>
+                    <p class="text-[10px] text-gray-400 leading-5 mb-5">
+                        Practice Task 1 and Task 2 and learn how to write clear and organized answers.
+                    </p>
+                    <a href="IELTS & TOEFL.course/ielts-writing.html"
+                        class="mt-auto bg-indigo-600 text-white font-bold text-[10px] py-3 rounded-md text-center hover:bg-indigo-500 transition-colors">
+                        Start Course
+                    </a>
+                </div>
+            </div>
+
+            <div
+                class="bg-[#111827] border border-[#151d2e] rounded-md overflow-hidden flex flex-col hover:border-[#817dff] transition-all duration-300">
+                <img src="../../images/images 20.png" alt="Food & Restaurant English"
+                    class="w-full h-37.5 object-cover block">
+                <div class="p-4 flex flex-col flex-1">
+                    <h3 class="text-sm font-bold mb-4">Food & Restaurant English</h3>
+                    <p class="text-[10px] text-gray-500 leading-5 mb-5">
+                        Learn how to order food, talk about meals and communicate at restaurants.
+                    </p>
+                    <a href="Everyday Fluency.course/food-restaurant.html"
+                        class="mt-auto bg-[#817dff] text-[#111321] font-bold text-[10px] py-3 rounded-md text-center hover:bg-[#6c68ff] transition-colors">
+                        Start Course
+                    </a>
+                </div>
+            </div>
+
+
+            <div
+                class="bg-[#111827] border border-[#151d2e] rounded-md overflow-hidden flex flex-col hover:border-[#817dff] transition-all duration-300">
+                <img src="../../images/images 21.png" alt="Travel English" class="w-full h-37.5 object-cover block">
+                <div class="p-4 flex flex-col flex-1">
+                    <h3 class="text-sm font-bold mb-4">Travel English</h3>
+                    <p class="text-[10px] text-gray-500 leading-5 mb-5">
+                        Practice useful English for airports, hotels, transportation and travel.
+                    </p>
+                    <a href="Everyday Fluency.course/travel-english.html"
+                        class="mt-auto bg-[#817dff] text-[#111321] font-bold text-[10px] py-3 rounded-md text-center hover:bg-[#6c68ff] transition-colors">
+                        Start Course
+                    </a>
+                </div>
+            </div>
+
+
+            <div
+                class="bg-[#111827] border border-[#151d2e] rounded-md overflow-hidden flex flex-col hover:border-[#817dff] transition-all duration-300">
+                <a href="Business English .course/negotiation-english.html" class="block overflow-hidden">
+                    <img src="../../images/images 8.png" alt="Negotiation English"
+                        class="w-full h-37.5 object-cover block hover:scale-105 transition-transform duration-300">
+                </a>
+                <div class="p-4 flex flex-col flex-1">
+                    <h3 class="text-sm font-bold mb-4">Negotiation English</h3>
+                    <p class="text-[10px] text-gray-500 leading-5 mb-5">
+                        Learn useful English expressions for negotiation, agreements and business deals.
+                    </p>
+                    <a href="Business English .course/negotiation-english.html"
+                        class="mt-auto bg-[#817dff] text-[#111321] font-bold text-[10px] py-3 rounded-md text-center hover:bg-[#6c68ff] transition-colors">
+                        Start Course
+                    </a>
+                </div>
+            </div>
+
+
+            <div
+                class="bg-[#111827] border border-[#151d2e] rounded-md overflow-hidden flex flex-col hover:border-[#817dff] transition-all duration-300">
+                <a href="Business English .course/email-workplace.html" class="block overflow-hidden">
+                    <img src="../../images/images 9.png" alt="Email & Workplace English"
+                        class="w-full h-37.5 object-cover block hover:scale-105 transition-transform duration-300">
+                </a>
+                <div class="p-4 flex flex-col flex-1">
+                    <h3 class="text-sm font-bold mb-4">Email & Workplace English</h3>
+                    <p class="text-[10px] text-gray-500 leading-5 mb-5">
+                        Learn how to write professional emails, messages and workplace communication.
+                    </p>
+                    <a href="Business English .course/email-workplace.html"
+                        class="mt-auto bg-[#817dff] text-[#111321] font-bold text-[10px] py-3 rounded-md text-center hover:bg-[#6c68ff] transition-colors">
+                        Start Course
+                    </a>
+                </div>
+            </div>
+
+
+            <div
+                class="bg-[#111827] border border-[#151d2e] rounded-md overflow-hidden flex flex-col hover:border-[#817dff] transition-all duration-300">
+                <a href="academic-writing-courses/academic-vocabulary.html" class="block overflow-hidden">
+                    <img src="../../images/essay-vocabulary.webp" alt="Academic Vocabulary"
+                        class="w-full h-37.5 object-cover block hover:scale-105 transition-transform duration-300">
+                </a>
+                <div class="p-4 flex flex-col flex-1">
+                    <h3 class="text-sm font-bold mb-4">Academic Vocabulary</h3>
+                    <p class="text-[10px] text-gray-500 leading-5 mb-5">
+                        Build useful academic vocabulary for essays, reports and university study.
+                    </p>
+                    <a href="academic-writing-courses/academic-vocabulary.html"
+                        class="mt-auto bg-[#817dff] text-[#111321] font-bold text-[10px] py-3 rounded-md text-center hover:bg-[#6c68ff] transition-colors">
+                        Start Course
+                    </a>
+                </div>
+            </div>
+
+            <div
+                class="bg-[#111827] border border-[#151d2e] rounded-md overflow-hidden flex flex-col hover:border-[#817dff] transition-all duration-300">
+                <a href="academic-writing-courses/academic-grammar.html" class="block overflow-hidden">
+                    <img src="../../images/images.png" alt="Academic Grammar"
+                        class="w-full h-37.5 object-cover block hover:scale-105 transition-transform duration-300">
+                </a>
+                <div class="p-4 flex flex-col flex-1">
+                    <h3 class="text-sm font-bold mb-4">Academic Grammar</h3>
+                    <p class="text-[10px] text-gray-500 leading-5 mb-5">
+                        Improve grammar and sentence structure for clear and professional academic writing.
+                    </p>
+                    <a href="academic-writing-courses/academic-grammar.html"
+                        class="mt-auto bg-[#817dff] text-[#111321] font-bold text-[10px] py-3 rounded-md text-center hover:bg-[#6c68ff] transition-colors">
+                        Start Course
+                    </a>
+                </div>
+            </div>
+
+            <div
+                class="bg-[#111827] border border-[#151d2e] rounded-md overflow-hidden flex flex-col hover:border-[#817dff] transition-all duration-300">
+                <a href="academic-writing-courses/reports-analysis.html" class="block overflow-hidden">
+                    <img src="../../images/images 1.png" alt="Reports & Analysis"
+                        class="w-full h-37.5 object-cover block hover:scale-105 transition-transform duration-300">
+                </a>
+                <div class="p-4 flex flex-col flex-1">
+                    <h3 class="text-sm font-bold mb-4">Reports & Analysis</h3>
+                    <p class="text-[10px] text-gray-500 leading-5 mb-5">
+                        Learn how to write reports, describe data and explain information clearly.
+                    </p>
+                    <a href="academic-writing-courses/reports-analysis.html"
+                        class="mt-auto bg-[#817dff] text-[#111321] font-bold text-[10px] py-3 rounded-md text-center hover:bg-[#6c68ff] transition-colors">
+                        Start Course
+                    </a>
+                </div>
+            </div>
+
+            <div
+                class="bg-[#111827] border border-[#151d2e] rounded-md overflow-hidden flex flex-col hover:border-[#817dff] transition-all duration-300">
+                <a href="academic-writing-courses/academic-presentation.html" class="block overflow-hidden">
+                    <img src="../../images/PresentationAnxiety-484.png" alt="Academic Presentation"
+                        class="w-full h-37.5 object-cover block hover:scale-105 transition-transform duration-300">
+                </a>
+                <div class="p-4 flex flex-col flex-1">
+                    <h3 class="text-sm font-bold mb-4">Academic Presentation</h3>
+                    <p class="text-[10px] text-gray-500 leading-5 mb-5">
+                        Practice presenting academic ideas clearly and confidently.
+                    </p>
+                    <a href="academic-writing-courses/academic-presentation.html"
+                        class="mt-auto bg-[#817dff] text-[#111321] font-bold text-[10px] py-3 rounded-md text-center hover:bg-[#6c68ff] transition-colors">
+                        Start Course
+                    </a>
+                </div>
+            </div>
+
+            <div
+                class="bg-[#111827] border border-[#151d2e] rounded-md overflow-hidden flex flex-col hover:border-[#817dff] transition-all duration-300">
+                <a href="Business English .course/professional-conversations.html" class="block overflow-hidden">
+                    <img src="../../images/images 11.png" alt="Professional Conversations"
+                        class="w-full h-37.5 object-cover block hover:scale-105 transition-transform duration-300">
+                </a>
+                <div class="p-4 flex flex-col flex-1">
+                    <h3 class="text-sm font-bold mb-4">Professional Conversations</h3>
+                    <p class="text-[10px] text-gray-500 leading-5 mb-5">
+                        Practice professional conversations with colleagues, customers and clients.
+                    </p>
+                    <a href="Business English .course/professional-conversations.html"
+                        class="mt-auto bg-[#817dff] text-[#111321] font-bold text-[10px] py-3 rounded-md text-center hover:bg-[#6c68ff] transition-colors">
+                        Start Course
+                    </a>
+                </div>
+            </div>
+
+            <div
+                class="bg-[#111827] border border-[#151d2e] rounded-md overflow-hidden flex flex-col hover:border-[#817dff] transition-all duration-300">
+                <a href="Business English .course/business-meetings.html" class="block overflow-hidden">
+                    <img src="../../images/images 10.png" alt="Business Meetings"
+                        class="w-full h-37.5 object-cover block hover:scale-105 transition-transform duration-300">
+                </a>
+                <div class="p-4 flex flex-col flex-1">
+                    <h3 class="text-sm font-bold mb-4">Business Meetings</h3>
+                    <p class="text-[10px] text-gray-500 leading-5 mb-5">
+                        Learn useful phrases for meetings, discussions, teamwork and decision-making.
+                    </p>
+                    <a href="Business English .course/business-meetings.html"
+                        class="mt-auto bg-[#817dff] text-[#111321] font-bold text-[10px] py-3 rounded-md text-center hover:bg-[#6c68ff] transition-colors">
+                        Start Course
+                    </a>
+                </div>
+            </div>
+
+            <div
+                class="bg-[#111827] border border-[#151d2e] rounded-md overflow-hidden flex flex-col hover:border-[#817dff] transition-all duration-300">
+                <img src="../../images/images 22.png" alt="Social English" class="w-full h-37.5 object-cover block">
+                <div class="p-4 flex flex-col flex-1">
+                    <h3 class="text-sm font-bold mb-4">Social English</h3>
+                    <p class="text-[10px] text-gray-500 leading-5 mb-5">
+                        Learn how to introduce yourself, make friends and have casual conversations.
+                    </p>
+                    <a href="Everyday Fluency.course/social-english.html"
+                        class="mt-auto bg-[#817dff] text-[#111321] font-bold text-[10px] py-3 rounded-md text-center hover:bg-[#6c68ff] transition-colors">
+                        Start Course
+                    </a>
+                </div>
+            </div>
+
+            <div
+                class="bg-[#111827] border border-[#151d2e] rounded-md overflow-hidden flex flex-col hover:border-[#817dff] transition-all duration-300">
+                <img src="../../images/images 23.png" alt="English for Daily Life"
+                    class="w-full h-37.5 object-cover block">
+                <div class="p-4 flex flex-col flex-1">
+                    <h3 class="text-sm font-bold mb-4">English for Daily Life</h3>
+                    <p class="text-[10px] text-gray-500 leading-5 mb-5">
+                        Build vocabulary and useful expressions for everyday situations and activities.
+                    </p>
+                    <a href="Everyday Fluency.course/daily-life-english.html"
+                        class="mt-auto bg-[#817dff] text-[#111321] font-bold text-[10px] py-3 rounded-md text-center hover:bg-[#6c68ff] transition-colors">
+                        Start Course
+                    </a>
+                </div>
+            </div>
+
+            <div
+                class="bg-gray-800 border border-gray-700 rounded-md overflow-hidden flex flex-col hover:border-indigo-500 transition-all duration-300">
+                <img src="../../images/images 16.png" alt="TOEFL Preparation" class="w-full h-37.5 object-cover block">
+                <div class="p-4 flex flex-col flex-1">
+                    <h3 class="text-sm font-bold mb-4">TOEFL Preparation</h3>
+                    <p class="text-[10px] text-gray-400 leading-5 mb-5">
+                        Prepare for the TOEFL exam with speaking, listening, reading and writing practice.
+                    </p>
+                    <a href="IELTS & TOEFL.course/IELTS & TOEFL.html"
+                        class="mt-auto bg-indigo-600 text-white font-bold text-[10px] py-3 rounded-md text-center hover:bg-indigo-500 transition-colors">
+                        Start Course
+                    </a>
+                </div>
+            </div>
+
+
+            <div
+                class="bg-gray-800 border border-gray-700 rounded-md overflow-hidden flex flex-col hover:border-indigo-500 transition-all duration-300">
+                <img src="../../images/images 17.png" alt="IELTS & TOEFL Grammar"
+                    class="w-full h-37.5 object-cover block">
+                <div class="p-4 flex flex-col flex-1">
+                    <h3 class="text-sm font-bold mb-4">IELTS & TOEFL Grammar</h3>
+                    <p class="text-[10px] text-gray-400 leading-5 mb-5">
+                        Improve grammar, vocabulary and sentence structure for better exam performance.
+                    </p>
+                    <a href="IELTS & TOEFL.course/grammar.html"
+                        class="mt-auto bg-indigo-600 text-white font-bold text-[10px] py-3 rounded-md text-center hover:bg-indigo-500 transition-colors">
+                        Start Course
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="/js/Proffile.js"></script>
+    <script src="/js/Dashboard.js"></script>
+</body>
+
+</html>

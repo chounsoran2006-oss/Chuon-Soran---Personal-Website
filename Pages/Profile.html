@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Page</title>
+    <script>(function () { try { if ((localStorage.getItem("rtlTheme") || "dark") === "light") { document.documentElement.classList.add("light") } } catch (e) { } })();</script>
+    <link rel="stylesheet" href="../css/output.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body
+    class="min-h-screen bg-[#0c0e17] text-slate-200 font-sans pb-12 antialiased selection:bg-indigo-500 selection:text-white">
+    <!-- Header -->
+    <header class="w-full bg-[#171b26] border-b border-[#242838] sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+
+            <div class="flex items-center justify-between">
+
+                <div class="flex items-center gap-3">
+                    <img src="https://img.magnific.com/premium-vector/rtl-logo-rtl-letter-rtl-letter-logo-design-initials-rtl-logo-linked-with-circle-uppercase-monogram-logo-rtl-typography-technology-business-real-estate-brand_229120-67750.jpg?semt=ais_hybrid&w=740&q=80"
+                        alt="RT Learning Logo"
+                        class="w-10 h-10 sm:w-11 sm:h-11 rounded-full object-cover ring-2 ring-indigo-500/20">
+
+                    <span class="text-lg sm:text-xl font-bold text-white tracking-tight">
+                        RT Learning
+                    </span>
+                </div>
+
+                <nav class="hidden md:flex items-center gap-2 lg:gap-4">
+                    <a href="../index.html"
+                        class="text-gray-400 hover:text-white px-3 py-2 rounded-lg hover:bg-[#242838] transition text-sm">
+                        Dashboard
+                    </a>
+                    <a href="./My course/My course.html"
+                        class="text-gray-400 hover:text-white px-3 py-2 rounded-lg hover:bg-[#242838] transition text-sm">
+                        My Course
+                    </a>
+                    <a href="./Practice%20Test/practice-test.html"
+                        class="text-gray-400 hover:text-white px-3 py-2 rounded-lg hover:bg-[#242838] transition text-sm">
+                        Practice Tests
+                    </a>
+                    <a href="./Profile.html"
+                        class="bg-[#817dff] text-black px-4 py-2 rounded-lg font-semibold hover:bg-[#6c67f0] transition hover:text-white">
+                        Profile
+                    </a>
+                    <a href="./Contact.html"
+                        class="text-gray-400 hover:text-white px-3 py-2 rounded-lg hover:bg-[#242838] transition text-sm">
+                        Contact Us
+                    </a>
+                    <a href="./Logout.html"
+                        class="text-gray-400 hover:text-white px-3 py-2 rounded-lg hover:bg-[#242838] transition text-sm flex items-center gap-1.5">
+                        <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M15.75 9V5.25A2.25 2.25 0 0 0 13.5 3h-6a2.25 2.25 0 0 0-2.25 2.25v13.5A2.25 2.25 0 0 0 7.5 21h6a2.25 2.25 0 0 0 2.25-2.25V15m3 0 3-3m0 0-3-3m3 3H9" />
+                        </svg>
+                        Logout
+                    </a>
+                </nav>
+
+                <button
+                    class="md:hidden text-gray-300 hover:text-white p-2 rounded-lg focus:outline-none focus:bg-[#242838]"
+                    onclick="document.getElementById('mobile-menu').classList.toggle('hidden')" aria-label="Open menu">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+
+            </div>
+
+            <nav id="mobile-menu" class="hidden md:hidden mt-4 pt-4 border-t border-[#242838]">
+                <div class="flex flex-col gap-1">
+                    <a href="../index.html"
+                        class="text-gray-300 hover:text-white px-4 py-2.5 rounded-lg hover:bg-[#242838] transition">
+                        Dashboard
+                    </a>
+                    <a href="./My course/My course.html"
+                        class="text-gray-300 hover:text-white px-4 py-2.5 rounded-lg hover:bg-[#242838] transition">
+                        My Course
+                    </a>
+                    <a href="./Practice%20Test/practice-test.html"
+                        class="text-gray-300 hover:text-white px-4 py-2.5 rounded-lg hover:bg-[#242838] transition">
+                        Practice Tests
+                    </a>
+                    <a href="./Profile.html"
+                        class="bg-[#817dff] text-black px-4 py-2.5 rounded-lg font-semibold text-center hover:bg-[#6c67f0] transition">
+                        Profile
+                    </a>
+                    <a href="./Contact.html"
+                        class="text-gray-300 hover:text-white px-4 py-2.5 rounded-lg hover:bg-[#242838] transition">
+                        Contact Us
+                    </a>
+                    <a href="./Logout.html"
+                        class="text-gray-300 hover:text-white px-4 py-2.5 rounded-lg hover:bg-[#242838] transition flex items-center gap-2">
+                        <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M15.75 9V5.25A2.25 2.25 0 0 0 13.5 3h-6a2.25 2.25 0 0 0-2.25 2.25v13.5A2.25 2.25 0 0 0 7.5 21h6a2.25 2.25 0 0 0 2.25-2.25V15m3 0 3-3m0 0-3-3m3 3H9" />
+                        </svg>
+                        Logout
+                    </a>
+                </div>
+            </nav>
+
+        </div>
+    </header>
+    <!-- Search & User Info -->
+    <section class="w-full max-w-7xl mx-auto sm:px-6 lg:px-8 my-4">
+        <div class="flex flex-col md:flex-row items-center md:justify-end gap-4">
+            <div class="flex items- md:justify-end w-full md:w-auto gap-4">
+                <div
+                    class="flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#1a1f30] border border-amber-500/20 text-amber-400 text-xs font-semibold">
+                    <i class="fa-solid fa-clock-rotate-left text-amber-400"></i>
+                    <span class="js-streak-days">14 days</span>
+                </div>
+
+                <button class="relative p-2 rounded-full text-slate-400 hover:text-white hover:bg-[#121625] transition">
+                    <i class="fa-regular fa-bell text-lg"></i>
+                    <span class="absolute top-1.5 right-1.5 w-2 h-2 bg-pink-500 rounded-full"></span>
+                </button>
+
+                <div class="flex items-center gap-3 pl-2 border-l border-[#1e2436] md:border-l-0">
+                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&auto=format&fit=crop&q=80"
+                        alt="User avatar"
+                        class="js-user-avatar w-9 h-9 rounded-full object-cover ring-2 ring-indigo-500/40">
+                    <div class="flex flex-col">
+                        <span class="js-user-name text-sm font-semibold text-white leading-tight">Soran</span>
+                        <span class="js-user-level text-xs text-slate-400 leading-tight">B2 - advance</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <main class="mx-auto max-w-6xl px-5 pb-16 sm:px-8 lg:px-12">
+
+        <!-- ================= PROFILE CARD ================= -->
+        <section
+            class="animate-fade-up mt-8 overflow-hidden rounded-3xl border border-[#1e2436] bg-[#121625] shadow-2xl shadow-black/30">
+
+            <!-- Banner -->
+            <div
+                class="banner-animate relative h-32 bg-linear-to-r from-indigo-600/50 via-[#817dff]/25 to-emerald-500/20 sm:h-40">
+                <div
+                    class="absolute inset-0 bg-[radial-gradient(circle_at_20%_30%,rgba(129,125,255,0.25),transparent_55%),radial-gradient(circle_at_80%_20%,rgba(52,211,153,0.15),transparent_50%)]">
+                </div>
+                <span
+                    class="absolute right-4 top-4 inline-flex items-center gap-1.5 rounded-full border border-emerald-500/40 bg-emerald-500/15 px-3 py-1.5 text-[10px] font-bold tracking-wide text-emerald-300 backdrop-blur-sm">
+                    <i class="fa-solid fa-shield-halved"></i> VERIFIED LEARNER
+                </span>
+                <span
+                    class="absolute left-4 top-4 hidden items-center gap-1.5 rounded-full border border-white/10 bg-black/25 px-3 py-1.5 text-[10px] font-semibold text-slate-200 backdrop-blur-sm sm:inline-flex">
+                    <i class="fa-solid fa-bolt text-amber-400"></i> B2 SPRINT ACTIVE
+                </span>
+            </div>
+
+            <div class="px-6 pb-8 sm:px-8">
+                <!-- Avatar + actions -->
+                <div class="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
+                    <div class="group relative -mt-14 sm:-mt-16">
+                        <div class="avatar-ring rounded-[1.4rem] p-0.75 shadow-xl shadow-indigo-500/20">
+                            <img id="profileAvatar"
+                                src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=300&auto=format&fit=crop&q=80"
+                                alt="Profile photo"
+                                class="h-28 w-28 rounded-[1.25rem] border-4 border-[#121625] object-cover transition duration-300 group-hover:scale-[1.02] sm:h-32 sm:w-32">
+                        </div>
+                        <button id="avatarEditBtn" type="button" title="Change photo"
+                            class="absolute -bottom-2 -right-2 flex h-9 w-9 items-center justify-center rounded-full bg-[#817dff] text-black shadow-lg shadow-indigo-500/30 ring-4 ring-[#121625] transition hover:scale-110 hover:bg-[#6c67f0] hover:text-white">
+                            <i class="fa-solid fa-camera text-sm"></i>
+                        </button>
+                        <input type="file" id="avatarInput" accept="image/png, image/jpeg, image/webp" class="hidden">
+                    </div>
+
+                    <div class="flex items-center gap-2">
+                        <button id="cancelBtn" type="button"
+                            class="hidden rounded-xl border border-[#242838] bg-white/5 px-4 py-2.5 text-sm text-slate-300 transition hover:bg-white/10 hover:text-white">
+                            Cancel
+                        </button>
+                        <button id="saveBtn" type="button"
+                            class="hidden items-center gap-2 rounded-xl bg-linear-to-r from-emerald-500 to-teal-400 px-5 py-2.5 text-sm font-semibold text-black shadow-lg shadow-emerald-500/25 transition hover:brightness-110">
+                            <i class="fa-solid fa-check"></i> Save Changes
+                        </button>
+                        <button id="editBtn" type="button"
+                            class="group flex items-center gap-2 rounded-xl bg-linear-to-r from-[#817dff] to-[#6c67f0] px-5 py-2.5 text-sm font-semibold text-black shadow-lg shadow-indigo-500/25 transition hover:brightness-110 hover:text-white">
+                            <i class="fa-solid fa-pen transition-transform group-hover:rotate-12"></i> Edit Profile
+                        </button>
+                    </div>
+                </div>
+
+                <!-- View mode -->
+                <div id="viewMode" class="mt-5">
+                    <div class="flex flex-wrap items-center gap-3">
+                        <h1 id="viewName" class="text-2xl font-extrabold tracking-tight text-white sm:text-3xl">Soran
+                        </h1>
+                        <span
+                            <!-- class="inline-flex items-center gap-1 rounded-full bg-gradient-to-r from-[#817dff]/20 to-indigo-500/20 px-2.5 py-1 text-[10px] font-bold text-indigo-300 ring-1 ring-indigo-500/40"> -->
+                            <i class="fa-solid fa-star text-[8px] text-amber-400"></i> PRO
+                        </span>
+                    </div>
+                    <p id="viewUsername" class="mt-1 text-sm font-medium text-slate-400">@sora_learns</p>
+
+                    <div id="viewBio" class="mt-3 max-w-2xl text-sm leading-relaxed text-slate-300 hidden">
+                        Passionate learner improving English every day.
+                    </div>
+
+                    <div class="mt-4 flex flex-wrap gap-2">
+                        <span
+                            class="inline-flex items-center gap-2 rounded-full border border-amber-500/30 bg-linear-to-r from-amber-500/15 to-orange-500/10 px-3.5 py-1.5 text-xs font-semibold text-amber-300 shadow-sm shadow-amber-500/10">
+                            <i class="fa-solid fa-graduation-cap"></i>
+                            <span id="viewLevel" class="font-bold">B2 High-Intermediate</span>
+                        </span>
+                        <span
+                            class="inline-flex items-center gap-2 rounded-full border border-[#242838] bg-white/5 px-3.5 py-1.5 text-xs font-medium text-slate-300 transition hover:border-indigo-500/40 hover:text-white">
+                            <i class="fa-regular fa-envelope text-indigo-400"></i>
+                            <span id="viewEmail">soran@example.com</span>
+                        </span>
+                        <span
+                            class="inline-flex items-center gap-2 rounded-full border border-[#242838] bg-white/5 px-3.5 py-1.5 text-xs font-medium text-slate-300 transition hover:border-pink-500/40 hover:text-white">
+                            <i class="fa-solid fa-calendar-day text-pink-400"></i>
+                            Joined September 2026
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Edit mode -->
+                <form id="editMode" class="mt-6 hidden gap-5 sm:grid-cols-2" novalidate>
+                    <label class="block">
+                        <span class="mb-1.5 block text-xs font-semibold tracking-wide text-slate-400 uppercase">Full
+                            Name</span>
+                        <input id="inputName" type="text" maxlength="40" autocomplete="name"
+                            placeholder="e.g. Soran Ahmed"
+                            class="w-full rounded-xl border border-[#242838] bg-[#0b0e18] px-4 py-2.5 text-sm text-white placeholder-slate-500 shadow-inner transition hover:border-[#3d4a75] focus:border-[#817dff] focus:outline-none focus:ring-2 focus:ring-[#817dff]/30">
+                        <p id="errorName" class="mt-1 hidden text-xs text-rose-400">
+                            <i class="fa-solid fa-circle-exclamation"></i> Please enter your name (min 2 characters).
+                        </p>
+                    </label>
+
+                    <label class="block">
+                        <span class="mb-1.5 block text-xs font-semibold tracking-wide text-slate-400 uppercase">Email
+                            Address</span>
+                        <input id="inputEmail" type="email" autocomplete="email" placeholder="e.g. you@example.com"
+                            class="w-full rounded-xl border border-[#242838] bg-[#0b0e18] px-4 py-2.5 text-sm text-white placeholder-slate-500 shadow-inner transition hover:border-[#3d4a75] focus:border-[#817dff] focus:outline-none focus:ring-2 focus:ring-[#817dff]/30">
+                        <p id="errorEmail" class="mt-1 hidden text-xs text-rose-400">
+                            <i class="fa-solid fa-circle-exclamation"></i> Please enter a valid email address.
+                        </p>
+                    </label>
+
+                    <label class="block">
+                        <span class="mb-1.5 block text-xs font-semibold tracking-wide text-slate-400 uppercase">Current
+                            Level (CEFR)</span>
+                        <div class="relative">
+                            <select id="inputLevel"
+                                class="w-full appearance-none rounded-xl border border-[#242838] bg-[#0b0e18] px-4 py-2.5 text-sm text-white transition focus:border-[#817dff] focus:outline-none focus:ring-2 focus:ring-[#817dff]/30">
+                                <option value="A1 Beginner">A1 - Beginner</option>
+                                <option value="A2 Elementary">A2 - Elementary</option>
+                                <option value="B1 Intermediate">B1 - Intermediate</option>
+                                <option value="B2 High-Intermediate">B2 - High-Intermediate</option>
+                                <option value="C1 Advanced">C1 - Advanced</option>
+                                <option value="C2 Proficient">C2 - Proficient</option>
+                            </select>
+                            <i
+                                class="fa-solid fa-chevron-down pointer-events-none absolute right-4 top-1/2 -translate-y-1/2 text-xs text-slate-500"></i>
+                        </div>
+                    </label>
+
+                    <label class="block">
+                        <span class="mb-1.5 block text-xs font-semibold tracking-wide text-slate-400 uppercase">Photo
+                            (PNG / JPG / WEBP, max 2MB)</span>
+                        <div class="flex items-center gap-3">
+                            <img id="avatarPreview"
+                                src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=300&auto=format&fit=crop&q=80"
+                                alt="Preview" class="h-12 w-12 rounded-xl border border-[#242838] object-cover">
+                            <button id="pickPhotoBtn" type="button"
+                                class="rounded-xl border border-[#242838] bg-white/5 px-4 py-2.5 text-xs font-semibold text-slate-200 transition hover:bg-white/10">
+                                <i class="fa-solid fa-upload mr-1"></i> Upload new photo
+                            </button>
+                        </div>
+                    </label>
+
+                    <label class="block sm:col-span-2">
+                        <span class="mb-1.5 block text-xs font-semibold tracking-wide text-slate-400 uppercase">Bio
+                            <span class="normal-case text-slate-500">(optional)</span></span>
+                        <textarea id="inputBio" rows="3" maxlength="160"
+                            placeholder="Tell us about your learning goals..."
+                            class="w-full resize-none rounded-xl border border-[#242838] bg-[#0b0e18] px-4 py-2.5 text-sm text-white placeholder-slate-500 transition focus:border-[#817dff] focus:outline-none focus:ring-2 focus:ring-[#817dff]/30"></textarea>
+                    </label>
+
+                    <p class="text-xs text-slate-500 sm:col-span-2">
+                        <i class="fa-solid fa-circle-info mr-1"></i> Your changes are saved in this browser.
+                    </p>
+                </form>
+            </div>
+        </section>
+
+        <!-- ================= STATS ================= -->
+        <section class="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            <div
+                class="group rounded-2xl border border-[#242838] bg-[#171b27] p-5 transition duration-300 hover:-translate-y-1 hover:border-amber-500/40 hover:shadow-xl hover:shadow-amber-500/10">
+                <div class="flex items-start justify-between">
+                    <p class="text-[11px] font-semibold tracking-wide text-slate-400">ACTIVE STREAK</p>
+                    <span
+                        class="rounded-xl bg-linear-to-br from-amber-500/30 to-orange-500/10 px-2.5 py-1.5 text-sm ring-1 ring-amber-500/30 transition group-hover:scale-110">&#128293;</span>
+                </div>
+                <p
+                    class="mt-2 bg-linear-to-r from-white to-slate-400 bg-clip-text text-3xl font-bold text-transparent">
+                    <span class="js-streak-count">14</span>
+                    <span class="font-medium text-slate-400">Days</span>
+                </p>
+                <p class="mt-3 text-[11px] font-semibold text-amber-400">&#9673; Personal Best Record!</p>
+            </div>
+            <div
+                class="group rounded-2xl border border-[#242838] bg-[#171b27] p-5 transition duration-300 hover:-translate-y-1 hover:border-indigo-500/40 hover:shadow-xl hover:shadow-indigo-500/10">
+                <div class="flex items-start justify-between">
+                    <p class="text-[11px] font-semibold tracking-wide text-slate-400">WORDS MASTERED</p>
+                    <span
+                        class="rounded-xl bg-linear-to-br from-indigo-500/30 to-violet-500/10 px-2.5 py-1.5 text-sm font-bold text-indigo-300 ring-1 ring-indigo-500/30 transition group-hover:scale-110">A</span>
+                </div>
+                <p
+                    class="mt-2 bg-linear-to-r from-white to-slate-400 bg-clip-text text-3xl font-bold text-transparent">
+                    3,420</p>
+                <p class="mt-3 text-[11px] font-semibold text-emerald-400">&#8599; +140 words this week</p>
+            </div>
+            <div
+                class="group rounded-2xl border border-[#242838] bg-[#171b27] p-5 transition duration-300 hover:-translate-y-1 hover:border-emerald-500/40 hover:shadow-xl hover:shadow-emerald-500/10">
+                <div class="flex items-start justify-between">
+                    <p class="text-[11px] font-semibold tracking-wide text-slate-400">QUIZ ACCURACY</p>
+                    <span
+                        class="rounded-xl bg-linear-to-br from-emerald-500/30 to-teal-500/10 px-2.5 py-1.5 text-sm text-emerald-300 ring-1 ring-emerald-500/30 transition group-hover:scale-110">&#10004;</span>
+                </div>
+                <p
+                    class="mt-2 bg-linear-to-r from-white to-slate-400 bg-clip-text text-3xl font-bold text-transparent">
+                    94%</p>
+                <p class="mt-3 text-[11px] font-semibold text-emerald-400">Top 3% of cohort</p>
+            </div>
+            <div
+                class="group rounded-2xl border border-[#242838] bg-[#171b27] p-5 transition duration-300 hover:-translate-y-1 hover:border-cyan-500/40 hover:shadow-xl hover:shadow-cyan-500/10">
+                <div class="flex items-start justify-between">
+                    <p class="text-[11px] font-semibold tracking-wide text-slate-400">LISTENING TIME</p>
+                    <span
+                        class="rounded-xl bg-linear-to-br from-cyan-500/30 to-sky-500/10 px-2.5 py-1.5 text-sm ring-1 ring-cyan-500/30 transition group-hover:scale-110">&#127911;</span>
+                </div>
+                <p
+                    class="mt-2 bg-linear-to-r from-white to-slate-400 bg-clip-text text-3xl font-bold text-transparent">
+                    42
+                    <span class="font-medium text-slate-400">Hours</span>
+                </p>
+                <p class="mt-3 text-[11px] font-semibold text-slate-400">&#9678; Auditory immersion</p>
+            </div>
+        </section>
+
+        <!-- ================= MAIN GRID ================= -->
+        <section class="mt-8 grid gap-6 lg:grid-cols-[1.7fr_1fr]">
+
+            <!-- Left column -->
+            <div class="space-y-6">
+                <div class="rounded-2xl bg-[#171b27] p-6">
+                    <div class="flex items-center justify-between">
+                        <p class="text-[11px] tracking-wide text-slate-400">SKILL ASSESSMENT</p>
+                        <span class="rounded-full bg-white/5 px-3 py-1 text-[10px] text-slate-400">Standardized
+                            Matrix</span>
+                    </div>
+                    <h2 class="mt-3 text-xl font-semibold">CEFR Fluency Breakdown</h2>
+
+                    <div class="mt-4 space-y-4">
+                        <div>
+                            <div class="flex items-end justify-between text-sm">
+                                <span>Speaking</span>
+                                <span class="text-xs text-slate-400">B2 Low <b
+                                        class="ml-1 text-amber-400">78%</b></span>
+                            </div>
+                            <div class="mt-1 h-1.5 rounded-full bg-white/10">
+                                <div
+                                    class="h-full w-[78%] rounded-full bg-linear-to-r from-amber-500 to-amber-300 shadow-[0_0_10px_rgba(245,158,11,0.45)] transition-all duration-1000">
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex items-end justify-between text-sm">
+                                <span>Listening</span>
+                                <span class="text-xs text-slate-400">B2 High <b
+                                        class="ml-1 text-emerald-400">88%</b></span>
+                            </div>
+                            <div class="mt-1 h-1.5 rounded-full bg-white/10">
+                                <div
+                                    class="h-full w-[88%] rounded-full bg-linear-to-r from-emerald-500 to-emerald-300 shadow-[0_0_10px_rgba(16,185,129,0.45)] transition-all duration-1000">
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex items-end justify-between text-sm">
+                                <span>Reading</span>
+                                <span class="text-xs text-slate-400">C1 Advanced <b
+                                        class="ml-1 text-slate-200">92%</b></span>
+                            </div>
+                            <div class="mt-1 h-1.5 rounded-full bg-white/10">
+                                <div
+                                    class="h-full w-[92%] rounded-full bg-linear-to-r from-indigo-400 to-indigo-300 shadow-[0_0_10px_rgba(129,140,248,0.45)] transition-all duration-1000">
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex items-end justify-between text-sm">
+                                <span>Writing</span>
+                                <span class="text-xs text-slate-400">B2 Mid <b
+                                        class="ml-1 text-slate-200">70%</b></span>
+                            </div>
+                            <div class="mt-1 h-1.5 rounded-full bg-white/10">
+                                <div
+                                    class="h-full w-[70%] rounded-full bg-linear-to-r from-slate-500 to-slate-400 transition-all duration-1000">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    class="relative mt-2 overflow-hidden rounded-2xl border border-indigo-500/25 bg-linear-to-br from-[#1a2540] via-[#182038] to-[#141a30] p-6">
+                    <div class="absolute -right-10 -top-10 h-40 w-40 rounded-full bg-indigo-500/15 blur-3xl"></div>
+                    <div class="relative flex flex-wrap items-center justify-between gap-4">
+                        <div>
+                            <h2 class="text-xl font-bold text-white">Overall Fluency Score</h2>
+                            <p class="mt-3 max-w-full text-sm leading-relaxed text-slate-400">Composite linguistic
+                                rating
+                                calibrated against the European framework.</p>
+                            <span
+                                class="mt-4 inline-flex items-center gap-1.5 rounded-md bg-emerald-500/10 px-3 py-1.5 text-xs font-semibold text-emerald-400 ring-1 ring-emerald-500/25">&#10003;
+                                Ready for C1 prep exam</span>
+                        </div>
+                        <button
+                            class="rounded-xl border border-white/10 bg-white/5 px-6 py-2.5 text-xs font-semibold text-slate-200 transition hover:bg-white/10 hover:text-white">Test
+                            Details &#8250;</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right column -->
+            <div class="space-y-6">
+                <div class="rounded-2xl bg-[#171b27] p-4">
+                    <div class="flex items-center justify-between px-1">
+                        <h3 class="text-sm font-medium">Achievements &amp; Badges</h3>
+                        <span class="text-[11px] text-slate-400">4 of 12</span>
+                    </div>
+                    <div class="mt-3 grid grid-cols-2 gap-3">
+                        <div
+                            class="group cursor-pointer rounded-xl border border-transparent bg-[#1d2333] p-4 text-center transition duration-300 hover:-translate-y-1 hover:border-amber-500/40 hover:bg-[#222941] hover:shadow-lg hover:shadow-amber-500/10">
+                            <div
+                                class="mx-auto flex h-10 w-10 items-center justify-center rounded-xl bg-linear-to-br from-amber-500/30 to-amber-500/5 text-base ring-1 ring-amber-500/30 transition group-hover:scale-110">
+                                &#127942;</div>
+                            <p class="mt-2 text-xs font-semibold">Word Smith</p>
+                            <p class="text-[11px] font-semibold text-amber-400">Gold Tier</p>
+                        </div>
+                        <div
+                            class="group cursor-pointer rounded-xl border border-transparent bg-[#1d2333] p-4 text-center transition duration-300 hover:-translate-y-1 hover:border-orange-500/40 hover:bg-[#222941] hover:shadow-lg hover:shadow-orange-500/10">
+                            <div
+                                class="mx-auto flex h-10 w-10 items-center justify-center rounded-xl bg-linear-to-br from-orange-500/30 to-orange-500/5 text-base ring-1 ring-orange-500/30 transition group-hover:scale-110">
+                                &#128293;</div>
+                            <p class="mt-2 text-xs font-semibold">Streak Master</p>
+                            <p class="text-[11px] font-semibold text-orange-400">Amber Tier</p>
+                        </div>
+                        <div
+                            class="group cursor-pointer rounded-xl border border-transparent bg-[#1d2333] p-4 text-center transition duration-300 hover:-translate-y-1 hover:border-emerald-500/40 hover:bg-[#1f2c33] hover:shadow-lg hover:shadow-emerald-500/10">
+                            <div
+                                class="mx-auto flex h-10 w-10 items-center justify-center rounded-xl bg-linear-to-br from-emerald-500/30 to-emerald-500/5 text-base text-emerald-300 ring-1 ring-emerald-500/30 transition group-hover:scale-110">
+                                &#10004;&#10008;</div>
+                            <p class="mt-2 text-xs font-semibold">Grammar</p>
+                            <p class="text-[11px] font-semibold text-emerald-400">Practice</p>
+                        </div>
+                        <div
+                            class="group cursor-pointer rounded-xl border border-transparent bg-[#1d2333] p-4 text-center transition duration-300 hover:-translate-y-1 hover:border-indigo-500/40 hover:bg-[#222941] hover:shadow-lg hover:shadow-indigo-500/10">
+                            <div
+                                class="mx-auto flex h-10 w-10 items-center justify-center rounded-xl bg-linear-to-br from-indigo-500/30 to-indigo-500/5 text-lg transition group-hover:scale-110">
+                                &#127769;</div>
+                            <p class="mt-2 text-xs font-semibold">Night Owl Learner</p>
+                            <p class="text-[11px] font-semibold text-indigo-300">Late Sessions</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="rounded-2xl bg-[#171b27] p-5">
+                    <div class="flex items-center justify-between">
+                        <p class="text-[11px] tracking-wide text-slate-400">WEEKLY COMMITMENT</p>
+                        <span class="rounded-full bg-emerald-500/10 px-3 py-1 text-[10px] text-emerald-400">&#10003; 90%
+                            Done</span>
+                    </div>
+                    <h3 class="mt-1 text-xl font-medium">Study Target</h3>
+
+                    <div class="mt-4 flex items-end justify-between text-sm text-slate-400">
+                        <span>Target Completion</span>
+                        <span class="text-xs"><b class="text-white">4.5</b> /5.0 hrs</span>
+                    </div>
+                    <div class="mt-1 h-2 rounded-full bg-white/10">
+                        <div
+                            class="h-full w-[90%] rounded-full bg-linear-to-r from-emerald-400 to-teal-300 shadow-[0_0_10px_rgba(52,211,153,0.5)] transition-all duration-1000">
+                        </div>
+                    </div>
+
+                    <div class="mt-5 flex items-center justify-between text-xs">
+                        <span>Target Reminder</span>
+                        <button role="switch" aria-checked="true"
+                            class="flex h-5 w-9 items-center justify-end rounded-full bg-indigo-500 px-0.5">
+                            <span class="h-4 w-4 rounded-full bg-white"></span>
+                        </button>
+                    </div>
+
+                    <div class="mt-4 grid grid-cols-2 gap-3">
+                        <button class="rounded-lg bg-[#1d2333] px-3 py-3 text-[11px] hover:bg-[#252c40]">Download B2
+                            Cert</button>
+                        <button class="rounded-lg bg-[#1d2333] px-3 py-3 text-[11px] hover:bg-[#252c40]">Share
+                            Transcript</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Toast notification -->
+    <div id="toast"
+        class="fixed bottom-6 right-6 z-60 hidden translate-y-3 items-center gap-2.5 rounded-xl border border-emerald-500/30 bg-[#0d221c] px-4 py-3 text-sm text-white opacity-0 shadow-2xl transition-all duration-300">
+        <i class="fa-solid fa-circle-check text-emerald-400"></i>
+        <span id="toastMsg">Profile updated successfully!</span>
+    </div>
+
+    <script src="../js/Proffile.js"></script>
+    <script src="../js/StreakSync.js"></script>
+    <script src="../js/Theme.js"></script>
+</body>
+
+</html>

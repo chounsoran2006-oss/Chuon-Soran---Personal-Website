@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RTLlearning - Welcome</title>
+    <script>(function () { try { if ((localStorage.getItem("rtlTheme") || "dark") === "light") { document.documentElement.classList.add("light") } } catch (e) { } })();</script>
+    <link rel="stylesheet" href="../css/output.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <script>
+        tailwind.config = { darkMode: 'class' }
+    </script>
+    <style>
+        input:-webkit-autofill,
+        input:-webkit-autofill:hover,
+        input:-webkit-autofill:focus,
+        input:-webkit-autofill:active {
+            transition: background-color 600000s 0s, color 600000s 0s;
+            -webkit-text-fill-color: currentColor !important;
+            caret-color: currentColor;
+        }
+    </style>
+</head>
+
+<body
+    class="min-h-screen flex items-center justify-center p-4 sm:p-6 text-slate-100 font-sans [background:radial-gradient(circle_at_15%_20%,#26305a_0%,transparent_45%),radial-gradient(circle_at_85%_80%,#263a5a_0%,transparent_45%),#0d1424]">
+
+    <!-- Decorative glows -->
+    <div class="pointer-events-none fixed -top-24 -left-24 w-96 h-96 bg-indigo-600/15 rounded-full blur-3xl"></div>
+    <div class="pointer-events-none fixed -bottom-24 -right-24 w-96 h-96 bg-emerald-500/10 rounded-full blur-3xl"></div>
+
+    <main
+        class="animate-fade-up w-full max-w-5xl grid lg:grid-cols-[1.05fr_1fr] rounded-3xl overflow-hidden border border-[#2a3454] bg-[#0f1424] shadow-[0_40px_80px_rgba(0,0,0,0.5)]">
+
+        <!-- ============ LEFT: BRAND PANEL ============ -->
+        <aside
+            class="relative hidden lg:flex flex-col justify-between p-10 xl:p-12 bg-linear-to-br from-[#2a3160] via-[#1c2540] to-[#101a33] overflow-hidden">
+            <div class="absolute -top-20 -right-20 w-72 h-72 bg-indigo-500/20 rounded-full blur-3xl"></div>
+            <div class="absolute bottom-10 -left-16 w-56 h-56 bg-emerald-400/10 rounded-full blur-3xl"></div>
+
+            <div class="relative flex items-center gap-3">
+                <div
+                    class="w-10 h-10 rounded-xl bg-[#111528] border border-[#2a3454] flex items-center justify-center text-xs font-bold text-red-400 shadow-lg">
+                    RTL</div>
+                <span class="text-lg font-bold tracking-tight">RT Learning</span>
+            </div>
+
+            <div class="relative my-10">
+                <h1 class="text-3xl xl:text-4xl font-extrabold leading-tight text-white">
+                    Master English,<br>
+                    <span
+                        class="bg-linear-to-r from-indigo-300 via-[#817dff] to-emerald-300 bg-clip-text text-transparent">one
+                        sprint at a time.</span>
+                </h1>
+                <p class="mt-4 text-sm text-[#9aa3bf] leading-relaxed max-w-sm">
+                    Bite-sized lessons, real feedback and streaks that keep you going — built around the CEFR
+                    framework.
+                </p>
+
+                <ul class="mt-8 space-y-4">
+                    <li class="flex items-start gap-3">
+                        <span
+                            class="w-9 h-9 shrink-0 rounded-xl bg-indigo-500/15 border border-indigo-500/30 flex items-center justify-center">⚡</span>
+                        <div>
+                            <p class="text-sm font-semibold text-white">3-minute micro lessons</p>
+                            <p class="text-xs text-[#9aa3bf]">Fit learning into any busy day</p>
+                        </div>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <span
+                            class="w-9 h-9 shrink-0 rounded-xl bg-emerald-500/15 border border-emerald-500/30 flex items-center justify-center">🎯</span>
+                        <div>
+                            <p class="text-sm font-semibold text-white">CEFR-aligned levels</p>
+                            <p class="text-xs text-[#9aa3bf]">From A1 beginner to C2 proficient</p>
+                        </div>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <span
+                            class="w-9 h-9 shrink-0 rounded-xl bg-amber-500/15 border border-amber-500/30 flex items-center justify-center">🔥</span>
+                        <div>
+                            <p class="text-sm font-semibold text-white">Streaks &amp; XP rewards</p>
+                            <p class="text-xs text-[#9aa3bf]">Stay motivated, see real progress</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="relative">
+                <div
+                    class="login-testimonial rounded-2xl border border-[#2a3454] bg-[#111528]/80 backdrop-blur p-4 flex items-start gap-3">
+                    <span class="text-lg">💬</span>
+                    <div>
+                        <p class="text-[13px] text-slate-200 leading-relaxed">“I went from B1 to B2 in four months.
+                            The speech coach feedback is gold.”</p>
+                        <p class="mt-2 text-[11px] text-[#9aa3bf]">— Sora, Verified Learner</p>
+                    </div>
+                </div>
+                <div class="mt-5 flex items-center gap-6 text-xs text-[#9aa3bf]">
+                    <span><b class="text-white">50k+</b> learners</span>
+                    <span><b class="text-white">4.8★</b> average rating</span>
+                    <span><b class="text-white">120+</b> lessons</span>
+                </div>
+            </div>
+        </aside>
+
+        <!-- ============ RIGHT: FORM PANEL ============ -->
+        <section class="relative p-6 sm:p-9 md:p-10 flex flex-col justify-center">
+
+            <!-- Compact brand (mobile only) -->
+            <div class="lg:hidden flex items-center justify-center gap-2.5 mb-6">
+                <div
+                    class="w-8 h-8 rounded-lg bg-[#111528] border border-[#2a3454] flex items-center justify-center text-[11px] font-bold text-red-400">
+                    RTL</div>
+                <span class="font-semibold">RT Learning</span>
+            </div>
+
+            <div class="text-center lg:text-left">
+                <div
+                    class="text-[11px] md:text-xs font-semibold text-[#9aa3bf] tracking-[4px] md:tracking-[5px] uppercase">
+                    Welcome back to</div>
+                <h2 class="mt-2 text-2xl md:text-3xl font-bold text-white">Sign in to continue</h2>
+                <p class="mt-1.5 text-[13px] text-[#9aa3bf]">Pick your level — you can change it anytime.</p>
+            </div>
+
+            <!-- Stages -->
+            <div class="grid grid-cols-3 gap-2.5 md:gap-3.5 mt-6 md:mt-7">
+                <button type="button" data-level="A1 Beginner"
+                    class="js-stage group relative bg-[#1c2540] border border-[#2a3454] rounded-2xl p-3.5 md:p-4 text-left cursor-pointer transition duration-200 hover:-translate-y-0.5 hover:border-[#3d4a75]">
+                    <span
+                        class="js-stage-check hidden absolute top-2 right-2 w-4.5 h-4.5 rounded-full bg-[#6c6ef0] items-center justify-center">
+                        <svg class="w-2.5 h-2.5 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="3.5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="m5 13 4 4L19 7" />
+                        </svg>
+                    </span>
+                    <div class="text-[10px] tracking-wide text-[#9aa3bf] mb-1">STAGE 01</div>
+                    <div class="text-sm md:text-base font-semibold">Beginner</div>
+                    <div class="text-xs text-[#3ddc97] font-semibold mt-0.5">A1 – A2</div>
+                    <div class="text-[10px] text-[#9aa3bf] mt-2 hidden sm:block">60 hrs to target</div>
+                </button>
+
+                <button type="button" data-level="B1 Intermediate"
+                    class="js-stage group relative bg-[#1c2540] border-2 border-[#6c6ef0] rounded-2xl p-3.5 md:p-4 text-left cursor-pointer transition duration-200 hover:-translate-y-0.5 shadow-lg shadow-indigo-500/10">
+                    <span
+                        class="js-stage-badge absolute -top-2.5 left-1/2 -translate-x-1/2 bg-linear-to-r from-[#7b7ff5] to-[#6c6ef0] text-white text-[9px] font-bold tracking-wide px-2.5 py-0.5 rounded-full whitespace-nowrap">POPULAR</span>
+                    <span
+                        class="js-stage-check absolute top-2 right-2 w-4.5 h-4.5 rounded-full bg-[#6c6ef0] flex items-center justify-center">
+                        <svg class="w-2.5 h-2.5 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="3.5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="m5 13 4 4L19 7" />
+                        </svg>
+                    </span>
+                    <div class="text-[10px] tracking-wide text-[#9aa3bf] mb-1">STAGE 02</div>
+                    <div class="text-sm md:text-base font-semibold">Intermediate</div>
+                    <div class="text-xs text-[#3ddc97] font-semibold mt-0.5">B1 - B2</div>
+                    <div class="text-[10px] text-[#9aa3bf] mt-2 hidden sm:block">Most popular</div>
+                </button>
+
+                <button type="button" data-level="C1 Advanced"
+                    class="js-stage group relative bg-[#1c2540] border border-[#2a3454] rounded-2xl p-3.5 md:p-4 text-left cursor-pointer transition duration-200 hover:-translate-y-0.5 hover:border-[#3d4a75]">
+                    <span
+                        class="js-stage-check hidden absolute top-2 right-2 w-4.5 h-4.5 rounded-full bg-[#6c6ef0] items-center justify-center">
+                        <svg class="w-2.5 h-2.5 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="3.5">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="m5 13 4 4L19 7" />
+                        </svg>
+                    </span>
+                    <div class="text-[10px] tracking-wide text-[#9aa3bf] mb-1">STAGE 03</div>
+                    <div class="text-sm md:text-base font-semibold">Advanced</div>
+                    <div class="text-xs text-[#3ddc97] font-semibold mt-0.5">C1 – C2</div>
+                    <div class="text-[10px] text-[#9aa3bf] mt-2 hidden sm:block">Fluency polish</div>
+                </button>
+            </div>
+
+            <!-- Socials -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-6">
+                <button type="button"
+                    class="js-social flex items-center justify-center gap-2.5 bg-[#1c2540] border border-[#2a3454] rounded-xl px-4 py-3 text-[13px] hover:border-slate-500 hover:bg-[#212b4d] transition">
+                    <svg class="w-4.5 h-4.5 shrink-0" viewBox="0 0 24 24">
+                        <path fill="#4285F4"
+                            d="M23.49 12.27c0-.79-.07-1.54-.19-2.27H12v4.51h6.47c-.29 1.48-1.14 2.73-2.4 3.58v3h3.86c2.26-2.09 3.56-5.17 3.56-8.82z" />
+                        <path fill="#34A853"
+                            d="M12 24c3.24 0 5.95-1.08 7.93-2.91l-3.86-3c-1.08.72-2.45 1.16-4.07 1.16-3.13 0-5.78-2.11-6.73-4.96H1.29v3.09C3.26 21.3 7.31 24 12 24z" />
+                        <path fill="#FBBC05"
+                            d="M5.27 14.29c-.25-.72-.38-1.49-.38-2.29s.14-1.57.38-2.29V6.62H1.29C.47 8.24 0 10.06 0 12s.47 3.76 1.29 5.38l3.98-3.09z" />
+                        <path fill="#EA4335"
+                            d="M12 4.75c1.77 0 3.35.61 4.6 1.8l3.42-3.42C17.95 1.19 15.24 0 12 0 7.31 0 3.26 2.7 1.29 6.62l3.98 3.09C6.22 6.86 8.87 4.75 12 4.75z" />
+                    </svg>
+                    Google
+                </button>
+                <button type="button"
+                    class="js-social flex items-center justify-center gap-2.5 bg-[#1c2540] border border-[#2a3454] rounded-xl px-4 py-3 text-[13px] hover:border-slate-500 hover:bg-[#212b4d] transition">
+                    <svg class="w-4.5 h-4.5 shrink-0" viewBox="0 0 24 24" fill="#1877F2">
+                        <path
+                            d="M24 12.07C24 5.4 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.09 10.13 24v-8.44H7.08v-3.49h3.05V9.41c0-3.02 1.79-4.7 4.53-4.7 1.31 0 2.68.24 2.68.24v2.97h-1.51c-1.49 0-1.96.93-1.96 1.89v2.26h3.33l-.53 3.49h-2.8V24C19.61 23.09 24 18.1 24 12.07z" />
+                    </svg>
+                    Facebook
+                </button>
+            </div>
+
+            <!-- Divider -->
+            <div class="flex items-center gap-4 text-[#9aa3bf] text-xs my-5">
+                <span class="flex-1 h-px bg-linear-to-r from-transparent via-[#2a3454] to-[#2a3454]"></span>
+                or continue with email
+                <span class="flex-1 h-px  bg-linear-to-r  from-transparent via-[#2a3454] to-[#2a3454]"></span>
+            </div>
+
+            <form id="loginForm" novalidate>
+                <!-- Email -->
+                <div class="mb-4">
+                    <label for="email" class="block text-xs font-semibold mb-2">Your Email</label>
+                    <div id="emailWrap"
+                        class="flex items-center gap-3 bg-[#1c2540] border border-[#2a3454] rounded-xl px-4 py-3 transition focus-within:border-[#6c6ef0] focus-within:ring-2 focus-within:ring-[#6c6ef0]/25">
+                        <svg class="w-4.5 h-4.5 text-[#9aa3bf] shrink-0" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="1.8">
+                            <rect x="2.5" y="4.5" width="19" height="15" rx="2.5" />
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="m3.5 7.5 7.9 5.27a1 1 0 0 0 1.2 0L20.5 7.5" />
+                        </svg>
+                        <input id="email" type="email" autocomplete="email" placeholder="you@example.com"
+                            class="flex-1 bg-transparent border-none outline-none text-slate-100 text-sm placeholder-slate-500">
+                    </div>
+                    <p id="emailError" class="hidden mt-1.5 text-[11px] text-rose-400">
+                        <i>!</i> Please enter a valid email address.
+                    </p>
+                </div>
+
+                <!-- Password -->
+                <div class="mb-4">
+                    <div class="flex justify-between items-center mb-2">
+                        <label for="pwd" class="block text-xs font-semibold">Your Password</label>
+                        <span id="forgotLink"
+                            class="text-xs text-[#817dff] hover:text-[#a5a1ff] cursor-pointer transition">Forgot
+                            password?</span>
+                    </div>
+                    <div id="pwdWrap"
+                        class="flex items-center gap-3 bg-[#1c2540] border border-[#2a3454] rounded-xl px-4 py-3 transition focus-within:border-[#6c6ef0] focus-within:ring-2 focus-within:ring-[#6c6ef0]/25">
+                        <svg class="w-4.5 h-4.5 text-[#9aa3bf] shrink-0" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="1.8">
+                            <rect x="4" y="10.5" width="16" height="10.5" rx="2.5" />
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M8 10.5V7a4 4 0 1 1 8 0v3.5" />
+                            <circle cx="12" cy="15.75" r="1.4" fill="currentColor" stroke="none" />
+                        </svg>
+                        <input id="pwd" type="password" autocomplete="current-password"
+                            placeholder="Enter your password"
+                            class="flex-1 bg-transparent border-none outline-none text-slate-100 text-sm placeholder-slate-500">
+                        <button type="button" id="togglePwd" aria-label="Show or hide password"
+                            class="bg-transparent border-none cursor-pointer text-[#9aa3bf] hover:text-white transition shrink-0">
+                            <svg id="eyeOpen" class="w-4.5 h-4.5" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1.8">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M2.5 12S6 5.5 12 5.5 21.5 12 21.5 12 18 18.5 12 18.5 2.5 12 2.5 12Z" />
+                                <circle cx="12" cy="12" r="3" />
+                            </svg>
+                            <svg id="eyeOff" class="w-4.5 h-4.5 hidden" viewBox="0 0 24 24" fill="none"
+                                stroke="currentColor" stroke-width="1.8">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M2.5 12S6 5.5 12 5.5c1.62 0 3.01.47 4.2 1.13M21.5 12S18 18.5 12 18.5c-1.62 0-3.01-.47-4.2-1.13" />
+                                <path stroke-linecap="round" d="m4 20 16-16" />
+                            </svg>
+                        </button>
+                    </div>
+                    <p id="pwdError" class="hidden mt-1.5 text-[11px] text-rose-400">
+                        <i>!</i> Password must be at least 6 characters.
+                    </p>
+                </div>
+
+                <!-- Remember -->
+                <label
+                    class="flex items-center gap-2.5 text-[#9aa3bf] text-[13px] my-4 mb-6 cursor-pointer select-none hover:text-slate-300 transition">
+                    <input id="remember" type="checkbox" class="w-4 h-4 rounded accent-[#6c6ef0] cursor-pointer">
+                    Remember me for 30 days
+                </label>
+
+                <!-- CTA -->
+                <button type="submit" id="submitBtn"
+                    class="group w-full flex items-center justify-center gap-2.5 py-3.5 md:py-4 rounded-2xl text-white text-sm md:text-[15px] font-semibold bg-linear-to-b from-[#7b7ff5] to-[#6c6ef0] shadow-lg shadow-indigo-500/30 hover:brightness-110 hover:-translate-y-0.5 active:translate-y-0 transition disabled:opacity-70 disabled:cursor-not-allowed disabled:hover:translate-y-0">
+                    <span id="submitText">Start Learning Free</span>
+                    <svg id="submitArrow" class="w-4 h-4 transition-transform group-hover:translate-x-1"
+                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M4 12h16m0 0-6-6m6 6-6 6" />
+                    </svg>
+                    <svg id="submitSpinner" class="spinner w-4 h-4 hidden" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2.5">
+                        <path stroke-linecap="round" d="M12 3a9 9 0 1 0 9 9" />
+                    </svg>
+                </button>
+            </form>
+
+            <p class="mt-5 text-center text-[13px] text-[#9aa3bf]">
+                New to RT Learning?
+                <span id="signupLink"
+                    class="text-[#817dff] font-semibold hover:text-[#a5a1ff] cursor-pointer transition">Create
+                    a free account</span>
+            </p>
+        </section>
+    </main>
+
+    <!-- Toast -->
+    <div id="toast"
+        class="fixed bottom-6 left-1/2 -translate-x-1/2 z-50 hidden rounded-xl border border-[#2a3454] bg-[#1c2540] px-4 py-3 text-sm text-white shadow-2xl">
+    </div>
+
+    <script>
+            (function () {
+                "use strict";
+
+                var email = document.getElementById("email");
+                var pwd = document.getElementById("pwd");
+                var emailError = document.getElementById("emailError");
+                var pwdError = document.getElementById("pwdError");
+                var emailWrap = document.getElementById("emailWrap");
+                var pwdWrap = document.getElementById("pwdWrap");
+                var remember = document.getElementById("remember");
+                var submitBtn = document.getElementById("submitBtn");
+                var submitText = document.getElementById("submitText");
+                var submitArrow = document.getElementById("submitArrow");
+                var submitSpinner = document.getElementById("submitSpinner");
+                var toast = document.getElementById("toast");
+                var selectedLevel = "B1 Intermediate";
+
+                /* ---------- Stage selection ---------- */
+                var stages = document.querySelectorAll(".js-stage");
+                stages.forEach(function (btn) {
+                    btn.addEventListener("click", function () {
+                        stages.forEach(function (b) {
+                            b.classList.remove("border-2", "border-[#6c6ef0]", "shadow-lg", "shadow-indigo-500/10");
+                            b.classList.add("border", "border-[#2a3454]");
+                            b.querySelector(".js-stage-check").classList.add("hidden");
+                            b.querySelector(".js-stage-check").classList.remove("flex");
+                        });
+                        btn.classList.remove("border", "border-[#2a3454]");
+                        btn.classList.add("border-2", "border-[#6c6ef0]", "shadow-lg", "shadow-indigo-500/10");
+                        var check = btn.querySelector(".js-stage-check");
+                        check.classList.remove("hidden");
+                        check.classList.add("flex");
+                        selectedLevel = btn.getAttribute("data-level");
+                    });
+                });
+
+                /* ---------- Password toggle ---------- */
+                document.getElementById("togglePwd").addEventListener("click", function () {
+                    var show = pwd.type === "password";
+                    pwd.type = show ? "text" : "password";
+                    document.getElementById("eyeOpen").classList.toggle("hidden", !show);
+                    document.getElementById("eyeOff").classList.toggle("hidden", show);
+                });
+
+                /* ---------- Validation ---------- */
+                function validEmail(v) {
+                    return /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v);
+                }
+
+                function showError(wrap, errEl, input) {
+                    errEl.classList.remove("hidden");
+                    wrap.classList.remove("border-[#2a3454]");
+                    wrap.classList.add("border-rose-500/70");
+                    wrap.classList.add("animate-shake");
+                    setTimeout(function () { wrap.classList.remove("animate-shake"); }, 450);
+                    input.setAttribute("aria-invalid", "true");
+                }
+
+                function clearError(wrap, errEl) {
+                    errEl.classList.add("hidden");
+                    wrap.classList.add("border-[#2a3454]");
+                    wrap.classList.remove("border-rose-500/70");
+                }
+
+                email.addEventListener("input", function () { clearError(emailWrap, emailError); });
+                pwd.addEventListener("input", function () { clearError(pwdWrap, pwdError); });
+
+                /* ---------- Toast ---------- */
+                function showToast(msg) {
+                    toast.textContent = msg;
+                    toast.classList.remove("hidden");
+                    setTimeout(function () { toast.classList.add("hidden"); }, 2400);
+                }
+
+                /* ---------- Submit ---------- */
+                document.getElementById("loginForm").addEventListener("submit", function (e) {
+                    e.preventDefault();
+                    var ok = true;
+
+                    if (!validEmail(email.value.trim())) {
+                        showError(emailWrap, emailError, email);
+                        ok = false;
+                    }
+                    if (pwd.value.length < 6) {
+                        showError(pwdWrap, pwdError, pwd);
+                        ok = false;
+                    }
+                    if (!ok) return;
+
+                    // Loading state
+                    submitBtn.disabled = true;
+                    submitText.textContent = "Signing you in";
+                    submitArrow.classList.add("hidden");
+                    submitSpinner.classList.remove("hidden");
+
+                    // Derive a display name from the email
+                    var raw = email.value.trim().split("@")[0];
+                    var token = raw.split(/[._\-0-9]+/)[0] || "Learner";
+                    var name = token.charAt(0).toUpperCase() + token.slice(1);
+
+                    // Save profile so Dashboard / Profile pages pick it up
+                    var profile = {
+                        name: name,
+                        email: email.value.trim(),
+                        level: selectedLevel,
+                        avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=300&auto=format&fit=crop&q=80"
+                    };
+                    try {
+                        localStorage.setItem("rtLearningProfile", JSON.stringify(profile));
+                        localStorage.setItem("rtlLoggedIn", "true");
+                        localStorage.setItem("rtlRemember", remember.checked ? "true" : "false");
+                    } catch (err) { /* ignore */ }
+
+                    setTimeout(function () {
+                        window.location.href = "../index.html";
+                    }, 750);
+                });
+
+                /* ---------- Demo links ---------- */
+                document.getElementById("forgotLink").addEventListener("click", function () {
+                    showToast("Password reset is not available in this demo.");
+                });
+                document.getElementById("signupLink").addEventListener("click", function () {
+                    showToast("Sign-up is not available in this demo — just sign in!");
+                });
+                document.querySelectorAll(".js-social").forEach(function (btn) {
+                    btn.addEventListener("click", function () {
+                        showToast("Social login is a demo — use email instead.");
+                    });
+                });
+            })();
+    </script>
+
+    <script src="../js/Theme.js"></script>
+</body>
+
+</html>

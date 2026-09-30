@@ -1,330 +1,410 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Soran Chuon - Personal Website</title>
-    <meta
-      name="description"
-      content="Portfolio website for CHUON SORAN, a first-year IT developer passionate about web development and technology."
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="icon" href="ran.png">
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <header class="header">
-      <nav class="nav container">
-        <a href="#home" class="logo" aria-label="Home">CHUON <span>SORAN</span></a>
 
-        <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RTLearning</title>
+    <meta name="google-site-verification" content="WOrsD8LwRjf6DsaKtF5c-0zIXE7Sr5E1HaayeiLgOLI" />
+    <meta name="description" content="RT Learning is an online English learning platform offering...">
+    <meta name="keywords" content="RT Learning, English learning, online course, learn English">
+    <meta name="robots" content="index, follow">
+    <script>(function () { try { if ((localStorage.getItem("rtlTheme") || "dark") === "light") { document.documentElement.classList.add("light") } } catch (e) { } })();</script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/output.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
 
-        <div class="nav-menu">
-          <ul class="nav-list">
-            <li><a href="#home" class="nav-link active">Home</a></li>
-            <li><a href="#about" class="nav-link">About Me</a></li>
-            <li><a href="#skills" class="nav-link">Skills</a></li>
-            <li><a href="#projects" class="nav-link">Projects</a></li>
-            <li><a href="#contact" class="nav-link">Contact</a></li>
-          </ul>
+<body
+    class="min-h-screen bg-[#0c0e17] text-slate-200 font-sans pb-12 antialiased selection:bg-indigo-500 selection:text-white">
+
+    <header class="w-full bg-[#171b26] border-b border-[#242838] sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+
+            <div class="flex items-center justify-between">
+
+                <div class="flex items-center gap-3">
+                    <img src="https://img.magnific.com/premium-vector/rtl-logo-rtl-letter-rtl-letter-logo-design-initials-rtl-logo-linked-with-circle-uppercase-monogram-logo-rtl-typography-technology-business-real-estate-brand_229120-67750.jpg?semt=ais_hybrid&w=740&q=80"
+                        alt="RT Learning Logo"
+                        class="w-10 h-10 sm:w-11 sm:h-11 rounded-full object-cover ring-2 ring-indigo-500/20">
+
+                    <span class="text-lg sm:text-xl font-bold text-white tracking-tight">
+                        RT Learning
+                    </span>
+                </div>
+
+                <nav class="hidden md:flex items-center gap-2 lg:gap-4">
+                    <a href="./index.html"
+                        class="bg-[#817dff] text-black px-4 py-2 rounded-lg font-semibold hover:bg-[#6c67f0] transition text-sm hover:text-white">
+                        Dashboard
+                    </a>
+                    <a href="./Pages/My course/My course.html"
+                        class="text-gray-400 hover:text-white px-3 py-2 rounded-lg hover:bg-[#242838] transition text-sm">
+                        My Course
+                    </a>
+                    <a href="./Pages/Practice%20Test/practice-test.html"
+                        class="text-gray-400 hover:text-white px-3 py-2 rounded-lg hover:bg-[#242838] transition text-sm">
+                        Practice Tests
+                    </a>
+                    <a href="./Pages/Profile.html"
+                        class="text-gray-400 hover:text-white px-3 py-2 rounded-lg hover:bg-[#242838] transition text-sm">
+                        Profile
+                    </a>
+                    <a href="./Pages/Contact.html"
+                        class="text-gray-400 hover:text-white px-3 py-2 rounded-lg hover:bg-[#242838] transition text-sm">
+                        Contact Us
+                    </a>
+                    <a href="./Pages/Logout.html"
+                        class="text-gray-400 hover:text-white px-3 py-2 rounded-lg hover:bg-[#242838] transition text-sm flex items-center gap-1.5">
+                        <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M15.75 9V5.25A2.25 2.25 0 0 0 13.5 3h-6a2.25 2.25 0 0 0-2.25 2.25v13.5A2.25 2.25 0 0 0 7.5 21h6a2.25 2.25 0 0 0 2.25-2.25V15m3 0 3-3m0 0-3-3m3 3H9" />
+                        </svg>
+                        Logout
+                    </a>
+                </nav>
+
+                <button
+                    class="md:hidden text-gray-300 hover:text-white p-2 rounded-lg focus:outline-none focus:bg-[#242838]"
+                    onclick="document.getElementById('mobile-menu').classList.toggle('hidden')" aria-label="Open menu">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+
+            </div>
+
+            <nav id="mobile-menu" class="hidden md:hidden mt-4 pt-4 border-t border-[#242838]">
+                <div class="flex flex-col gap-1">
+                    <a href="./index.html"
+                        class="bg-[#817dff] text-black px-4 py-2.5 rounded-lg font-semibold text-center hover:bg-[#6c67f0] transition">
+                        Dashboard
+                    </a>
+                    <a href="./Pages/My course/My course.html"
+                        class="text-gray-300 hover:text-white px-4 py-2.5 rounded-lg hover:bg-[#242838] transition">
+                        My Course
+                    </a>
+                    <a href="./Pages/Practice%20Test/practice-test.html"
+                        class="text-gray-300 hover:text-white px-4 py-2.5 rounded-lg hover:bg-[#242838] transition">
+                        Practice Tests
+                    </a>
+                    <a href="./Pages/Profile.html"
+                        class="text-gray-300 hover:text-white px-4 py-2.5 rounded-lg hover:bg-[#242838] transition">
+                        Profile
+                    </a>
+                    <a href="./Pages/Contact.html"
+                        class="text-gray-300 hover:text-white px-4 py-2.5 rounded-lg hover:bg-[#242838] transition">
+                        Contact Us
+                    </a>
+                    <a href="./Pages/Logout.html"
+                        class="text-gray-300 hover:text-white px-4 py-2.5 rounded-lg hover:bg-[#242838] transition flex items-center gap-2">
+                        <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M15.75 9V5.25A2.25 2.25 0 0 0 13.5 3h-6a2.25 2.25 0 0 0-2.25 2.25v13.5A2.25 2.25 0 0 0 7.5 21h6a2.25 2.25 0 0 0 2.25-2.25V15m3 0 3-3m0 0-3-3m3 3H9" />
+                        </svg>
+                        Logout
+                    </a>
+                </div>
+            </nav>
+
         </div>
-      </nav>
     </header>
-
-    <main>
-      <section id="home" class="hero">
-        <div class="container hero-content">
-          <div class="hero-text reveal">
-            <p class="eyebrow">Hello, I'm</p>
-            <h1>CHUON SORAN</h1>
-            <h2 class="typing-text" aria-live="polite">Student | First Year IT Developer</h2>
-            <p class="intro">
-              Hello! I'm CHUON SORAN, a first-year IT developer passionate about
-              technology, programming, and web development. I am continuously learning
-              new skills and building projects to become a professional developer.
-            </p>
-
-            <div class="hero-actions">
-              <a href="#about" class="btn btn-primary">About Me</a>
-              <a href="#projects" class="btn btn-secondary">My Projects</a>
-            </div>
-
-            <div class="quick-stats">
-              <div>
-                <strong>1+</strong>
-                <span>Years Learning</span>
-              </div>
-              <div>
-                <strong>5+</strong>
-                <span>Projects Built</span>
-              </div>
-              <div>
-                <strong>100%</strong>
-                <span>Motivated</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="hero-visual reveal">
-            <div class="code-window" aria-label="Developer workspace illustration">
-              <div class="window-header">
-                <span class="dot red"></span>
-                <span class="dot yellow"></span>
-                <span class="dot green"></span>
-                <span class="tab">developer.js</span>
-              </div>
-
-              <div class="window-body">
-                <div class="code-line"><span class="keyword">const</span> <span class="name">name</span> = <span class="string">"CHUON SORAN"</span>;</div>
-                <div class="code-line"><span class="keyword">const</span> <span class="name">role</span> = <span class="string">"First Year IT Developer"</span>;</div>
-                <div class="code-line"><span class="keyword">const</span> <span class="name">skills</span> = [<span class="string">"HTML"</span>, <span class="string">"CSS"</span>, <span class="string">"JavaScript"</span>];</div>
-                <div class="code-line"><span class="keyword">function</span> <span class="name">buildPortfolio</span>() {</div>
-                <div class="code-line indent"><span class="keyword">return</span> <span class="string">"Learning & creating"</span>;</div>
-                <div class="code-line">}</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="about" class="section">
-        <div class="container">
-          <div class="section-heading reveal">
-            <p class="section-tag">About Me</p>
-            <h2>My story and motivation</h2>
-          </div>
-
-          <div class="about-grid">
-            <div class="img"><img src="ran.png" alt="" width="1500"></div>
-           
-
-            <div class="about-cards reveal">
-              <div class="info-card">
-                <span class="label">Name</span>
-                <strong>CHUON SORAN</strong>
-              </div>
-              <div class="info-card">
-                <span class="label">Job</span>
-                <strong>Student</strong>
-              </div>
-              <div class="info-card">
-                <span class="label">Position</span>
-                <strong>First Year IT Developer</strong>
-              </div>
-              <div class="info-card">
-                <span class="label">Field</span>
-                <strong>Information Technology</strong>
-              </div>
-              <div class="info-card highlight">
-                <span class="label">Interest</span>
-                <strong>Web Development</strong>
-              </div>
-            </div>
-             <div class="about-copy reveal">
-              <p>
-                Hi, I'm CHUON SORAN. I am a first-year IT student and aspiring web
-                developer. I enjoy learning programming, creating websites, solving
-                problems, and exploring new technologies.
-              </p>
-              <p>
-                My goal is to keep improving my technical skills, build real-world
-                projects, and grow into a confident developer who can contribute to
-                modern digital experiences.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="skills" class="section section-alt">
-        <div class="container">
-          <div class="section-heading reveal">
-            <p class="section-tag">Skills</p>
-            <h2>Technologies I am learning</h2>
-          </div>
-
-          <div class="skills-grid">
-            <div class="skill-card reveal">
-              <div class="skill-top">
-                <span>HTML</span>
-                <span>90%</span>
-              </div>
-              <div class="skill-bar"><span style="width: 90%"></span></div>
-            </div>
-
-            <div class="skill-card reveal">
-              <div class="skill-top">
-                <span>CSS</span>
-                <span>88%</span>
-              </div>
-              <div class="skill-bar"><span style="width: 88%"></span></div>
-            </div>
-
-            <div class="skill-card reveal">
-              <div class="skill-top">
-                <span>JavaScript</span>
-                <span>80%</span>
-              </div>
-              <div class="skill-bar"><span style="width: 80%"></span></div>
-            </div>
-
-            <div class="skill-card reveal">
-              <div class="skill-top">
-                <span>Python</span>
-                <span>75%</span>
-              </div>
-              <div class="skill-bar"><span style="width: 75%"></span></div>
-            </div>
-
-            <div class="skill-card reveal">
-              <div class="skill-top">
-                <span>Git / GitHub</span>
-                <span>82%</span>
-              </div>
-              <div class="skill-bar"><span style="width: 82%"></span></div>
-            </div>
-
-            <div class="skill-card reveal">
-              <div class="skill-top">
-                <span>Responsive Web Design</span>
-                <span>85%</span>
-              </div>
-              <div class="skill-bar"><span style="width: 85%"></span></div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="projects" class="section">
-        <div class="container">
-          <div class="section-heading reveal">
-            <p class="section-tag">Projects</p>
-            <h2>Featured work and ideas</h2>
-          </div>
-
-          <div class="projects-grid">
-            <article class="project-card reveal">
-              <div class="project-image project-one">
-                <span>Portfolio</span>
-              </div>
-              <div class="project-body">
-                <h3>Personal Portfolio</h3>
-                <p>
-                  A clean personal portfolio website built to showcase my skills,
-                  projects, and contact information.
-                </p>
-                <div class="project-tags">
-                  <span>HTML</span>
-                  <span>CSS</span>
-                  <span>JavaScript</span>
+    <section class="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 my-4">
+        <div class="flex flex-col md:flex-row items-center justify-between gap-4">
+            <div class="relative w-full md:max-w-xl">
+                <div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-400">
+                    <i class="fa-solid fa-magnifying-glass text-sm"></i>
                 </div>
-                <a href="#" class="project-link">View Project</a>
-              </div>
+                <input type="text" id="searchInput" placeholder="Search lessons, grammar rules, idioms..."
+                    class="w-full pl-10 pr-4 py-2.5 bg-[#121625] border border-[#1e2436] rounded-xl text-sm text-slate-200 placeholder-slate-500 focus:outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-500/20 focus:shadow-[0_0_20px_rgba(99,102,241,0.15)] transition-all">
+                <div id="searchResults"
+                    class="hidden absolute left-0 right-0 top-full mt-2 z-40 rounded-xl border border-[#242838] bg-[#121625] shadow-2xl overflow-hidden divide-y divide-[#1e2436]">
+                </div>
+            </div>
+
+            <div class="flex items-center justify-between md:justify-end w-full md:w-auto gap-4">
+                <div id="streakPill"
+                    class="flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#1a1f30] border border-amber-500/20 text-amber-400 text-xs font-semibold hover:bg-amber-500/10 hover:border-amber-500/40 transition cursor-default">
+                    <i class="fa-solid fa-clock-rotate-left text-amber-400"></i>
+                    <span id="streakDays">14 days</span>
+                </div>
+
+                <div class="relative">
+                    <button id="bellBtn"
+                        class="relative p-2 rounded-full text-slate-400 hover:text-white hover:bg-[#121625] hover:ring-2 hover:ring-[#242838] transition-all">
+                        <i class="fa-regular fa-bell text-lg"></i>
+                        <span id="notifDot"
+                            class="absolute top-1.5 right-1.5 w-2 h-2 bg-pink-500 rounded-full ring-2 ring-[#0c0e17] animate-pulse"></span>
+                    </button>
+                    <div id="notifPanel"
+                        class="hidden absolute right-0 top-full mt-2 z-40 w-72 rounded-xl border border-[#242838] bg-[#121625] shadow-2xl overflow-hidden">
+                        <div class="flex items-center justify-between px-4 py-3 border-b border-[#242838]">
+                            <span class="text-xs font-bold tracking-wide text-slate-300 uppercase">Notifications</span>
+                            <button id="notifClear" class="text-[11px] text-indigo-400 hover:text-indigo-300">Mark all
+                                read</button>
+                        </div>
+                        <div id="notifList" class="max-h-64 overflow-y-auto divide-y divide-[#1e2436]"></div>
+                    </div>
+                </div>
+
+                <a href="./Pages/Profile.html" title="Go to your profile"
+                    class="flex items-center gap-3 pl-2 border-l border-[#1e2436] md:border-l-0 group cursor-pointer">
+                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100&auto=format&fit=crop&q=80"
+                        alt="Soran Avatar"
+                        class="js-user-avatar w-9 h-9 rounded-full object-cover ring-2 ring-indigo-500/40 group-hover:ring-[#817dff] transition">
+                    <div class="flex flex-col">
+                        <span class="js-user-name text-sm font-semibold text-white leading-tight">Soran</span>
+                        <span class="js-user-level text-xs text-slate-400 leading-tight">B2 - advance</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 space-y-6">
+
+        <section
+            class="dashboard-hero relative overflow-hidden bg-linear-to-br from-[#1c2340] via-[#1e2330] to-[#152019] border border-[#2a3454] flex flex-col sm:flex-row justify-between p-6 sm:p-8 items-start sm:items-center rounded-3xl gap-6 shadow-2xl">
+            <div
+                class="absolute -top-16 -right-10 w-64 h-64 bg-indigo-500/20 rounded-full blur-3xl pointer-events-none">
+            </div>
+            <div
+                class="absolute -bottom-20 -left-10 w-56 h-56 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none">
+            </div>
+            <div class="relative">
+                <span
+                    class="inline-flex items-center gap-2 text-[11px] font-bold text-indigo-300 tracking-wider uppercase bg-indigo-500/10 border border-indigo-500/30 px-3 py-1.5 rounded-full">
+                    <span class="w-1.5 h-1.5 rounded-full bg-indigo-400 animate-pulse"></span>
+                    Nocturnal Sprint • Week 43
+                </span>
+                <h1 id="greeting" class="text-2xl sm:text-3xl font-bold text-white mt-3 leading-tight">
+                    Monday, September 21 — Keep the fire,<br class="hidden sm:inline"> Sora!
+                </h1>
+                <p class="text-sm text-slate-400 mt-2">You are one session away from keeping your streak alive.</p>
+            </div>
+            <div
+                class="relative pulse-ring bg-emerald-500/10 border border-emerald-500/25 px-5 py-3 rounded-2xl flex items-center gap-3 shrink-0">
+                <span class="text-2xl">⚡</span>
+                <div class="flex flex-col leading-tight">
+                    <span id="xpToday" class="text-emerald-300 text-base font-bold">45 XP Today</span>
+                    <span class="text-[11px] text-emerald-500/80">Keep earning</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+            <div
+                class="bg-[#1e2330] border border-[#242838] p-6 sm:p-8 rounded-2xl flex flex-col justify-between space-y-6">
+                <div>
+                    <div class="flex flex-wrap items-center justify-between gap-4 mb-6">
+                        <div class="flex items-center gap-4">
+                            <span
+                                class="animate-floaty bg-linear-to-br from-orange-500/40 to-amber-500/10 border border-orange-500/40 shadow-lg shadow-orange-500/20 p-3.5 text-2xl rounded-2xl">🔥</span>
+                            <div>
+                                <h2 id="streakTitle" class="text-xl sm:text-2xl font-bold text-white">14-Day Streak</h2>
+                                <p id="streakRecord" class="text-xs text-slate-400 mt-0.5">Personal record: 14 days</p>
+                            </div>
+                        </div>
+                        <span
+                            class="px-3 py-1 rounded-full text-xs font-semibold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
+                            Emerald Tier
+                        </span>
+                    </div>
+
+                    <div id="streakGrid" class="grid grid-cols-7 gap-1.5 sm:gap-2 mb-6">
+                        <div class="flex flex-col items-center gap-1.5">
+                            <span class="text-xs font-medium text-slate-400">M</span>
+                            <span
+                                class="w-full aspect-square flex items-center justify-center bg-emerald-500/20 border border-emerald-500/30 rounded-lg text-emerald-400 text-sm font-bold">✓</span>
+                        </div>
+                        <div class="flex flex-col items-center gap-1.5">
+                            <span class="text-xs font-medium text-slate-400">T</span>
+                            <span
+                                class="w-full aspect-square flex items-center justify-center bg-emerald-500/20 border border-emerald-500/30 rounded-lg text-emerald-400 text-sm font-bold">✓</span>
+                        </div>
+                        <div class="flex flex-col items-center gap-1.5">
+                            <span class="text-xs font-medium text-slate-400">W</span>
+                            <span
+                                class="w-full aspect-square flex items-center justify-center bg-emerald-500/20 border border-emerald-500/30 rounded-lg text-emerald-400 text-sm font-bold">✓</span>
+                        </div>
+                        <div class="flex flex-col items-center gap-1.5">
+                            <span class="text-xs font-medium text-slate-400">T</span>
+                            <span
+                                class="w-full aspect-square flex items-center justify-center bg-emerald-500/20 border border-emerald-500/30 rounded-lg text-emerald-400 text-sm font-bold">✓</span>
+                        </div>
+                        <div class="flex flex-col items-center gap-1.5">
+                            <span class="text-xs font-medium text-slate-400">F</span>
+                            <span
+                                class="w-full aspect-square flex items-center justify-center bg-emerald-500/20 border border-emerald-500/30 rounded-lg text-emerald-400 text-sm font-bold">✓</span>
+                        </div>
+                        <div class="flex flex-col items-center gap-1.5">
+                            <span class="text-xs font-medium text-slate-400">S</span>
+                            <span
+                                class="w-full aspect-square flex items-center justify-center bg-emerald-500/20 border border-emerald-500/30 rounded-lg text-emerald-400 text-sm font-bold">✓</span>
+                        </div>
+                        <div class="flex flex-col items-center gap-1.5">
+                            <span class="text-xs font-medium text-slate-400">S</span>
+                            <span
+                                class="w-full aspect-square flex items-center justify-center bg-emerald-500/20 border border-emerald-500/30 rounded-lg text-emerald-400 text-sm font-bold">✓</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="space-y-2">
+                    <div class="flex justify-between text-xs font-semibold">
+                        <span class="text-slate-400">Daily Time Target</span>
+                        <span id="timeTargetText" class="text-emerald-400">12 / 15 mins (80%)</span>
+                    </div>
+                    <div class="bg-[#12151e] w-full h-2.5 rounded-full overflow-hidden p-0.5 border border-[#242838]">
+                        <div id="timeTargetBar"
+                            class="bg-linear-to-r from-emerald-500 to-teal-300 h-full rounded-full transition-all duration-500 shadow-[0_0_10px_rgba(16,185,129,0.5)]"
+                            style="width: 80%;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-[#1e2330] border border-[#242838] p-6 sm:p-8 rounded-2xl flex flex-col justify-between">
+                <div class="flex justify-between items-center text-xs font-bold tracking-wider mb-6">
+                    <span class="uppercase text-slate-400 flex items-center gap-2"><span
+                            class="text-indigo-400">📊</span>
+                        Weekly XP Trajectory</span>
+                    <span id="xpAvg"
+                        class="text-emerald-400 font-semibold bg-emerald-500/10 px-2.5 py-1 rounded-md border border-emerald-500/20">+18%
+                        vs avg</span>
+                </div>
+
+                <div id="xpChart" class="flex justify-between items-end h-40 pt-4">
+                    <div class="flex flex-col items-center gap-2 w-full h-full justify-end">
+                        <div class="w-full max-w-8 h-[50%] bg-[#252c3d] rounded-t-lg"></div>
+                        <span class="font-bold text-xs text-slate-400">M</span>
+                    </div>
+                    <div class="flex flex-col items-center gap-2 w-full h-full justify-end">
+                        <div class="w-full max-w-8 h-[70%] bg-[#252c3d] rounded-t-lg"></div>
+                        <span class="font-bold text-xs text-slate-400">T</span>
+                    </div>
+                    <div class="flex flex-col items-center gap-2 w-full h-full justify-end">
+                        <div class="w-full max-w-8 h-[50%] bg-[#252c3d] rounded-t-lg"></div>
+                        <span class="font-bold text-xs text-slate-400">W</span>
+                    </div>
+                    <div class="flex flex-col items-center gap-2 w-full h-full justify-end">
+                        <div class="w-full max-w-8 h-[85%] bg-[#252c3d] rounded-t-lg"></div>
+                        <span class="font-bold text-xs text-slate-400">T</span>
+                    </div>
+                    <div class="flex flex-col items-center gap-2 w-full h-full justify-end">
+                        <div class="w-full max-w-8 h-[60%] bg-[#252c3d] rounded-t-lg"></div>
+                        <span class="font-bold text-xs text-slate-400">F</span>
+                    </div>
+                    <div class="flex flex-col items-center gap-2 w-full h-full justify-end">
+                        <div class="w-full max-w-8 h-[70%] bg-[#252c3d] rounded-t-lg"></div>
+                        <span class="font-bold text-xs text-slate-400">S</span>
+                    </div>
+                    <div class="flex flex-col items-center gap-2 w-full h-full justify-end">
+                        <div class="w-full max-w-8 h-[95%] bg-emerald-400 rounded-t-lg shadow-lg shadow-emerald-500/20">
+                        </div>
+                        <span class="font-bold text-xs text-emerald-400">S</span>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <!-- Active course -->
+        <section
+            class="active-course-banner relative overflow-hidden bg-linear-to-r from-[#1c1f33] via-[#1e2330] to-[#1e2330] border border-[#2a3454] p-6 sm:p-8 rounded-3xl">
+            <div class="absolute left-0 top-0 bottom-0 w-1.5 bg-linear-to-b from-indigo-500 to-emerald-400"></div>
+            <div class="flex flex-wrap items-center justify-between gap-6">
+                <div>
+                    <p class="text-xs font-semibold text-indigo-300 mb-1.5 flex items-center gap-2">
+                        <span class="bg-indigo-500/15 border border-indigo-500/30 rounded-md px-2 py-0.5">Active
+                            Course</span>
+                        · B2 Workplace Focus
+                    </p>
+                    <h2 class="text-2xl font-bold text-white">All lessons that you learn already</h2>
+                    <p class="text-sm text-slate-400 mt-2">Check your <span class="text-white font-medium">Speed
+                            Listening</span>, <span class="text-white font-medium">Grammar Sprint</span> &amp; <span
+                            class="text-white font-medium">AI Speech Coach</span> in lesson</p>
+                </div>
+                <a href="./Pages/rt-learning-dashboard.html"
+                    class="active-course-cta group flex items-center gap-2 bg-linear-to-r from-[#817dff] to-[#6c67f0] hover:brightness-110 text-sm text-white font-semibold px-6 py-3 rounded-full transition shadow-lg shadow-indigo-500/25">
+                    Start <span class="transition-transform group-hover:translate-x-1">→</span>
+                </a>
+            </div>
+        </section>
+
+        <section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+            <article
+                class="js-activity group cursor-pointer active:scale-[0.98] bg-[#1e2330] border border-[#242838] hover:border-indigo-500/50 hover:-translate-y-1 hover:shadow-2xl hover:shadow-indigo-500/10 p-6 rounded-2xl flex flex-col justify-between transition-all duration-300">
+                <div class="flex justify-between items-start mb-6">
+                    <div
+                        class="w-12 h-12 rounded-2xl bg-linear-to-br from-indigo-500/30 to-indigo-500/5 border border-indigo-500/30 flex items-center justify-center text-xl text-indigo-300 shadow-lg shadow-indigo-500/10 group-hover:scale-110 transition-transform">
+                        ◴
+                    </div>
+                    <span
+                        class="text-xs font-bold bg-indigo-500/10 text-indigo-300 border border-indigo-500/25 px-3 py-1.5 rounded-lg">
+                        +45 XP
+                    </span>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold text-white">Speed Listening</h3>
+                    <p class="text-xs text-slate-400 mt-1">1h 30min rapid audio</p>
+                    <span
+                        class="mt-4 inline-flex items-center gap-1.5 text-xs font-semibold text-indigo-400 opacity-0 group-hover:opacity-100 transition">Start
+                        session <span>→</span></span>
+                </div>
             </article>
 
-            <article class="project-card reveal">
-              <div class="project-image project-two">
-                <span>Landing Page</span>
-              </div>
-              <div class="project-body">
-                <h3>Tech Landing Page</h3>
-                <p>
-                  A modern digital product landing page with call-to-action sections,
-                  service cards, and responsive layouts.
-                </p>
-                <div class="project-tags">
-                  <span>HTML</span>
-                  <span>CSS</span>
-                  <span>UI/UX</span>
+            <article
+                class="js-activity group cursor-pointer active:scale-[0.98] bg-[#1e2330] border border-[#242838] hover:border-emerald-500/50 hover:-translate-y-1 hover:shadow-2xl hover:shadow-emerald-500/10 p-6 rounded-2xl flex flex-col justify-between transition-all duration-300">
+                <div class="flex justify-between items-start mb-6">
+                    <div
+                        class="w-12 h-12 rounded-2xl bg-linear-to-br from-emerald-500/30 to-emerald-500/5 border border-emerald-500/30 flex items-center justify-center text-xl text-emerald-300 shadow-lg shadow-emerald-500/10 group-hover:scale-110 transition-transform">
+                        ☷
+                    </div>
+                    <span
+                        class="text-xs font-bold bg-emerald-500/10 text-emerald-300 border border-emerald-500/25 px-3 py-1.5 rounded-lg">
+                        +60 XP
+                    </span>
                 </div>
-                <a href="#" class="project-link">View Project</a>
-              </div>
+                <div>
+                    <h3 class="text-xl font-bold text-white">Grammar Sprint</h3>
+                    <p class="text-xs text-slate-400 mt-1">30 tense queries</p>
+                    <span
+                        class="mt-4 inline-flex items-center gap-1.5 text-xs font-semibold text-emerald-400 opacity-0 group-hover:opacity-100 transition">Start
+                        session <span>→</span></span>
+                </div>
             </article>
 
-            <article class="project-card reveal">
-              <div class="project-image project-three">
-                <span>Dashboard</span>
-              </div>
-              <div class="project-body">
-                <h3>Student Dashboard</h3>
-                <p>
-                  A simple project tracking dashboard designed for students to manage
-                  tasks, notes, and goals efficiently.
-                </p>
-                <div class="project-tags">
-                  <span>JavaScript</span>
-                  <span>CSS Grid</span>
-                  <span>Responsive</span>
+            <article
+                class="js-activity group cursor-pointer active:scale-[0.98] bg-[#1e2330] border border-[#242838] hover:border-fuchsia-500/50 hover:-translate-y-1 hover:shadow-2xl hover:shadow-fuchsia-500/10 p-6 rounded-2xl flex flex-col justify-between transition-all duration-300 sm:col-span-2 lg:col-span-1">
+                <div class="flex justify-between items-start mb-6">
+                    <div
+                        class="w-12 h-12 rounded-2xl bg-linear-to-br from-fuchsia-500/30 to-fuchsia-500/5 border border-fuchsia-500/30 flex items-center justify-center text-xl text-fuchsia-300 shadow-lg shadow-fuchsia-500/10 group-hover:scale-110 transition-transform">
+                        ♧
+                    </div>
+                    <span
+                        class="text-xs font-bold bg-fuchsia-500/10 text-fuchsia-300 border border-fuchsia-500/25 px-3 py-1.5 rounded-lg">
+                        +75 XP
+                    </span>
                 </div>
-                <a href="#" class="project-link">View Project</a>
-              </div>
+                <div>
+                    <h3 class="text-xl font-bold text-white">AI Speech Coach</h3>
+                    <p class="text-xs text-slate-400 mt-1">Phoneme feedback</p>
+                    <span
+                        class="mt-4 inline-flex items-center gap-1.5 text-xs font-semibold text-fuchsia-400 opacity-0 group-hover:opacity-100 transition">Start
+                        session <span>→</span></span>
+                </div>
             </article>
-          </div>
-        </div>
-      </section>
 
-      <section id="contact" class="section contact-section">
-        <div class="container">
-          <div class="contact-grid">
-            <div class="contact-panel reveal">
-              <p class="section-tag">Contact</p>
-              <h2>Let’s work together</h2>
-              <p>
-                I am open to learning opportunities, collaboration, and junior web
-                development projects.
-              </p>
-
-              <div class="social-links">
-                <a href="#" aria-label="GitHub">GitHub</a>
-                <a href="#" aria-label="Facebook">Facebook</a>
-                <a href="#" aria-label="Telegram">Telegram</a>
-              </div>
-            </div>
-
-            <form id="contactForm" class="contact-form reveal" novalidate>
-              <div class="form-group">
-                <label for="name">Name</label>
-                <input type="text" id="name" name="name" placeholder="Your name" />
-                <small class="error-message"></small>
-              </div>
-
-              <div class="form-group">
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" placeholder="Your email" />
-                <small class="error-message"></small>
-              </div>
-
-              <div class="form-group">
-                <label for="message">Message</label>
-                <textarea id="message" name="message" rows="5" placeholder="Write your message..."></textarea>
-                <small class="error-message"></small>
-              </div>
-
-              <button type="submit" class="btn btn-primary btn-submit">Send Message</button>
-              <p id="formMessage" class="form-message" aria-live="polite"></p>
-            </form>
-          </div>
-        </div>
-      </section>
+        </section>
     </main>
+    <script src="./js/ProfileSync.js"></script>
+    <script src="./js/Dashboard.js"></script>
+    <script src="./js/Theme.js"></script>
+</body>
 
-    <footer class="footer">
-      <div class="container footer-content">
-        <p>© 2026 CHUON SORAN. All rights reserved.</p>
-      </div>
-    </footer>
-
-    <a href="#home" class="back-to-top" aria-label="Back to top">↑</a>
-
-    <script src="script.js"></script>
-  </body>
 </html>
